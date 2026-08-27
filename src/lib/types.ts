@@ -1,0 +1,21 @@
+import type { z } from "zod";
+
+import type {
+  aiAnalysisSchema,
+  homepageSummarySchema,
+  latestUpdateSchema,
+  linkStatusSchema,
+  patternSchema,
+  projectSchema,
+  sourceProjectSchema,
+  unclusteredProjectSchema,
+} from "./schemas";
+
+export type SourceProject = z.infer<typeof sourceProjectSchema>;
+export type AiAnalysis = z.infer<typeof aiAnalysisSchema>;
+export type Project = z.infer<typeof projectSchema>;
+export type Pattern = z.infer<typeof patternSchema>;
+export type LinkStatus = z.infer<typeof linkStatusSchema>;
+export type HomepageSummary = z.infer<typeof homepageSummarySchema>;
+export type UnclusteredProject = z.infer<typeof unclusteredProjectSchema>;
+export type LatestUpdate = z.infer<typeof latestUpdateSchema>;
