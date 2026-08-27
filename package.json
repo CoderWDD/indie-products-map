@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "test": "vitest run",
     "validate-data": "tsx scripts/validate-data.ts",
-    "fetch": "tsx scripts/fetch-source.ts"
+    "fetch": "tsx scripts/fetch-source.ts",
+    "update-projects": "tsx scripts/update-projects.ts"
   },
   "keywords": [
     "astro",
