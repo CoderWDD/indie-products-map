@@ -1,0 +1,29 @@
+---
+import { StatusBadge } from "../components/StatusBadge";
+import "../styles/global.css";
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Indie Products Map</title>
+    <meta
+      name="description"
+      content="一个非官方独立产品灵感浏览器的 Astro 项目骨架。"
+    />
+  </head>
+  <body>
+    <main class="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-16">
+      <section class="max-w-2xl">
+        <StatusBadge client:load label="Astro + React Islands ready" />
+        <h1 class="mt-8 text-4xl font-semibold tracking-normal text-slate-950">
+          Indie Products Map
+        </h1>
+        <p class="mt-4 text-lg leading-8 text-slate-700">
+          当前提交只包含项目初始化骨架，后续任务卡会继续补充数据模型、解析脚本和页面功能。
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
