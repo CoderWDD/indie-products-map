@@ -97,7 +97,7 @@ export const linkStatusCodeSchema = z.enum([
 
 export const linkStatusSchema = z.object({
   projectSlug: slugSchema,
-  url: urlSchema,
+  url: z.string().min(1),
   status: linkStatusCodeSchema,
   httpStatus: z.number().int().min(100).max(599).nullable(),
   finalUrl: urlSchema.nullable(),

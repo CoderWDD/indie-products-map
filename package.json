@@ -11,7 +11,8 @@
     "test": "vitest run",
     "validate-data": "tsx scripts/validate-data.ts",
     "fetch": "tsx scripts/fetch-source.ts",
-    "update-projects": "tsx scripts/update-projects.ts"
+    "update-projects": "tsx scripts/update-projects.ts",
+    "check-links": "tsx scripts/check-links.ts"
   },
   "keywords": [
     "astro",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.2",
+    "@types/node": "^26.4.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
     "jsdom": "^30.0.1",
