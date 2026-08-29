@@ -1,0 +1,31 @@
+---
+import type { Project } from "../lib/types";
+
+type Props = {
+  project: Project;
+};
+
+const { project } = Astro.props;
+const analysis = project.aiAnalysis;
+---
+
+<article class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+  <div class="flex items-start justify-between gap-4">
+    <h2 class="text-lg font-semibold tracking-normal text-slate-950">
+      <a class="hover:text-emerald-700" href={`/projects/${project.slug}`}>{project.name}</a>
+    </h2>
+    {project.url && (
+      <a class="shrink-0 text-sm text-slate-500 hover:text-slate-950" href={project.url} target="_blank" rel="noreferrer">官网</a>
+    )}
+  </div>
+  <p class="mt-2 text-sm text-slate-500">
+    {project.author ? `作者：${project.author}` : "作者：原始数据未提供"}
+  </p>
+  <p class="mt-4 line-clamp-3 text-sm leading-6 text-slate-700">{project.rawDescription || "原始简介暂缺。"}</p>
+  <div class="mt-4 flex flex-wrap gap-2 text-xs">
+    {analysis?.productPatternName && <span class="rounded-md bg-emerald-50 px-2 py-1 text-emerald-700">{analysis.productPatternName}</span>}
+    {analysis?.productTypes.map((type) => <span class="rounded-md bg-slate-100 px-2 py-1 text-slate-600">{type}</span>)}
+    {analysis?.lowConfidence && <span class="rounded-md bg-amber-50 px-2 py-1 text-amber-700">低置信度 AI 推测</span>}
+    {!analysis && <span class="rounded-md bg-slate-100 px-2 py-1 text-slate-600">暂无 AI 分析</span>}
+  </div>
+</article>
