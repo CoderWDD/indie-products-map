@@ -84,6 +84,27 @@ export const patternSchema = z.object({
   updatedAt: isoDateTimeSchema,
 });
 
+export const patternClassificationSchema = z
+  .object({
+    matchedPatternSlug: slugSchema.nullable(),
+    reason: z.enum(["matched", "insufficient_information", "no_matching_pattern"]),
+  })
+  .strict();
+
+export const generatedPatternSchema = z
+  .object({
+    name: z.string().min(1),
+    description: z.string().min(1),
+    keywords: z.array(z.string().min(1)).min(1).max(8),
+    icon: z.string().min(1),
+    color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
+    representativeProjectSlugs: z.array(slugSchema).min(1).max(6),
+    projectSlugs: z.array(slugSchema).min(1),
+  })
+  .strict();
+
+export const generatedPatternsDataSchema = z.array(generatedPatternSchema);
+
 export const linkStatusCodeSchema = z.enum([
   "ok",
   "timeout",
@@ -152,6 +173,7 @@ export const latestUpdateSchema = z.object({
 export const sourceProjectsDataSchema = z.array(sourceProjectSchema);
 export const projectsDataSchema = z.array(projectSchema);
 export const patternsDataSchema = z.array(patternSchema);
+export const patternClassificationsDataSchema = patternClassificationSchema;
 export const linkStatusesDataSchema = z.array(linkStatusSchema);
 export const homepageSummariesDataSchema = z.array(homepageSummarySchema);
 export const unclusteredProjectsDataSchema = z.array(unclusteredProjectSchema);

@@ -15,7 +15,9 @@
     "check-links": "tsx scripts/check-links.ts",
     "analyze": "tsx scripts/analyze.ts",
     "analyze:project": "tsx scripts/analyze-project.ts",
-    "analyze:stale": "tsx scripts/analyze-stale.ts"
+    "analyze:stale": "tsx scripts/analyze-stale.ts",
+    "cluster": "tsx scripts/cluster.ts",
+    "cluster:new": "tsx scripts/cluster-new.ts"
   },
   "keywords": [
     "astro",
