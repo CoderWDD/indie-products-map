@@ -24,7 +24,11 @@ const homepageSummary = homepageSummaryByProjectSlug.get(project.slug) ?? null;
 const analysis = project.aiAnalysis;
 ---
 
-<BaseLayout title={`${project.name} | Indie Products Map`} description={project.rawDescription || `${project.name} 的独立产品详情。`}>
+<BaseLayout
+  title={`${project.name} | Indie Products Map`}
+  description={project.rawDescription || `${project.name} 的独立产品详情。`}
+  canonicalPath={`/projects/${project.slug}/`}
+>
   <main class="mx-auto max-w-6xl px-6 py-10">
     <div class="grid gap-8 lg:grid-cols-[2fr_1fr]">
       <article>
