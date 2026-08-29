@@ -12,7 +12,10 @@
     "validate-data": "tsx scripts/validate-data.ts",
     "fetch": "tsx scripts/fetch-source.ts",
     "update-projects": "tsx scripts/update-projects.ts",
-    "check-links": "tsx scripts/check-links.ts"
+    "check-links": "tsx scripts/check-links.ts",
+    "analyze": "tsx scripts/analyze.ts",
+    "analyze:project": "tsx scripts/analyze-project.ts",
+    "analyze:stale": "tsx scripts/analyze-stale.ts"
   },
   "keywords": [
     "astro",

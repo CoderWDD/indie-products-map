@@ -26,29 +26,31 @@ export const analysisEvidenceTypeSchema = z.enum([
   "homepage_only",
 ]);
 
-export const aiAnalysisSchema = z.object({
-  status: z.enum(["available", "unavailable"]),
-  summary: z.string().min(1).nullable(),
-  targetUsers: z.array(z.string().min(1)),
-  productTypes: z.array(z.string().min(1)),
-  productPatternSlug: slugSchema.nullable(),
-  productPatternName: z.string().min(1).nullable(),
-  interpretation: z.string().min(1).nullable(),
-  inspirationPoints: z.array(z.string().min(1)).min(0).max(3),
-  inspirationQuestions: z.array(z.string().min(1)).min(0).max(3),
-  monetization: z
-    .object({
-      methods: z.array(z.string().min(1)),
-      note: z.string().min(1).nullable(),
-    })
-    .nullable(),
-  relatedProjectSlugs: z.array(slugSchema),
-  evidenceTypes: z.array(analysisEvidenceTypeSchema),
-  lowConfidence: z.boolean(),
-  unavailableReason: z.string().min(1).nullable(),
-  stale: z.boolean(),
-  analyzedAt: isoDateTimeSchema.nullable(),
-});
+export const aiAnalysisSchema = z
+  .object({
+    status: z.enum(["available", "unavailable"]),
+    summary: z.string().min(1).nullable(),
+    targetUsers: z.array(z.string().min(1)),
+    productTypes: z.array(z.string().min(1)),
+    productPatternSlug: slugSchema.nullable(),
+    productPatternName: z.string().min(1).nullable(),
+    interpretation: z.string().min(1).nullable(),
+    inspirationPoints: z.array(z.string().min(1)).min(0).max(3),
+    inspirationQuestions: z.array(z.string().min(1)).min(0).max(3),
+    monetization: z
+      .object({
+        methods: z.array(z.string().min(1)),
+        note: z.string().min(1).nullable(),
+      })
+      .nullable(),
+    relatedProjectSlugs: z.array(slugSchema),
+    evidenceTypes: z.array(analysisEvidenceTypeSchema),
+    lowConfidence: z.boolean(),
+    unavailableReason: z.string().min(1).nullable(),
+    stale: z.boolean(),
+    analyzedAt: isoDateTimeSchema.nullable(),
+  })
+  .strict();
 
 export const projectSchema = z.object({
   id: z.string().min(1),
