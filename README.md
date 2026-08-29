@@ -34,7 +34,10 @@ AI analysis uses an OpenAI-compatible chat completions API. Copy `.env.example` 
 AI_BASE_URL=
 AI_API_KEY=
 AI_MODEL=
+AI_API_FORMAT=
 ```
+
+`AI_API_FORMAT` is optional. Use `chat_completions` for `/chat/completions` providers, or `responses` for providers that only support `/responses`. The default is `chat_completions`.
 
 `SITE_URL` may be set for production canonical URLs and sitemap output. If omitted, the project uses `https://indie-products-map.vercel.app`.
 
@@ -133,6 +136,7 @@ Required repository secrets:
 AI_BASE_URL
 AI_API_KEY
 AI_MODEL
+AI_API_FORMAT
 ```
 
 The workflow installs dependencies with `npm ci`, runs `npm run update-data`, and commits generated `data/` changes only after the full pipeline succeeds.
