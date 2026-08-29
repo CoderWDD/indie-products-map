@@ -1,3 +1,5 @@
+import "./load-env";
+
 import { clusterNewPatterns } from "../src/lib/ai/cluster-new-patterns";
 import { createAiClientFromEnv, MissingAiConfigError } from "../src/lib/ai/client";
 import {

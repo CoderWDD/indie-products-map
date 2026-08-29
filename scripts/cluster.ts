@@ -1,3 +1,5 @@
+import "./load-env";
+
 import { classifyProjectPattern } from "../src/lib/ai/classify-pattern";
 import { createAiClientFromEnv, MissingAiConfigError } from "../src/lib/ai/client";
 import type { Project, UnclusteredProject } from "../src/lib/types";

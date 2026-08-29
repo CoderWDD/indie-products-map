@@ -1,3 +1,5 @@
+import "./load-env";
+
 import { analyzeProject } from "../src/lib/ai/analyze-project";
 import { createAiClientFromEnv, MissingAiConfigError } from "../src/lib/ai/client";
 import {
