@@ -12,7 +12,7 @@
 - 将原始 README 项目列表解析为结构化数据。
 - 使用 AI 对新增项目做项目级增量分析。
 - 提供首页、项目列表页、项目详情页、关于页。
-- 使用 GitHub Actions 每月自动更新数据并提交到主分支。
+- 使用 GitHub Actions 每周自动更新数据并提交到主分支。
 - Vercel 监听主分支自动部署。
 
 项目不包含账户、后台、评论、收藏、导出、访问统计、深色模式、E2E 测试。
@@ -179,7 +179,7 @@
 - AI 输出必须使用 Zod 校验。
 - 校验失败自动重试 1-2 次。
 - 仍失败则标记 AI 分析失败，不阻塞项目展示。
-- 新增项目在月度更新时立即分析。
+- 新增项目在每周更新时立即分析。
 - 官网不可访问时可基于 README 生成低置信度分析。
 - AI 分析不包含风险提示、成功失败判断、收入估算、用户量推断、攻击性评价、作者动机断言。
 - 支持单个项目重新分析。
@@ -193,7 +193,7 @@
 
 - 不实现 `cluster` / `cluster:new` 命令。
 - 不生成 `/patterns` 页面。
-- 不在月度更新流程中执行产品模式聚类。
+- 不在每周更新流程中执行产品模式聚类。
 - `patterns.json` 和 `unclustered-projects.json` 仅作为历史兼容空文件保留。
 
 ### M8. 静态页面与基础布局
@@ -263,18 +263,18 @@
 
 ### M11. 自动更新与部署流水线
 
-目标：GitHub Actions 每月自动增量更新，成功后自动提交。
+目标：GitHub Actions 每周自动增量更新，成功后自动提交。
 
 交付物：
 
-- `.github/workflows/update-data.yml`
+- `.github/workflows/main.yml`
 - `scripts/update-data.ts`
 - `npm run update-data`
 
 验收标准：
 
 - workflow 支持 `schedule` 和 `workflow_dispatch`。
-- cron 为 `20 3 15 * *`。
+- cron 为 `20 3 * * 1`。
 - 自动更新流程为：抓取 README、增量对比、新增项目 AI 分析、全量链接检测、schema 校验、Vitest、Astro build、commit 到主分支。
 - 测试或构建失败时不提交数据。
 - 更新失败不影响现有站点。
@@ -504,7 +504,7 @@
 - `npm run analyze:project -- --slug xxx` 可运行。
 - `npm run analyze:stale` 可运行。
 - `npm run update-data` 可运行。
-- GitHub Actions 支持每月定时和手动触发。
+- GitHub Actions 支持每周定时和手动触发。
 - GitHub Actions 成功后自动 commit。
 - 测试或构建失败不提交。
 
@@ -567,7 +567,7 @@
 
 处理：
 
-- 月度更新只分析新增项目。
+- 每周更新只分析新增项目。
 - 原始信息变化只标记 stale。
 - stale 项目通过手动命令重分析。
 - 不执行产品模式聚类，避免全量聚类成本。

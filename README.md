@@ -67,7 +67,7 @@ npm run analyze:project -- --slug example-slug
 npm run analyze:stale
 ```
 
-完整月度更新流程：
+完整每周更新流程：
 
 ```bash
 npm run update-data
@@ -119,11 +119,11 @@ AI 内容是推测和辅助分析，不是事实判断。页面必须把原始 R
 
 ## GitHub Actions
 
-月度更新 workflow 位于 `.github/workflows/update-data.yml`。
+每周更新 workflow 位于 `.github/workflows/main.yml`。
 
 触发方式：
 
-- `schedule`: `20 3 15 * *`
+- `schedule`: `20 3 * * 1`
 - `workflow_dispatch`
 
 需要配置的 GitHub Secrets：
@@ -149,7 +149,7 @@ workflow 会使用 `npm ci` 安装依赖，执行 `npm run update-data`，并且
 - Production branch: `main`
 - Optional environment variable: `SITE_URL`
 
-Vercel 监听 `main` 分支后，月度 GitHub Actions 数据提交会自动触发生产部署。
+Vercel 监听 `main` 分支后，每周 GitHub Actions 数据提交会自动触发生产部署。
 
 ## Project Structure
 

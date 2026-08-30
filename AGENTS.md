@@ -90,7 +90,7 @@ AI provider 使用 OpenAI-compatible API。
 
 ## 自动更新规则
 
-GitHub Actions 月度更新流程必须符合：
+GitHub Actions 每周更新流程必须符合：
 
 ```txt
 抓取 README
@@ -113,5 +113,5 @@ GitHub Actions 月度更新流程必须符合：
 - `npm test` 成功。
 - `npm run build` 成功。
 - 首页、项目列表页、项目详情页、关于页存在。
-- GitHub Actions 支持每月定时和手动触发。
+- GitHub Actions 支持每周定时和手动触发。
 - README 说明本地开发、环境变量、数据更新、GitHub Actions Secrets、Vercel 部署、数据来源、AI 边界和许可证。
