@@ -1,4 +1,4 @@
-import { ExternalLink, RotateCcw, SlidersHorizontal } from "lucide-react";
+import { ChevronDown, ExternalLink, RotateCcw, SlidersHorizontal } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 import {
@@ -35,6 +35,12 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
   const [sortKey, setSortKey] = useState<ProjectSortKey>("default");
   const [visibleLimit, setVisibleLimit] = useState(pageSize);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [openFilterGroups, setOpenFilterGroups] = useState<Record<FilterKey, boolean>>({
+    productTypes: true,
+    targetUsers: false,
+    monetizationMethods: false,
+    linkStatuses: false,
+  });
   const filterOptions = useMemo(() => createFilterOptions(projects), [projects]);
   const visibleProjects = useMemo(() => {
     const searchedProjects = searchProjects(projects, query);
@@ -96,6 +102,13 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
     setSortKey("default");
   }
 
+  function setFilterGroupOpen(filterKey: FilterKey, open: boolean) {
+    setOpenFilterGroups((current) => ({
+      ...current,
+      [filterKey]: open,
+    }));
+  }
+
   return (
     <section className="mt-8">
       <div className="grid min-w-0 gap-5 lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
@@ -139,13 +152,34 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
             </select>
           </label>
 
-          <div className="mt-5 space-y-5">
+          {activeFilterCount > 0 ? (
+            <div className="mt-4 rounded-md border border-slate-200 bg-slate-50 p-3">
+              <div className="flex items-center justify-between gap-3 text-xs">
+                <span className="font-semibold text-slate-950">已选条件</span>
+                <span className="font-data text-slate-500">{activeFilterCount}</span>
+              </div>
+              <div className="mt-3 flex min-w-0 flex-wrap gap-2 text-xs">
+                {Object.entries(filters).flatMap(([key, values]) =>
+                  values.map((value) => (
+                    <span className="max-w-full break-words rounded-md bg-white px-2 py-1 text-slate-600" key={`${key}-${value}`}>
+                      {value}
+                    </span>
+                  )),
+                )}
+              </div>
+            </div>
+          ) : null}
+
+          <div className="mt-5 space-y-3">
             <FilterGroup
               label="产品类型"
               filterKey="productTypes"
               options={filterOptions.productTypes}
               filters={filters}
               onChange={setFilters}
+              isOpen={openFilterGroups.productTypes}
+              onOpenChange={(open) => setFilterGroupOpen("productTypes", open)}
+              optionLimit={12}
             />
             <FilterGroup
               label="目标用户"
@@ -153,6 +187,9 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
               options={filterOptions.targetUsers}
               filters={filters}
               onChange={setFilters}
+              isOpen={openFilterGroups.targetUsers}
+              onOpenChange={(open) => setFilterGroupOpen("targetUsers", open)}
+              optionLimit={8}
             />
             <FilterGroup
               label="商业化方式"
@@ -160,6 +197,9 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
               options={filterOptions.monetizationMethods}
               filters={filters}
               onChange={setFilters}
+              isOpen={openFilterGroups.monetizationMethods}
+              onOpenChange={(open) => setFilterGroupOpen("monetizationMethods", open)}
+              optionLimit={8}
             />
             <FilterGroup
               label="链接状态"
@@ -167,6 +207,9 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
               options={filterOptions.linkStatuses}
               filters={filters}
               onChange={setFilters}
+              isOpen={openFilterGroups.linkStatuses}
+              onOpenChange={(open) => setFilterGroupOpen("linkStatuses", open)}
+              optionLimit={6}
             />
           </div>
         </aside>
@@ -269,56 +312,79 @@ function FilterGroup({
   options,
   filters,
   onChange,
+  isOpen,
+  onOpenChange,
+  optionLimit = 8,
 }: {
   label: string;
   filterKey: FilterKey;
   options: Array<{ value: string; label: string }>;
   filters: ProjectFilters;
   onChange: (filters: ProjectFilters) => void;
+  isOpen: boolean;
+  onOpenChange: (open: boolean) => void;
+  optionLimit?: number;
 }) {
   if (options.length === 0) {
     return (
-      <div className="min-w-0 text-sm">
-        <div className="font-medium text-slate-700">{label}</div>
-        <div className="mt-2 rounded-md bg-slate-50 px-3 py-2 text-slate-500">暂无可筛选项</div>
-      </div>
+      <details
+        className="group min-w-0 rounded-md border border-slate-200 bg-white text-sm"
+        open={isOpen}
+        onToggle={(event) => onOpenChange(event.currentTarget.open)}
+      >
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-3 py-3 font-medium text-slate-700">
+          <span>{label}</span>
+          <ChevronDown aria-hidden="true" className="h-4 w-4 shrink-0 text-slate-400 group-open:rotate-180" />
+        </summary>
+        <div className="border-t border-slate-200 px-3 py-3 text-slate-500">暂无可筛选项</div>
+      </details>
     );
   }
 
   const selectedCount = filters[filterKey].length;
-  const visibleOptions = options.slice(0, 16);
+  const visibleOptions = options.slice(0, optionLimit);
 
   return (
-    <fieldset className="min-w-0 text-sm">
-      <legend className="flex w-full items-center justify-between gap-3 font-medium text-slate-700">
+    <details
+      className="group min-w-0 rounded-md border border-slate-200 bg-white text-sm"
+      open={isOpen}
+      onToggle={(event) => onOpenChange(event.currentTarget.open)}
+    >
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-3 py-3 font-medium text-slate-700">
         <span>{label}</span>
-        {selectedCount > 0 ? <span className="font-data text-xs text-slate-500">{selectedCount}</span> : null}
-      </legend>
-      <div className="mt-2 flex max-h-44 min-w-0 flex-wrap gap-2 overflow-auto pr-1">
+        <span className="inline-flex items-center gap-2">
+          {selectedCount > 0 ? (
+            <span className="font-data rounded-md bg-slate-50 px-2 py-1 text-xs text-slate-500">{selectedCount}</span>
+          ) : null}
+          <ChevronDown aria-hidden="true" className="h-4 w-4 shrink-0 text-slate-400 group-open:rotate-180" />
+        </span>
+      </summary>
+      <div className="grid min-w-0 gap-2 border-t border-slate-200 p-3">
         {visibleOptions.map((option) => {
           const checked = filters[filterKey].includes(option.value);
           return (
-          <label
-            className={[
-              "inline-flex min-w-0 max-w-full items-start gap-2 rounded-md border px-3 py-2 text-slate-700",
-              checked ? "border-slate-300 bg-white shadow-sm" : "border-slate-200 bg-slate-50",
-            ].join(" ")}
-            key={option.value}
-          >
-            <input
-              checked={checked}
-              className="h-4 w-4 accent-emerald-600"
-              type="checkbox"
-              onChange={() => onChange(toggleFilter(filters, filterKey, option.value))}
-            />
-            <span className="min-w-0 break-words leading-5">{option.label}</span>
-          </label>
-        )})}
+            <label
+              className={[
+                "flex min-w-0 max-w-full items-start gap-2 rounded-md border px-3 py-2 text-slate-700",
+                checked ? "border-slate-300 bg-white shadow-sm" : "border-slate-200 bg-slate-50",
+              ].join(" ")}
+              key={option.value}
+            >
+              <input
+                checked={checked}
+                className="mt-0.5 h-4 w-4 shrink-0 accent-emerald-600"
+                type="checkbox"
+                onChange={() => onChange(toggleFilter(filters, filterKey, option.value))}
+              />
+              <span className="min-w-0 break-words leading-5">{option.label}</span>
+            </label>
+          );
+        })}
+        {options.length > visibleOptions.length ? (
+          <p className="text-xs leading-5 text-slate-500">显示前 {visibleOptions.length} 项，搜索可缩小范围。</p>
+        ) : null}
       </div>
-      {options.length > visibleOptions.length ? (
-        <p className="mt-2 text-xs text-slate-500">显示前 {visibleOptions.length} 项，搜索可缩小范围。</p>
-      ) : null}
-    </fieldset>
+    </details>
   );
 }
 
