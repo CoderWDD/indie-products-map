@@ -1,6 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { latestUpdate } from "../lib/data";
+import {
+  ArrowUpRight,
+  Bot,
+  Database,
+  FileCheck2,
+  GitFork,
+  GitPullRequest,
+  Scale,
+  ShieldCheck,
+} from "lucide-react";
 
 function formatDateTime(value: string | null) {
   if (!value) {
@@ -19,100 +29,205 @@ function formatDateTime(value: string | null) {
 const updatedAt = formatDateTime(latestUpdate.updatedAt);
 const sourceUrl = "https://github.com/1c7/chinese-independent-developer";
 const siteRepoUrl = "https://github.com/CoderWDD/indie-products-map";
+const sourceEditUrl = `${sourceUrl}/edit/master/README.md`;
+const issueUrl = `${siteRepoUrl}/issues`;
 ---
 
 <BaseLayout title="关于 | Indie Products Map" description="本站的数据来源、AI 边界和非官方说明。">
   <main>
     <section class="border-b border-slate-200 bg-white/65">
-      <div class="mx-auto grid max-w-6xl gap-8 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
-        <div>
-          <p class="font-data text-xs uppercase tracking-[0.18em] text-emerald-700">About this record desk</p>
-          <h1 class="font-display mt-3 text-4xl font-semibold tracking-normal text-slate-950">关于这个观察台</h1>
+      <div class="mx-auto grid max-w-6xl gap-6 px-6 py-8 sm:py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-stretch">
+        <div class="rounded-md border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <p class="font-data text-xs uppercase tracking-[0.18em] text-emerald-700">Boundary ledger</p>
+          <h1 class="font-display mt-3 max-w-3xl text-4xl font-semibold leading-tight tracking-normal text-slate-950 sm:text-5xl">
+            这是一个非官方的产品观察台
+          </h1>
           <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
-            Indie Products Map 是一个非官方的中文独立产品灵感浏览器。它不替代原仓库，只把公开 README、链接检测、官网摘要和项目级 AI 推测组织成更容易浏览的静态站点。
+            Indie Products Map 不接管原仓库，也不判断项目成败。本站只把公开 README、链接检测、官网摘要和项目级 AI 推测整理成更容易检索和理解的静态页面。
           </p>
+          <div class="mt-7 flex flex-wrap gap-3 text-sm">
+            <a class="inline-flex items-center gap-2 rounded-md bg-slate-950 px-4 py-2 font-medium text-white hover:bg-slate-800" href={sourceUrl} target="_blank" rel="noreferrer">
+              <GitFork aria-hidden="true" className="h-4 w-4" />
+              原始仓库
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-md border border-slate-300 bg-white px-4 py-2 font-medium text-slate-700 hover:border-slate-500 hover:text-slate-950" href={issueUrl} target="_blank" rel="noreferrer">
+              提交本站纠错
+              <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+            </a>
+          </div>
         </div>
-        <div class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
-          <p class="text-sm font-semibold text-slate-950">数据状态</p>
-          <dl class="mt-4 space-y-3 text-sm">
-            <div class="flex justify-between gap-4">
-              <dt class="text-slate-500">项目数</dt>
-              <dd class="font-data text-slate-950">{latestUpdate.counts.projects}</dd>
-            </div>
-            <div class="flex justify-between gap-4">
-              <dt class="text-slate-500">AI 分析</dt>
-              <dd class="font-data text-slate-950">{latestUpdate.counts.aiAnalyzedProjects}</dd>
+
+        <aside class="rounded-md bg-slate-950 p-6 text-white shadow-sm">
+          <p class="font-data text-xs uppercase tracking-[0.18em] text-slate-400">Dataset state</p>
+          <dl class="mt-6 grid gap-5 text-sm">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <dt class="text-slate-400">项目数</dt>
+                <dd class="font-data mt-1 text-2xl font-semibold">{latestUpdate.counts.projects}</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">AI 分析</dt>
+                <dd class="font-data mt-1 text-2xl font-semibold">{latestUpdate.counts.aiAnalyzedProjects}</dd>
+              </div>
             </div>
             <div>
-              <dt class="text-slate-500">最近更新</dt>
-              <dd class="font-data mt-1 text-slate-950">{updatedAt}</dd>
+              <dt class="text-slate-400">最近更新</dt>
+              <dd class="font-data mt-1 font-semibold">{updatedAt}</dd>
+            </div>
+            <div>
+              <dt class="text-slate-400">当前范围</dt>
+              <dd class="mt-1 font-semibold">项目浏览、搜索筛选、详情页和 AI 推测</dd>
             </div>
           </dl>
-        </div>
+        </aside>
       </div>
     </section>
 
     <div class="mx-auto grid max-w-6xl gap-8 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_320px]">
-      <div class="space-y-6">
-        <section class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
-          <p class="text-sm font-medium text-emerald-700">非官方说明</p>
-          <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">原仓库仍是权威来源</h2>
-          <p class="mt-4 leading-7 text-slate-700">
-            本站基于 1c7/chinese-independent-developer 构建，不接管项目收录、排序和维护权。项目新增、修改、下架等源头问题，应优先回到原仓库处理。
-          </p>
-        </section>
+      <article class="min-w-0 space-y-6">
+        <section class="rounded-md border border-slate-200 bg-white shadow-sm">
+          <div class="border-b border-slate-200 px-6 py-5">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-emerald-50 text-emerald-700">
+                <ShieldCheck aria-hidden="true" className="h-4 w-4" />
+              </span>
+              <div>
+                <p class="text-sm font-medium text-emerald-700">边界</p>
+                <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">本站如何处理信息</h2>
+              </div>
+            </div>
+          </div>
 
-        <section class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
-          <p class="text-sm font-medium text-emerald-700">数据来源</p>
-          <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">公开信息被整理成结构化记录</h2>
-          <div class="mt-4 space-y-3 leading-7 text-slate-700">
-            <p>原始项目数据来自原仓库 README。本站会保存解析后的项目名称、链接、作者、简介、来源分区和来源顺序。</p>
-            <p>链接检测和官网摘要只保存轻量结果，不保存原始官网全文。</p>
+          <div class="grid gap-0 md:grid-cols-[180px_minmax(0,1fr)]">
+            <div class="border-b border-slate-200 px-6 py-5 md:border-r md:border-slate-200">
+              <p class="text-sm font-semibold text-slate-950">权威来源</p>
+            </div>
+            <div class="border-b border-slate-200 px-6 py-5">
+              <p class="leading-7 text-slate-700">
+                原始项目收录来自 1c7/chinese-independent-developer。项目新增、修改、移除等源头问题，应优先回到原仓库处理。
+              </p>
+            </div>
+
+            <div class="border-b border-slate-200 px-6 py-5 md:border-r md:border-slate-200">
+              <p class="text-sm font-semibold text-slate-950">结构化数据</p>
+            </div>
+            <div class="border-b border-slate-200 px-6 py-5">
+              <p class="leading-7 text-slate-700">
+                本站保存解析后的项目名称、链接、作者、简介、来源分区、来源顺序、链接检测结果和官网摘要。官网摘要只保存轻量提取结果，不保存原始官网全文。
+              </p>
+            </div>
+
+            <div class="border-b border-slate-200 px-6 py-5 md:border-r md:border-slate-200">
+              <p class="text-sm font-semibold text-slate-950">AI 推测</p>
+            </div>
+            <div class="border-b border-slate-200 px-6 py-5">
+              <p class="leading-7 text-slate-700">
+                AI 内容经过 Zod 校验后写入数据，并在页面上与 README/官网摘要分开展示。它只用于帮助理解产品方向，不替代项目事实。
+              </p>
+            </div>
+
+            <div class="px-6 py-5 md:border-r md:border-slate-200">
+              <p class="text-sm font-semibold text-slate-950">当前不做</p>
+            </div>
+            <div class="px-6 py-5">
+              <p class="leading-7 text-slate-700">
+                本站不提供账户、后台、评论、收藏、访问统计、收入估算、用户规模推断、产品截图抓取、作者头像抓取，也不维护高成本的产品模式地图。
+              </p>
+            </div>
           </div>
         </section>
 
-        <section class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
-          <p class="text-sm font-medium text-emerald-700">AI 边界</p>
-          <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">AI 内容只作为产品灵感推测</h2>
-          <p class="mt-4 leading-7 text-slate-700">
-            AI 分析经过 Zod 校验后才会写入数据。页面会把 README/官网摘要和 AI 推测分开展示。本站不展示成功或失败判断、收入估算、用户规模推断、风险提示、攻击性评价或作者动机断言。
-          </p>
+        <section class="grid gap-4 sm:grid-cols-3">
+          <div class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+            <Database aria-hidden="true" className="h-5 w-5 text-emerald-700" />
+            <h3 class="mt-4 font-semibold text-slate-950">README 是源头</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">本站展示的是公开收录记录的再整理，原仓库仍是权威入口。</p>
+          </div>
+          <div class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+            <Bot aria-hidden="true" className="h-5 w-5 text-emerald-700" />
+            <h3 class="mt-4 font-semibold text-slate-950">AI 是辅助</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">AI 内容只解释可能的用户、类型和启发点，不替代事实。</p>
+          </div>
+          <div class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+            <Scale aria-hidden="true" className="h-5 w-5 text-emerald-700" />
+            <h3 class="mt-4 font-semibold text-slate-950">边界明确</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">页面不做成败判断、收入估算、用户量推断或作者动机判断。</p>
+          </div>
         </section>
 
-        <section class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
-          <p class="text-sm font-medium text-emerald-700">当前范围</p>
-          <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">不维护产品模式地图</h2>
-          <p class="mt-4 leading-7 text-slate-700">
-            当前版本取消高成本的产品模式聚类和模式页，保留项目浏览、搜索筛选、详情页、链接检测、官网摘要和项目级 AI 推测分析。
-          </p>
+        <section class="rounded-md border border-slate-200 bg-white shadow-sm">
+          <div class="border-b border-slate-200 px-6 py-5">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-emerald-50 text-emerald-700">
+                <GitPullRequest aria-hidden="true" className="h-4 w-4" />
+              </span>
+              <div>
+                <p class="text-sm font-medium text-emerald-700">纠错</p>
+                <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">如何提交新增、修改或移除</h2>
+              </div>
+            </div>
+          </div>
+          <div class="grid gap-0 md:grid-cols-[180px_minmax(0,1fr)]">
+            <div class="border-b border-slate-200 px-6 py-5 md:border-r md:border-slate-200">
+              <p class="text-sm font-semibold text-slate-950">项目收录</p>
+            </div>
+            <div class="border-b border-slate-200 px-6 py-5">
+              <p class="leading-7 text-slate-700">新增或修改独立产品条目，请优先在原仓库 README 提交 Pull Request。</p>
+              <a class="mt-3 inline-flex items-center gap-2 text-sm font-medium text-emerald-700 hover:text-emerald-900" href={sourceEditUrl} target="_blank" rel="noreferrer">
+                编辑原 README
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </a>
+            </div>
+            <div class="px-6 py-5 md:border-r md:border-slate-200">
+              <p class="text-sm font-semibold text-slate-950">本站展示</p>
+            </div>
+            <div class="px-6 py-5">
+              <p class="leading-7 text-slate-700">如果本站解析、摘要或 AI 推测展示有误，可以在本站仓库提交 Issue。</p>
+              <a class="mt-3 inline-flex items-center gap-2 text-sm font-medium text-emerald-700 hover:text-emerald-900" href={issueUrl} target="_blank" rel="noreferrer">
+                提交 Issue
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
         </section>
-      </div>
+      </article>
 
       <aside class="space-y-4 lg:sticky lg:top-4 lg:self-start">
         <section class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
-          <h2 class="font-semibold text-slate-950">维护入口</h2>
+          <div class="flex items-center gap-3">
+            <GitFork aria-hidden="true" className="h-4 w-4 text-emerald-700" />
+            <h2 class="font-semibold text-slate-950">维护入口</h2>
+          </div>
           <div class="mt-4 space-y-3 text-sm">
-            <a class="block rounded-md bg-slate-950 px-4 py-3 font-medium text-white hover:bg-slate-800" href={sourceUrl} target="_blank" rel="noreferrer">
+            <a class="flex items-center justify-between gap-3 rounded-md bg-slate-950 px-4 py-3 font-medium text-white hover:bg-slate-800" href={sourceUrl} target="_blank" rel="noreferrer">
               访问原始项目仓库
+              <ArrowUpRight aria-hidden="true" className="h-4 w-4 shrink-0" />
             </a>
-            <a class="block rounded-md border border-slate-300 bg-white px-4 py-3 font-medium text-slate-700 hover:border-slate-500" href={`${siteRepoUrl}/issues`} target="_blank" rel="noreferrer">
+            <a class="flex items-center justify-between gap-3 rounded-md border border-slate-300 bg-white px-4 py-3 font-medium text-slate-700 hover:border-slate-500 hover:text-slate-950" href={issueUrl} target="_blank" rel="noreferrer">
               提交本站纠错
+              <ArrowUpRight aria-hidden="true" className="h-4 w-4 shrink-0" />
             </a>
           </div>
         </section>
 
         <section class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
-          <h2 class="font-semibold text-slate-950">本站不提供</h2>
+          <div class="flex items-center gap-3">
+            <FileCheck2 aria-hidden="true" className="h-4 w-4 text-emerald-700" />
+            <h2 class="font-semibold text-slate-950">数据说明</h2>
+          </div>
           <ul class="mt-4 space-y-2 text-sm leading-6 text-slate-700">
-            <li>账号、后台、评论或收藏</li>
-            <li>访问统计或行为记录</li>
-            <li>收入估算或成功判断</li>
-            <li>产品截图或作者头像抓取</li>
+            <li>原始信息来自公开 README</li>
+            <li>官网摘要为规则提取结果</li>
+            <li>AI 内容为产品灵感推测</li>
+            <li>数据更新后由静态站点展示</li>
           </ul>
         </section>
 
         <section class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
-          <h2 class="font-semibold text-slate-950">许可证</h2>
+          <div class="flex items-center gap-3">
+            <Scale aria-hidden="true" className="h-4 w-4 text-emerald-700" />
+            <h2 class="font-semibold text-slate-950">许可证</h2>
+          </div>
           <p class="mt-3 text-sm leading-6 text-slate-700">
             本站代码使用 MIT License。原始项目内容归各自项目和原仓库维护者所有。
           </p>
