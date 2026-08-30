@@ -1,16 +1,54 @@
 {
   "schemaVersion": 1,
   "sourceUrl": "https://github.com/1c7/chinese-independent-developer/blob/master/README.md",
-  "fetchedAt": "2026-08-27T15:56:44.109Z",
-  "updatedAt": "2026-08-29T23:47:44.173Z",
+  "fetchedAt": "2026-08-30T11:58:56.091Z",
+  "updatedAt": "2026-08-30T12:00:43.970Z",
   "counts": {
-    "sourceProjects": 1962,
-    "projects": 1962,
+    "sourceProjects": 1969,
+    "projects": 1969,
     "patterns": 0,
-    "aiAnalyzedProjects": 1931
+    "aiAnalyzedProjects": 1938
   },
   "changes": {
     "added": [
+      {
+        "sourceId": "75b1c71ad24a",
+        "projectSlug": "ikat",
+        "name": "Ikat"
+      },
+      {
+        "sourceId": "f702d9cfe26d",
+        "projectSlug": "easymap-desktop",
+        "name": "EasyMap Desktop"
+      },
+      {
+        "sourceId": "9e1c62bc3aac",
+        "projectSlug": "fishcare-ai",
+        "name": "FishCare AI"
+      },
+      {
+        "sourceId": "0c2a09c0a148",
+        "projectSlug": "bibla",
+        "name": "bibla"
+      },
+      {
+        "sourceId": "e4cb93ffbacf",
+        "projectSlug": "bazicalculator-ai",
+        "name": "BaziCalculator.ai"
+      },
+      {
+        "sourceId": "55aa0a5ef8fb",
+        "projectSlug": "nail-shapes",
+        "name": "Nail Shapes"
+      },
+      {
+        "sourceId": "ebc01db11015",
+        "projectSlug": "deepseek",
+        "name": "DeepSeek酱语录"
+      }
+    ],
+    "removed": [],
+    "changed": [
       {
         "sourceId": "a7aff284c198",
         "projectSlug": "agentero",
@@ -1643,7 +1681,7 @@
       },
       {
         "sourceId": "b43f8cde5b0a",
-        "projectSlug": "schulte-table",
+        "projectSlug": "schulte-table-b43f8c",
         "name": "Schulte Table"
       },
       {
@@ -2008,7 +2046,7 @@
       },
       {
         "sourceId": "c30c99aafb5a",
-        "projectSlug": "zooop",
+        "projectSlug": "zooop-c30c99",
         "name": "ZOOOP"
       },
       {
@@ -2113,7 +2151,7 @@
       },
       {
         "sourceId": "81266590dff3",
-        "projectSlug": "floaty",
+        "projectSlug": "floaty-812665",
         "name": "Floaty"
       },
       {
@@ -2718,7 +2756,7 @@
       },
       {
         "sourceId": "40fe1db215c5",
-        "projectSlug": "animegen",
+        "projectSlug": "animegen-40fe1d",
         "name": "AnimeGen"
       },
       {
@@ -3138,7 +3176,7 @@
       },
       {
         "sourceId": "df66248be8d8",
-        "projectSlug": "bookletai",
+        "projectSlug": "bookletai-df6624",
         "name": "BookletAI"
       },
       {
@@ -3278,7 +3316,7 @@
       },
       {
         "sourceId": "6ebe6a9e7d17",
-        "projectSlug": "sonicker",
+        "projectSlug": "sonicker-6ebe6a",
         "name": "Sonicker"
       },
       {
@@ -3413,7 +3451,7 @@
       },
       {
         "sourceId": "758b00fd50dc",
-        "projectSlug": "steamvai",
+        "projectSlug": "steamvai-758b00",
         "name": "steamvai"
       },
       {
@@ -3533,7 +3571,7 @@
       },
       {
         "sourceId": "f566cb7a6a62",
-        "projectSlug": "us-address-generator",
+        "projectSlug": "us-address-generator-f566cb",
         "name": "US Address Generator"
       },
       {
@@ -4128,7 +4166,7 @@
       },
       {
         "sourceId": "361fc9b6d3ef",
-        "projectSlug": "musci",
+        "projectSlug": "musci-361fc9",
         "name": "musci"
       },
       {
@@ -5148,7 +5186,7 @@
       },
       {
         "sourceId": "7298d02a4eca",
-        "projectSlug": "runway-aleph",
+        "projectSlug": "runway-aleph-7298d0",
         "name": "Runway Aleph"
       },
       {
@@ -5813,7 +5851,7 @@
       },
       {
         "sourceId": "c2e8e6707bfe",
-        "projectSlug": "flux-kontext",
+        "projectSlug": "flux-kontext-c2e8e6",
         "name": "FLUX Kontext"
       },
       {
@@ -7618,7 +7656,7 @@
       },
       {
         "sourceId": "f831c3a46ae4",
-        "projectSlug": "project-9519d6",
+        "projectSlug": "project-9519d6-f831c3",
         "name": "微芒计划"
       },
       {
@@ -8648,7 +8686,7 @@
       },
       {
         "sourceId": "e782e6a9f79d",
-        "projectSlug": "webhub123",
+        "projectSlug": "webhub123-e782e6",
         "name": "webhub123"
       },
       {
@@ -9822,8 +9860,6 @@
         "name": "视频进度条生成工具"
       }
     ],
-    "removed": [],
-    "changed": [],
     "unchanged": []
   }
 }
