@@ -395,13 +395,19 @@ function ProjectCard({ project }: { project: ProjectListItem }) {
     : null;
 
   return (
-    <article className="flex min-h-72 min-w-0 flex-col rounded-md border border-slate-200 bg-white p-5 shadow-sm">
-      <div className="flex min-w-0 items-start justify-between gap-4">
-        <h2 className="min-w-0 break-words text-lg font-semibold leading-7 tracking-normal text-slate-950">
-          <a className="break-words hover:text-emerald-700" href={`/projects/${project.slug}`}>
-            {project.name}
-          </a>
-        </h2>
+    <article className="flex min-h-72 min-w-0 flex-col overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm">
+      <div className="flex min-w-0 items-start justify-between gap-4 border-b border-slate-200 px-5 py-4">
+        <div className="min-w-0">
+          <p className="font-data text-[0.68rem] uppercase tracking-[0.16em] text-slate-500">Project record</p>
+          <h2 className="mt-2 min-w-0 break-words text-lg font-semibold leading-7 tracking-normal text-slate-950">
+            <a className="break-words hover:text-emerald-700" href={`/projects/${project.slug}`}>
+              {project.name}
+            </a>
+          </h2>
+          <p className="mt-1 min-w-0 break-words text-sm text-slate-500">
+            {project.author ? `作者：${project.author}` : "作者：原始数据未提供"}
+          </p>
+        </div>
         {project.url ? (
           <a
             aria-label={`访问 ${project.name} 官网`}
@@ -415,16 +421,24 @@ function ProjectCard({ project }: { project: ProjectListItem }) {
           </a>
         ) : null}
       </div>
-      <p className="mt-2 min-w-0 break-words text-sm text-slate-500">
-        {project.author ? `作者：${project.author}` : "作者：原始数据未提供"}
-      </p>
-      <p className="mt-4 min-w-0 break-words text-sm leading-6 text-slate-700 sm:line-clamp-3">
-        {project.rawDescription || "原始简介暂缺。"}
-      </p>
-      {interpretation ? (
-        <p className="mt-3 min-w-0 break-words border-l-2 border-slate-200 pl-3 text-sm leading-6 text-slate-600">{interpretation}</p>
-      ) : null}
-      <div className="mt-auto flex min-w-0 flex-wrap gap-2 pt-5 text-xs">
+
+      <div className="grid min-w-0 flex-1 content-start gap-4 px-5 py-4">
+        <section className="min-w-0">
+          <p className="text-xs font-medium text-slate-500">原始简介</p>
+          <p className="mt-2 min-w-0 break-words text-sm leading-6 text-slate-700 sm:line-clamp-3">
+            {project.rawDescription || "原始简介暂缺。"}
+          </p>
+        </section>
+
+        {interpretation ? (
+          <section className="min-w-0 rounded-md bg-slate-50 px-3 py-3">
+            <p className="text-xs font-medium text-emerald-700">AI 推测</p>
+            <p className="mt-2 min-w-0 break-words text-sm leading-6 text-slate-600">{interpretation}</p>
+          </section>
+        ) : null}
+      </div>
+
+      <div className="mt-auto flex min-w-0 flex-wrap gap-2 border-t border-slate-200 px-5 py-4 text-xs">
         {analysis?.productTypes.slice(0, 3).map((type) => (
           <span className="max-w-full break-words rounded-md bg-slate-100 px-2 py-1 text-slate-600" key={type}>
             {type}
