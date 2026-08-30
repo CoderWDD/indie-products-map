@@ -45,6 +45,7 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
   const hasActiveControls = query.trim().length > 0 || activeFilterCount > 0 || sortKey !== "default";
   const analyzedCount = projects.filter((project) => project.aiAnalysis?.status === "available").length;
   const lowConfidenceCount = projects.filter((project) => project.aiAnalysis?.lowConfidence).length;
+  const isLoading = !loadError && projects.length === 0;
 
   useEffect(() => {
     let active = true;
@@ -97,8 +98,8 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
 
   return (
     <section className="mt-8">
-      <div className="grid gap-5 lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
-        <aside className="rounded-md border border-slate-200 bg-white p-4 shadow-sm lg:sticky lg:top-4">
+      <div className="grid min-w-0 gap-5 lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
+        <aside className="min-w-0 rounded-md border border-slate-200 bg-white p-4 shadow-sm lg:sticky lg:top-4">
           <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-4">
             <div>
               <div className="flex items-center gap-2 text-sm font-semibold text-slate-950">
@@ -170,33 +171,35 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
           </div>
         </aside>
 
-        <div>
+        <div className="min-w-0">
           <div className="rounded-md border border-slate-200 bg-white px-5 py-4 shadow-sm">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-sm text-slate-500">当前结果</p>
                 <p className="font-data mt-1 text-3xl font-semibold text-slate-950">
-                  {visibleProjects.length}
-                  <span className="ml-2 text-sm font-normal text-slate-500">/ {projects.length}</span>
+                  {isLoading ? "..." : visibleProjects.length}
+                  <span className="ml-2 text-sm font-normal text-slate-500">
+                    {isLoading ? "正在加载" : `/ ${projects.length}`}
+                  </span>
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-3 text-sm sm:min-w-64">
                 <div className="rounded-md bg-slate-50 px-3 py-2">
                   <div className="text-xs text-slate-500">可用 AI 分析</div>
-                  <div className="font-data mt-1 text-lg font-semibold text-slate-950">{analyzedCount}</div>
+                  <div className="font-data mt-1 text-lg font-semibold text-slate-950">{isLoading ? "..." : analyzedCount}</div>
                 </div>
                 <div className="rounded-md bg-slate-50 px-3 py-2">
                   <div className="text-xs text-slate-500">低置信度</div>
-                  <div className="font-data mt-1 text-lg font-semibold text-slate-950">{lowConfidenceCount}</div>
+                  <div className="font-data mt-1 text-lg font-semibold text-slate-950">{isLoading ? "..." : lowConfidenceCount}</div>
                 </div>
               </div>
             </div>
             {hasActiveControls ? (
-              <div className="mt-4 flex flex-wrap gap-2 border-t border-slate-200 pt-4 text-xs">
-                {query.trim() ? <span className="rounded-md bg-slate-100 px-2 py-1 text-slate-600">搜索：{query}</span> : null}
+              <div className="mt-4 flex min-w-0 flex-wrap gap-2 border-t border-slate-200 pt-4 text-xs">
+                {query.trim() ? <span className="max-w-full break-words rounded-md bg-slate-100 px-2 py-1 text-slate-600">搜索：{query}</span> : null}
                 {Object.entries(filters).flatMap(([key, values]) =>
                   values.map((value) => (
-                    <span className="rounded-md bg-slate-100 px-2 py-1 text-slate-600" key={`${key}-${value}`}>
+                    <span className="max-w-full break-words rounded-md bg-slate-100 px-2 py-1 text-slate-600" key={`${key}-${value}`}>
                       {value}
                     </span>
                   )),
@@ -211,9 +214,13 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
             </div>
           ) : null}
 
-          {!loadError && projects.length === 0 ? (
+          {isLoading ? (
             <div className="mt-4 rounded-md border border-slate-200 bg-white p-6 text-sm text-slate-600">
-              正在加载项目数据...
+              <div className="h-4 w-36 rounded-md bg-slate-100" />
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <div className="h-36 rounded-md bg-slate-50" />
+                <div className="h-36 rounded-md bg-slate-50" />
+              </div>
             </div>
           ) : null}
 
@@ -233,7 +240,7 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
             </div>
           ) : null}
 
-          <div className="mt-4 grid gap-4 md:grid-cols-2" aria-label="项目卡片">
+          <div className="mt-4 grid min-w-0 gap-4 md:grid-cols-2" aria-label="项目卡片">
             {displayedProjects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
@@ -271,7 +278,7 @@ function FilterGroup({
 }) {
   if (options.length === 0) {
     return (
-      <div className="text-sm">
+      <div className="min-w-0 text-sm">
         <div className="font-medium text-slate-700">{label}</div>
         <div className="mt-2 rounded-md bg-slate-50 px-3 py-2 text-slate-500">暂无可筛选项</div>
       </div>
@@ -282,18 +289,18 @@ function FilterGroup({
   const visibleOptions = options.slice(0, 16);
 
   return (
-    <fieldset className="text-sm">
+    <fieldset className="min-w-0 text-sm">
       <legend className="flex w-full items-center justify-between gap-3 font-medium text-slate-700">
         <span>{label}</span>
         {selectedCount > 0 ? <span className="font-data text-xs text-slate-500">{selectedCount}</span> : null}
       </legend>
-      <div className="mt-2 flex max-h-44 flex-wrap gap-2 overflow-auto pr-1">
+      <div className="mt-2 flex max-h-44 min-w-0 flex-wrap gap-2 overflow-auto pr-1">
         {visibleOptions.map((option) => {
           const checked = filters[filterKey].includes(option.value);
           return (
           <label
             className={[
-              "inline-flex items-center gap-2 rounded-md border px-3 py-2 text-slate-700",
+              "inline-flex min-w-0 max-w-full items-start gap-2 rounded-md border px-3 py-2 text-slate-700",
               checked ? "border-slate-300 bg-white shadow-sm" : "border-slate-200 bg-slate-50",
             ].join(" ")}
             key={option.value}
@@ -304,7 +311,7 @@ function FilterGroup({
               type="checkbox"
               onChange={() => onChange(toggleFilter(filters, filterKey, option.value))}
             />
-            <span>{option.label}</span>
+            <span className="min-w-0 break-words leading-5">{option.label}</span>
           </label>
         )})}
       </div>
@@ -322,10 +329,10 @@ function ProjectCard({ project }: { project: ProjectListItem }) {
     : null;
 
   return (
-    <article className="flex min-h-72 flex-col rounded-md border border-slate-200 bg-white p-5 shadow-sm">
-      <div className="flex items-start justify-between gap-4">
-        <h2 className="text-lg font-semibold leading-7 tracking-normal text-slate-950">
-          <a className="hover:text-emerald-700" href={`/projects/${project.slug}`}>
+    <article className="flex min-h-72 min-w-0 flex-col rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+      <div className="flex min-w-0 items-start justify-between gap-4">
+        <h2 className="min-w-0 break-words text-lg font-semibold leading-7 tracking-normal text-slate-950">
+          <a className="break-words hover:text-emerald-700" href={`/projects/${project.slug}`}>
             {project.name}
           </a>
         </h2>
@@ -342,23 +349,23 @@ function ProjectCard({ project }: { project: ProjectListItem }) {
           </a>
         ) : null}
       </div>
-      <p className="mt-2 text-sm text-slate-500">
+      <p className="mt-2 min-w-0 break-words text-sm text-slate-500">
         {project.author ? `作者：${project.author}` : "作者：原始数据未提供"}
       </p>
-      <p className="mt-4 line-clamp-3 text-sm leading-6 text-slate-700">
+      <p className="mt-4 min-w-0 break-words text-sm leading-6 text-slate-700 sm:line-clamp-3">
         {project.rawDescription || "原始简介暂缺。"}
       </p>
       {interpretation ? (
-        <p className="mt-3 border-l-2 border-slate-200 pl-3 text-sm leading-6 text-slate-600">{interpretation}</p>
+        <p className="mt-3 min-w-0 break-words border-l-2 border-slate-200 pl-3 text-sm leading-6 text-slate-600">{interpretation}</p>
       ) : null}
-      <div className="mt-auto flex flex-wrap gap-2 pt-5 text-xs">
+      <div className="mt-auto flex min-w-0 flex-wrap gap-2 pt-5 text-xs">
         {analysis?.productTypes.slice(0, 3).map((type) => (
-          <span className="rounded-md bg-slate-100 px-2 py-1 text-slate-600" key={type}>
+          <span className="max-w-full break-words rounded-md bg-slate-100 px-2 py-1 text-slate-600" key={type}>
             {type}
           </span>
         ))}
         {analysis?.targetUsers.slice(0, 2).map((targetUser) => (
-          <span className="rounded-md bg-slate-100 px-2 py-1 text-slate-600" key={targetUser}>
+          <span className="max-w-full break-words rounded-md bg-slate-100 px-2 py-1 text-slate-600" key={targetUser}>
             {targetUser}
           </span>
         ))}
