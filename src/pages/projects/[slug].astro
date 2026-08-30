@@ -22,6 +22,43 @@ const { project } = Astro.props;
 const linkStatus = linkStatusByProjectSlug.get(project.slug) ?? null;
 const homepageSummary = homepageSummaryByProjectSlug.get(project.slug) ?? null;
 const analysis = project.aiAnalysis;
+const relatedProjects = analysis?.status === "available"
+  ? analysis.relatedProjectSlugs
+      .map((slug) => projects.find((item) => item.slug === slug))
+      .filter((item): item is Project => Boolean(item))
+      .slice(0, 4)
+  : [];
+const evidenceLabels = {
+  homepage_only: "官网摘要",
+  readme_and_homepage: "README 与官网摘要",
+  readme_only: "README",
+};
+const linkStatusLabels = {
+  ok: "可访问",
+  timeout: "检测超时",
+  dns_error: "DNS 异常",
+  non_html: "非 HTML 页面",
+  blocked: "访问受限",
+  http_404: "404",
+  http_error: "HTTP 异常",
+  empty_content: "内容为空",
+  invalid_url: "链接无效",
+  unknown_error: "未知异常",
+};
+
+function formatDateTime(value: string | null | undefined) {
+  if (!value) {
+    return "暂无记录";
+  }
+
+  return new Intl.DateTimeFormat("zh-CN", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date(value));
+}
 ---
 
 <BaseLayout
@@ -29,74 +66,151 @@ const analysis = project.aiAnalysis;
   description={project.rawDescription || `${project.name} 的独立产品详情。`}
   canonicalPath={`/projects/${project.slug}/`}
 >
-  <main class="mx-auto max-w-6xl px-6 py-10">
-    <div class="grid gap-8 lg:grid-cols-[2fr_1fr]">
-      <article>
-        <p class="text-sm font-medium text-emerald-700">项目详情</p>
-        <h1 class="mt-3 text-4xl font-semibold tracking-normal">{project.name}</h1>
-        <p class="mt-4 text-lg leading-8 text-slate-700">{project.rawDescription || "原始简介暂缺。"}</p>
+  <main>
+    <section class="border-b border-slate-200 bg-white/65">
+      <div class="mx-auto max-w-6xl px-6 py-10">
+        <a class="text-sm text-emerald-700 hover:text-emerald-900" href="/projects">返回项目列表</a>
+        <div class="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
+          <div>
+            <p class="font-data text-xs uppercase tracking-[0.18em] text-emerald-700">Project record</p>
+            <h1 class="font-display mt-3 text-4xl font-semibold leading-tight tracking-normal text-slate-950 sm:text-5xl">
+              {project.name}
+            </h1>
+            <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-700">{project.rawDescription || "原始简介暂缺。"}</p>
+          </div>
+          <div class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm font-semibold text-slate-950">记录状态</p>
+            <dl class="mt-4 space-y-3 text-sm">
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-500">来源顺序</dt>
+                <dd class="font-data text-slate-950">{project.sourceOrder}</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-500">原列表</dt>
+                <dd class="text-slate-950">{project.inSource ? "仍在收录" : "已不在原列表"}</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-500">AI 分析</dt>
+                <dd class="text-slate-950">{analysis?.status === "available" ? "可用" : "暂不可用"}</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="mt-8 rounded-md border border-slate-200 bg-white p-6">
-          <h2 class="text-xl font-semibold tracking-normal">原始信息</h2>
-          <dl class="mt-5 grid gap-4 text-sm sm:grid-cols-2">
+    <div class="mx-auto grid max-w-6xl gap-8 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_320px]">
+      <article class="space-y-6">
+        <section class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
+          <div class="flex flex-col gap-2 border-b border-slate-200 pb-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
+              <p class="text-sm font-medium text-emerald-700">原始信息</p>
+              <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">README 收录记录</h2>
+            </div>
+            <span class="font-data text-xs text-slate-500">{project.slug}</span>
+          </div>
+          <dl class="mt-5 grid gap-4 text-sm sm:grid-cols-2">
+            <div class="rounded-md bg-slate-50 px-4 py-3">
               <dt class="text-slate-500">作者</dt>
               <dd class="mt-1 text-slate-900">{project.author || "原始数据未提供"}</dd>
             </div>
-            <div>
+            <div class="rounded-md bg-slate-50 px-4 py-3">
               <dt class="text-slate-500">来源分区</dt>
               <dd class="mt-1 text-slate-900">{project.rawSection || "原始数据未提供"}</dd>
             </div>
-            <div>
-              <dt class="text-slate-500">来源顺序</dt>
-              <dd class="mt-1 text-slate-900">{project.sourceOrder}</dd>
+            <div class="rounded-md bg-slate-50 px-4 py-3">
+              <dt class="text-slate-500">首次收录</dt>
+              <dd class="mt-1 text-slate-900">{formatDateTime(project.firstSeenAt)}</dd>
             </div>
-            <div>
-              <dt class="text-slate-500">是否仍在原列表</dt>
-              <dd class="mt-1 text-slate-900">{project.inSource ? "是" : "否"}</dd>
+            <div class="rounded-md bg-slate-50 px-4 py-3">
+              <dt class="text-slate-500">原始信息更新</dt>
+              <dd class="mt-1 text-slate-900">{formatDateTime(project.rawUpdatedAt)}</dd>
             </div>
           </dl>
           <div class="mt-5 flex flex-wrap gap-3 text-sm">
-            {project.url && <a class="rounded-md border border-slate-300 px-3 py-2 text-slate-700 hover:border-slate-500" href={project.url} target="_blank" rel="noreferrer">访问官网</a>}
-            <a class="rounded-md border border-slate-300 px-3 py-2 text-slate-700 hover:border-slate-500" href={project.sourceUrl} target="_blank" rel="noreferrer">查看原 README 来源</a>
+            {project.url && <a class="rounded-md bg-slate-950 px-4 py-2 font-medium text-white hover:bg-slate-800" href={project.url} target="_blank" rel="noreferrer">访问官网</a>}
+            <a class="rounded-md border border-slate-300 bg-white px-4 py-2 font-medium text-slate-700 hover:border-slate-500" href={project.sourceUrl} target="_blank" rel="noreferrer">查看原 README 来源</a>
           </div>
         </section>
 
-        <section class="mt-6 rounded-md border border-slate-200 bg-white p-6">
-          <h2 class="text-xl font-semibold tracking-normal">AI 推测分析</h2>
+        <section class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
+          <div class="border-b border-slate-200 pb-5">
+            <p class="text-sm font-medium text-emerald-700">AI 推测</p>
+            <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">产品理解记录</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-600">以下内容由 AI 基于 README 和官网摘要生成，只作为灵感参考。</p>
+          </div>
           {!analysis ? (
-            <p class="mt-4 leading-7 text-slate-700">AI 分析暂不可用。页面仍展示原始 README 信息和官网摘要。</p>
+            <p class="mt-5 leading-7 text-slate-700">AI 分析暂不可用。页面仍展示原始 README 信息和官网摘要。</p>
           ) : analysis.status === "unavailable" ? (
-            <p class="mt-4 leading-7 text-slate-700">AI 分析暂不可用：{analysis.unavailableReason}</p>
+            <p class="mt-5 leading-7 text-slate-700">AI 分析暂不可用：{analysis.unavailableReason}</p>
           ) : (
-            <div class="mt-4 space-y-5 text-slate-700">
-              <p class="leading-7">{analysis.interpretation}</p>
+            <div class="mt-5 space-y-6 text-slate-700">
+              {analysis.lowConfidence && (
+                <p class="rounded-md border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-700">
+                  该分析依据较少，阅读时应优先参考原始信息。
+                </p>
+              )}
               <div>
-                <h3 class="font-medium text-slate-950">目标用户</h3>
-                <p class="mt-2">{analysis.targetUsers.join("、") || "未提供"}</p>
+                <h3 class="text-sm font-semibold text-slate-950">一句话摘要</h3>
+                <p class="mt-2 leading-7">{analysis.summary}</p>
               </div>
               <div>
-                <h3 class="font-medium text-slate-950">产品类型</h3>
-                <p class="mt-2">{analysis.productTypes.join("、") || "未提供"}</p>
+                <h3 class="text-sm font-semibold text-slate-950">产品解读</h3>
+                <p class="mt-2 border-l-2 border-slate-200 pl-4 leading-7">{analysis.interpretation}</p>
               </div>
-              <div>
-                <h3 class="font-medium text-slate-950">可借鉴点</h3>
-                <ul class="mt-2 list-disc space-y-1 pl-5">
-                  {analysis.inspirationPoints.map((point) => <li>{point}</li>)}
-                </ul>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-950">目标用户</h3>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    {analysis.targetUsers.map((item) => <span class="rounded-md bg-slate-100 px-2 py-1 text-sm text-slate-600">{item}</span>)}
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-950">产品类型</h3>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    {analysis.productTypes.map((item) => <span class="rounded-md bg-slate-100 px-2 py-1 text-sm text-slate-600">{item}</span>)}
+                  </div>
+                </div>
               </div>
+              <div class="grid gap-5 lg:grid-cols-2">
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-950">可借鉴点</h3>
+                  <ul class="mt-3 space-y-2 text-sm leading-6">
+                    {analysis.inspirationPoints.map((point) => <li class="rounded-md bg-slate-50 px-3 py-2">{point}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-950">灵感问题</h3>
+                  <ul class="mt-3 space-y-2 text-sm leading-6">
+                    {analysis.inspirationQuestions.map((question) => <li class="rounded-md bg-slate-50 px-3 py-2">{question}</li>)}
+                  </ul>
+                </div>
+              </div>
+              {analysis.monetization && (
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-950">商业化推测</h3>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    {analysis.monetization.methods.map((item) => <span class="rounded-md bg-slate-100 px-2 py-1 text-sm text-slate-600">{item}</span>)}
+                  </div>
+                  {analysis.monetization.note && <p class="mt-3 text-sm leading-6 text-slate-600">{analysis.monetization.note}</p>}
+                </div>
+              )}
             </div>
           )}
         </section>
 
-        <details class="mt-6 rounded-md border border-slate-200 bg-white p-6">
-          <summary class="cursor-pointer text-xl font-semibold tracking-normal">分析依据</summary>
-          <div class="mt-4 space-y-4 text-sm leading-7 text-slate-700">
-            <p>README 原始简介：{project.rawDescription || "暂缺"}</p>
+        <details class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
+          <summary class="cursor-pointer font-display text-2xl font-semibold tracking-normal text-slate-950">分析依据</summary>
+          <div class="mt-5 space-y-4 text-sm leading-7 text-slate-700">
+            <div>
+              <h3 class="font-semibold text-slate-950">README 原始简介</h3>
+              <p class="mt-2">{project.rawDescription || "暂缺"}</p>
+            </div>
             {homepageSummary ? (
               <div>
-                <p>官网标题：{homepageSummary.title || "未提取到"}</p>
-                <p>官网摘要：{homepageSummary.description || homepageSummary.extractedText.slice(0, 240)}</p>
+                <h3 class="font-semibold text-slate-950">官网摘要</h3>
+                <p class="mt-2">标题：{homepageSummary.title || "未提取到"}</p>
+                <p class="mt-1">{homepageSummary.description || homepageSummary.extractedText.slice(0, 240)}</p>
               </div>
             ) : (
               <p>官网不可访问或未提取摘要时，后续 AI 分析只能基于 README 推测。</p>
@@ -105,12 +219,46 @@ const analysis = project.aiAnalysis;
         </details>
       </article>
 
-      <aside class="space-y-4">
-        <section class="rounded-md border border-slate-200 bg-white p-5">
-          <h2 class="font-semibold">链接状态</h2>
-          <p class="mt-3 text-sm text-slate-700">{linkStatus ? linkStatus.status : "尚未检测"}</p>
-          {linkStatus?.checkedAt && <p class="mt-2 text-xs text-slate-500">最近检测：{linkStatus.checkedAt}</p>}
+      <aside class="space-y-4 lg:sticky lg:top-4 lg:self-start">
+        <section class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+          <h2 class="font-semibold text-slate-950">链接状态</h2>
+          <p class="mt-3 text-sm text-slate-700">{linkStatus ? linkStatusLabels[linkStatus.status] : "尚未检测"}</p>
+          {linkStatus?.httpStatus && <p class="mt-2 font-data text-xs text-slate-500">HTTP {linkStatus.httpStatus}</p>}
+          {linkStatus?.checkedAt && <p class="mt-2 text-xs text-slate-500">最近检测：{formatDateTime(linkStatus.checkedAt)}</p>}
         </section>
+
+        <section class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+          <h2 class="font-semibold text-slate-950">分析记录</h2>
+          <dl class="mt-4 space-y-3 text-sm">
+            <div>
+              <dt class="text-slate-500">分析时间</dt>
+              <dd class="mt-1 text-slate-900">{formatDateTime(analysis?.analyzedAt)}</dd>
+            </div>
+            <div>
+              <dt class="text-slate-500">分析依据</dt>
+              <dd class="mt-1 text-slate-900">
+                {analysis?.status === "available" ? analysis.evidenceTypes.map((type) => evidenceLabels[type]).join("、") : "暂无"}
+              </dd>
+            </div>
+            <div>
+              <dt class="text-slate-500">是否过期</dt>
+              <dd class="mt-1 text-slate-900">{analysis?.stale ? "需要重新分析" : "当前记录"}</dd>
+            </div>
+          </dl>
+        </section>
+
+        {relatedProjects.length > 0 && (
+          <section class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+            <h2 class="font-semibold text-slate-950">相关项目</h2>
+            <div class="mt-4 space-y-3">
+              {relatedProjects.map((item) => (
+                <a class="block rounded-md bg-slate-50 px-3 py-2 text-sm font-medium text-slate-950 hover:text-emerald-700" href={`/projects/${item.slug}`}>
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
       </aside>
     </div>
   </main>
