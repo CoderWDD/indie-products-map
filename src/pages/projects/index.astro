@@ -1,25 +1,20 @@
 ---
 import { ProjectExplorer } from "../../components/ProjectExplorer";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { linkStatusByProjectSlug, projects } from "../../lib/data";
 
-const projectsWithLinkStatus = projects.map((project) => ({
-  ...project,
-  linkStatus: linkStatusByProjectSlug.get(project.slug) ?? null,
-}));
 const initialQuery = Astro.url.searchParams.get("q") ?? "";
 ---
 
 <BaseLayout title="项目列表 | Indie Products Map" description="按原 README 顺序展示独立产品项目。">
   <main class="mx-auto max-w-6xl px-6 py-10">
     <section>
-      <p class="text-sm font-medium text-emerald-700">项目列表</p>
-      <h1 class="mt-3 text-3xl font-semibold tracking-normal">按来源顺序浏览项目</h1>
+      <p class="text-sm font-medium text-emerald-700">项目浏览</p>
+      <h1 class="mt-3 text-3xl font-semibold tracking-normal">查找独立产品案例</h1>
       <p class="mt-4 max-w-3xl leading-7 text-slate-700">
-        支持模糊搜索、多选筛选和基础排序。默认顺序沿用原 README 来源顺序。
+        支持模糊搜索、多选筛选和基础排序。AI 字段均为推测分析，原始信息以 README 和官网摘要为准。
       </p>
     </section>
 
-    <ProjectExplorer client:load projects={projectsWithLinkStatus} initialQuery={initialQuery} />
+    <ProjectExplorer client:load initialQuery={initialQuery} />
   </main>
 </BaseLayout>

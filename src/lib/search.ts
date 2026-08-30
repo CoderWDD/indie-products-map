@@ -1,8 +1,8 @@
 import Fuse from "fuse.js";
 
-import type { ProjectWithLinkStatus } from "./filter-projects";
+import type { ProjectListItem } from "./filter-projects";
 
-export function searchProjects(projects: ProjectWithLinkStatus[], query: string) {
+export function searchProjects(projects: ProjectListItem[], query: string) {
   const normalizedQuery = query.trim();
   if (!normalizedQuery) {
     return projects;
@@ -18,7 +18,6 @@ export function searchProjects(projects: ProjectWithLinkStatus[], query: string)
       "aiAnalysis.summary",
       "aiAnalysis.targetUsers",
       "aiAnalysis.productTypes",
-      "aiAnalysis.productPatternName",
       "aiAnalysis.monetization.methods",
     ],
   });

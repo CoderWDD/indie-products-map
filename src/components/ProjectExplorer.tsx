@@ -7,14 +7,13 @@ import {
   filterProjects,
   sortProjects,
   type ProjectFilters,
+  type ProjectListItem,
   type ProjectSortKey,
-  type ProjectWithLinkStatus,
 } from "../lib/filter-projects";
 import { searchProjects } from "../lib/search";
 import { ProjectSearch } from "./ProjectSearch";
 
 type ProjectExplorerProps = {
-  projects: ProjectWithLinkStatus[];
   initialQuery?: string;
 };
 
@@ -27,15 +26,50 @@ const sortOptions: Array<{ value: ProjectSortKey; label: string }> = [
   { value: "sourceOrder", label: "来源顺序" },
 ];
 
-export function ProjectExplorer({ projects, initialQuery = "" }: ProjectExplorerProps) {
+const pageSize = 60;
+
+export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
+  const [projects, setProjects] = useState<ProjectListItem[]>([]);
   const [query, setQuery] = useState(initialQuery);
   const [filters, setFilters] = useState<ProjectFilters>(emptyProjectFilters);
   const [sortKey, setSortKey] = useState<ProjectSortKey>("default");
+  const [visibleLimit, setVisibleLimit] = useState(pageSize);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const filterOptions = useMemo(() => createFilterOptions(projects), [projects]);
   const visibleProjects = useMemo(() => {
     const searchedProjects = searchProjects(projects, query);
     return sortProjects(filterProjects(searchedProjects, filters), sortKey);
   }, [filters, projects, query, sortKey]);
+  const displayedProjects = visibleProjects.slice(0, visibleLimit);
+
+  useEffect(() => {
+    let active = true;
+    fetch("/projects-data.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load projects: ${response.status}`);
+        }
+        return response.json() as Promise<ProjectListItem[]>;
+      })
+      .then((items) => {
+        if (active) {
+          setProjects(items);
+        }
+      })
+      .catch((error: unknown) => {
+        if (active) {
+          setLoadError(error instanceof Error ? error.message : "Failed to load projects.");
+        }
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    setVisibleLimit(pageSize);
+  }, [filters, query, sortKey]);
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -57,13 +91,6 @@ export function ProjectExplorer({ projects, initialQuery = "" }: ProjectExplorer
         <ProjectSearch value={query} onChange={setQuery} />
         <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_220px]">
           <div className="grid gap-4 md:grid-cols-2">
-            <FilterGroup
-              label="产品模式"
-              filterKey="patternSlugs"
-              options={filterOptions.patterns}
-              filters={filters}
-              onChange={setFilters}
-            />
             <FilterGroup
               label="目标用户"
               filterKey="targetUsers"
@@ -114,11 +141,35 @@ export function ProjectExplorer({ projects, initialQuery = "" }: ProjectExplorer
         显示 {visibleProjects.length} / {projects.length} 个项目
       </div>
 
+      {loadError ? (
+        <div className="mt-4 rounded-md border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+          项目数据加载失败，请稍后重试。
+        </div>
+      ) : null}
+
+      {!loadError && projects.length === 0 ? (
+        <div className="mt-4 rounded-md border border-slate-200 bg-white p-6 text-sm text-slate-600">
+          正在加载项目数据...
+        </div>
+      ) : null}
+
       <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3" aria-label="项目卡片">
-        {visibleProjects.map((project) => (
+        {displayedProjects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
       </div>
+
+      {visibleLimit < visibleProjects.length ? (
+        <div className="mt-6 flex justify-center">
+          <button
+            className="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:border-slate-500"
+            type="button"
+            onClick={() => setVisibleLimit((value) => value + pageSize)}
+          >
+            加载更多
+          </button>
+        </div>
+      ) : null}
     </section>
   );
 }
@@ -168,7 +219,7 @@ function FilterGroup({
   );
 }
 
-function ProjectCard({ project }: { project: ProjectWithLinkStatus }) {
+function ProjectCard({ project }: { project: ProjectListItem }) {
   const analysis = project.aiAnalysis;
   const interpretation = analysis?.interpretation
     ? truncateText(analysis.interpretation, 80)
@@ -205,11 +256,6 @@ function ProjectCard({ project }: { project: ProjectWithLinkStatus }) {
         <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">{interpretation}</p>
       ) : null}
       <div className="mt-4 flex flex-wrap gap-2 text-xs">
-        {analysis?.productPatternName ? (
-          <span className="rounded-md bg-emerald-50 px-2 py-1 text-emerald-700">
-            {analysis.productPatternName}
-          </span>
-        ) : null}
         {analysis?.productTypes.map((type) => (
           <span className="rounded-md bg-slate-100 px-2 py-1 text-slate-600" key={type}>
             {type}

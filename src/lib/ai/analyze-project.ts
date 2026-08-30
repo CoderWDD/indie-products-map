@@ -42,6 +42,8 @@ export async function analyzeProject({
       const parsed = parseAiJson(content);
       const analysis = aiAnalysisSchema.parse({
         ...parsed,
+        productPatternSlug: null,
+        productPatternName: null,
         status: "available",
         stale: false,
         analyzedAt: now,

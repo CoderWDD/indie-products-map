@@ -1,21 +1,34 @@
-import type { LinkStatus, Project } from "./types";
+import type { AiAnalysis, LinkStatus, Project } from "./types";
 
 export type ProjectSortKey = "default" | "name" | "lastChecked" | "sourceOrder";
 
 export type ProjectFilters = {
-  patternSlugs: string[];
   targetUsers: string[];
   productTypes: string[];
   monetizationMethods: string[];
   linkStatuses: string[];
 };
 
-export type ProjectWithLinkStatus = Project & {
+type ProjectListAnalysis = Pick<
+  AiAnalysis,
+  | "status"
+  | "summary"
+  | "targetUsers"
+  | "productTypes"
+  | "interpretation"
+  | "monetization"
+  | "lowConfidence"
+>;
+
+export type ProjectListItem = Pick<
+  Project,
+  "slug" | "name" | "url" | "author" | "rawDescription" | "sourceOrder"
+> & {
+  aiAnalysis: ProjectListAnalysis | null;
   linkStatus?: LinkStatus | null;
 };
 
 export const emptyProjectFilters: ProjectFilters = {
-  patternSlugs: [],
   targetUsers: [],
   productTypes: [],
   monetizationMethods: [],
@@ -23,14 +36,13 @@ export const emptyProjectFilters: ProjectFilters = {
 };
 
 export function filterProjects(
-  projects: ProjectWithLinkStatus[],
+  projects: ProjectListItem[],
   filters: ProjectFilters,
 ) {
   return projects.filter((project) => {
     const analysis = project.aiAnalysis;
 
     return (
-      matchesOne(filters.patternSlugs, analysis?.productPatternSlug ? [analysis.productPatternSlug] : []) &&
       matchesOne(filters.targetUsers, analysis?.targetUsers ?? []) &&
       matchesOne(filters.productTypes, analysis?.productTypes ?? []) &&
       matchesOne(filters.monetizationMethods, analysis?.monetization?.methods ?? []) &&
@@ -39,7 +51,7 @@ export function filterProjects(
   });
 }
 
-export function sortProjects(projects: ProjectWithLinkStatus[], sortKey: ProjectSortKey) {
+export function sortProjects(projects: ProjectListItem[], sortKey: ProjectSortKey) {
   return [...projects].sort((a, b) => {
     if (sortKey === "name") {
       return a.name.localeCompare(b.name, "zh-CN");
@@ -53,20 +65,8 @@ export function sortProjects(projects: ProjectWithLinkStatus[], sortKey: Project
   });
 }
 
-export function createFilterOptions(projects: ProjectWithLinkStatus[]) {
-  const patternOptions: Array<{ value: string; label: string }> = [];
-  for (const project of projects) {
-    const analysis = project.aiAnalysis;
-    if (analysis?.productPatternSlug && analysis.productPatternName) {
-      patternOptions.push({
-        value: analysis.productPatternSlug,
-        label: analysis.productPatternName,
-      });
-    }
-  }
-
+export function createFilterOptions(projects: ProjectListItem[]) {
   return {
-    patterns: uniqueOptions(patternOptions),
     targetUsers: uniqueStringOptions(projects.flatMap((project) => project.aiAnalysis?.targetUsers ?? [])),
     productTypes: uniqueStringOptions(projects.flatMap((project) => project.aiAnalysis?.productTypes ?? [])),
     monetizationMethods: uniqueStringOptions(

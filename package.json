@@ -16,8 +16,6 @@
     "analyze": "tsx scripts/analyze.ts",
     "analyze:project": "tsx scripts/analyze-project.ts",
     "analyze:stale": "tsx scripts/analyze-stale.ts",
-    "cluster": "tsx scripts/cluster.ts",
-    "cluster:new": "tsx scripts/cluster-new.ts",
     "update-data": "tsx scripts/update-data.ts"
   },
   "keywords": [

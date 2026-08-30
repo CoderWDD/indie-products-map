@@ -25,16 +25,6 @@ const steps: Step[] = [
     args: ["run", "analyze"],
   },
   {
-    name: "Classify product patterns",
-    command: "npm",
-    args: ["run", "cluster"],
-  },
-  {
-    name: "Cluster new patterns",
-    command: "npm",
-    args: ["run", "cluster:new"],
-  },
-  {
     name: "Check all links",
     command: "npm",
     args: ["run", "check-links"],

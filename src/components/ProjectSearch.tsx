@@ -15,7 +15,7 @@ export function ProjectSearch({ value, onChange }: ProjectSearchProps) {
       />
       <input
         className="w-full rounded-md border border-slate-300 bg-white py-3 pl-11 pr-4 text-base outline-none focus:border-emerald-600"
-        placeholder="搜索项目、作者、简介、AI 摘要或产品模式"
+        placeholder="搜索项目、作者、简介或 AI 摘要"
         type="search"
         value={value}
         onChange={(event) => onChange(event.target.value)}

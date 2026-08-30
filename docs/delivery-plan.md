@@ -1,5 +1,7 @@
 # 开发、交付、验收计划
 
+> 2026-08-30 范围调整：当前版本取消产品模式地图和 AI 聚类，后续交付以项目灵感浏览器为准。`npm run update-data` 不再执行 `cluster` / `cluster:new`，站点不再生成 `/patterns` 页面。
+
 本文档基于 [requirements.md](./requirements.md) 制定，用于指导 AI agent 或开发者按阶段实现、验证和交付项目。
 
 ## 1. 交付目标
@@ -602,4 +604,3 @@
 - Vercel 可静态部署。
 - 测试、schema 校验、构建全部通过。
 - README 和本文档足够支持后续 AI agent 继续维护。
-

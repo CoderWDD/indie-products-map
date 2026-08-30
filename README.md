@@ -2,7 +2,7 @@
 
 An unofficial independent product inspiration browser based on [`1c7/chinese-independent-developer`](https://github.com/1c7/chinese-independent-developer).
 
-The site turns the source README into structured project data, checks project links, stores lightweight homepage summaries, adds Zod-validated AI analysis, clusters product patterns, and builds a static Astro site for browsing product inspiration.
+The site turns the source README into structured project data, checks project links, stores lightweight homepage summaries, adds Zod-validated AI analysis, and builds a static Astro site for browsing product inspiration.
 
 ## Scope
 
@@ -63,8 +63,6 @@ npm run check-links
 npm run analyze
 npm run analyze:project -- --slug example-slug
 npm run analyze:stale
-npm run cluster
-npm run cluster:new
 ```
 
 Full monthly pipeline:
@@ -79,8 +77,6 @@ The full pipeline runs:
 fetch README
 -> merge incremental project data
 -> analyze new projects
--> classify analyzed projects into existing patterns
--> cluster new patterns
 -> check all links
 -> validate data
 -> run Vitest
@@ -102,8 +98,6 @@ If validation, tests, or build fail, generated data should not be committed.
 - `npm run analyze`: analyze projects without AI analysis.
 - `npm run analyze:project -- --slug <slug>`: analyze one project.
 - `npm run analyze:stale`: reanalyze projects whose source data changed.
-- `npm run cluster`: match analyzed projects to existing product patterns or mark them as unclustered.
-- `npm run cluster:new`: cluster unclustered projects into new fixed product patterns when enough signal exists.
 - `npm run update-data`: run the complete automated update pipeline.
 
 ## AI Boundaries

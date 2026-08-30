@@ -71,8 +71,8 @@ function validAnalysisJson(overrides: Record<string, unknown> = {}) {
     summary: "一个面向创作者的轻量规划工具。",
     targetUsers: ["独立开发者", "内容创作者"],
     productTypes: ["效率工具"],
-    productPatternSlug: "maker-planning-tool",
-    productPatternName: "创作者规划工具",
+    productPatternSlug: null,
+    productPatternName: null,
     interpretation:
       "这个产品看起来围绕创作者的早期规划流程展开，可能适合把分散想法整理成可执行的产品方向。",
     inspirationPoints: ["入口聚焦在单一工作流", "信息结构清晰"],
@@ -104,6 +104,8 @@ describe("analyzeProject", () => {
     expect(analysis.status).toBe("available");
     expect(analysis.analyzedAt).toBe(now);
     expect(analysis.stale).toBe(false);
+    expect(analysis.productPatternSlug).toBeNull();
+    expect(analysis.productPatternName).toBeNull();
   });
 
   it("retries invalid JSON before returning a valid analysis", async () => {

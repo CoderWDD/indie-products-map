@@ -4,17 +4,13 @@ import {
   homepageSummariesDataSchema,
   latestUpdateSchema,
   linkStatusesDataSchema,
-  patternsDataSchema,
   projectsDataSchema,
-  unclusteredProjectsDataSchema,
 } from "../src/lib/schemas";
 import type {
   HomepageSummary,
   LatestUpdate,
   LinkStatus,
-  Pattern,
   Project,
-  UnclusteredProject,
 } from "../src/lib/types";
 
 export async function readProjects() {
@@ -35,24 +31,6 @@ export async function readLinkStatuses() {
   return linkStatusesDataSchema.parse(await readJson("data/link-status.json"));
 }
 
-export async function readPatterns() {
-  return patternsDataSchema.parse(await readJson("data/patterns.json"));
-}
-
-export async function writePatterns(patterns: Pattern[]) {
-  await writeJson("data/patterns.json", patternsDataSchema.parse(patterns));
-}
-
-export async function readUnclusteredProjects() {
-  return unclusteredProjectsDataSchema.parse(
-    await readJson("data/unclustered-projects.json"),
-  );
-}
-
-export async function writeUnclusteredProjects(items: UnclusteredProject[]) {
-  await writeJson("data/unclustered-projects.json", unclusteredProjectsDataSchema.parse(items));
-}
-
 export async function updateLatestAiCount(projects: Project[]) {
   const latestUpdate = latestUpdateSchema.parse(await readJson("data/latest-update.json"));
   const updated: LatestUpdate = {
@@ -62,20 +40,6 @@ export async function updateLatestAiCount(projects: Project[]) {
       aiAnalyzedProjects: projects.filter(
         (project) => project.aiAnalysis?.status === "available",
       ).length,
-    },
-    updatedAt: new Date().toISOString(),
-  };
-
-  await writeJson("data/latest-update.json", latestUpdateSchema.parse(updated));
-}
-
-export async function updateLatestPatternCount(patterns: Pattern[]) {
-  const latestUpdate = latestUpdateSchema.parse(await readJson("data/latest-update.json"));
-  const updated: LatestUpdate = {
-    ...latestUpdate,
-    counts: {
-      ...latestUpdate.counts,
-      patterns: patterns.length,
     },
     updatedAt: new Date().toISOString(),
   };

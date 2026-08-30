@@ -1,15 +1,14 @@
 import type { APIContext } from "astro";
 
-import { patterns, projects } from "../lib/data";
+import { projects } from "../lib/data";
 import { createAbsoluteUrl } from "../lib/site";
 
-const staticPaths = ["/", "/projects/", "/patterns/", "/about/"];
+const staticPaths = ["/", "/projects/", "/about/"];
 
 export function GET({ site }: APIContext) {
   const urls = [
     ...staticPaths,
     ...projects.map((project) => `/projects/${project.slug}/`),
-    ...patterns.map((pattern) => `/patterns/${pattern.slug}/`),
   ];
 
   return new Response(renderSitemap(urls, site ?? undefined), {

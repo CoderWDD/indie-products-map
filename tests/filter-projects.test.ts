@@ -4,7 +4,7 @@ import {
   filterProjects,
   sortProjects,
   type ProjectFilters,
-  type ProjectWithLinkStatus,
+  type ProjectListItem,
 } from "../src/lib/filter-projects";
 import { searchProjects } from "../src/lib/search";
 import type { AiAnalysis } from "../src/lib/types";
@@ -12,7 +12,6 @@ import type { AiAnalysis } from "../src/lib/types";
 const now = "2026-08-29T12:00:00.000Z";
 
 const emptyFilters: ProjectFilters = {
-  patternSlugs: [],
   targetUsers: [],
   productTypes: [],
   monetizationMethods: [],
@@ -46,25 +45,27 @@ function analysis(overrides: Partial<AiAnalysis> = {}): AiAnalysis {
 
 function project(
   slug: string,
-  overrides: Partial<ProjectWithLinkStatus> = {},
-): ProjectWithLinkStatus {
+  overrides: Partial<ProjectListItem> = {},
+): ProjectListItem {
   return {
-    id: slug,
     slug,
-    sourceId: slug,
     name: slug,
     url: `https://${slug}.example.com/`,
     author: "Alice",
-    authorUrl: null,
     rawDescription: "Original description.",
-    rawSection: "Section",
     sourceOrder: 0,
-    sourceUrl: "https://github.com/example/source#L1",
-    inSource: true,
-    firstSeenAt: now,
-    lastSeenAt: now,
-    rawUpdatedAt: now,
-    aiAnalysis: analysis(),
+    aiAnalysis: {
+      status: "available",
+      summary: "面向写作者的内容整理工具。",
+      targetUsers: ["写作者"],
+      productTypes: ["内容工具"],
+      interpretation: "这个产品看起来围绕内容整理流程展开，可能帮助用户沉淀材料。",
+      monetization: {
+        methods: ["订阅"],
+        note: "商业化方式只是推测。",
+      },
+      lowConfidence: false,
+    },
     linkStatus: {
       projectSlug: slug,
       url: `https://${slug}.example.com/`,

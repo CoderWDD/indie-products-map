@@ -23,7 +23,6 @@ const analysis = project.aiAnalysis;
   </p>
   <p class="mt-4 line-clamp-3 text-sm leading-6 text-slate-700">{project.rawDescription || "原始简介暂缺。"}</p>
   <div class="mt-4 flex flex-wrap gap-2 text-xs">
-    {analysis?.productPatternName && <span class="rounded-md bg-emerald-50 px-2 py-1 text-emerald-700">{analysis.productPatternName}</span>}
     {analysis?.productTypes.map((type) => <span class="rounded-md bg-slate-100 px-2 py-1 text-slate-600">{type}</span>)}
     {analysis?.lowConfidence && <span class="rounded-md bg-amber-50 px-2 py-1 text-amber-700">低置信度 AI 推测</span>}
     {!analysis && <span class="rounded-md bg-slate-100 px-2 py-1 text-slate-600">暂无 AI 分析</span>}

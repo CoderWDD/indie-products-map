@@ -111,10 +111,6 @@ const analysis = project.aiAnalysis;
           <p class="mt-3 text-sm text-slate-700">{linkStatus ? linkStatus.status : "尚未检测"}</p>
           {linkStatus?.checkedAt && <p class="mt-2 text-xs text-slate-500">最近检测：{linkStatus.checkedAt}</p>}
         </section>
-        <section class="rounded-md border border-slate-200 bg-white p-5">
-          <h2 class="font-semibold">产品模式</h2>
-          <p class="mt-3 text-sm text-slate-700">{analysis?.productPatternName || "暂无 AI 推测模式"}</p>
-        </section>
       </aside>
     </div>
   </main>
