@@ -65,6 +65,7 @@ AI agent 进入本仓库后，必须先阅读：
 ## Git 规则
 
 - 每个任务卡完成后建议单独提交。
+- 每次完成代码或文档修改并创建本地提交后，必须继续执行 `git push` 推送到远端 GitHub，除非用户明确要求暂不推送或远端认证不可用。
 - 提交信息使用简短英文 conventional commit，例如：
   - `chore: initialize astro project`
   - `feat: add data schemas`
@@ -113,4 +114,3 @@ GitHub Actions 月度更新流程必须符合：
 - 首页、项目列表页、项目详情页、产品模式页、关于页存在。
 - GitHub Actions 支持每月定时和手动触发。
 - README 说明本地开发、环境变量、数据更新、GitHub Actions Secrets、Vercel 部署、数据来源、AI 边界和许可证。
-
