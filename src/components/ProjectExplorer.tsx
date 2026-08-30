@@ -4,6 +4,7 @@ import {
   ListFilter,
   Loader2,
   RotateCcw,
+  Search,
   SlidersHorizontal,
   X,
 } from "lucide-react";
@@ -35,6 +36,7 @@ const sortOptions: Array<{ value: ProjectSortKey; label: string }> = [
 ];
 
 const pageSize = 60;
+const filterOptionPageSize = 40;
 const filterLabels: Record<FilterKey, string> = {
   productTypes: "类型",
   targetUsers: "用户",
@@ -402,6 +404,9 @@ function FilterGroup({
   onOpenChange: (open: boolean) => void;
   optionLimit?: number;
 }) {
+  const [optionQuery, setOptionQuery] = useState("");
+  const [visibleOptionLimit, setVisibleOptionLimit] = useState(optionLimit);
+
   if (options.length === 0) {
     return (
       <details
@@ -419,7 +424,20 @@ function FilterGroup({
   }
 
   const selectedCount = filters[filterKey].length;
-  const visibleOptions = options.slice(0, optionLimit);
+  const normalizedOptionQuery = optionQuery.trim().toLowerCase();
+  const isSearchingOptions = normalizedOptionQuery.length > 0;
+  const filteredOptions = isSearchingOptions
+    ? options.filter((option) => option.label.toLowerCase().includes(normalizedOptionQuery))
+    : options;
+  const visibleOptions = getVisibleFilterOptions({
+    filteredOptions,
+    options,
+    selectedValues: filters[filterKey],
+    visibleOptionLimit,
+  });
+  const remainingOptionCount = Math.max(filteredOptions.length - visibleOptionLimit, 0);
+  const canShowMoreOptions = remainingOptionCount > 0;
+  const canCollapseOptions = visibleOptionLimit > optionLimit;
 
   return (
     <details
@@ -428,7 +446,10 @@ function FilterGroup({
       onToggle={(event) => onOpenChange(event.currentTarget.open)}
     >
       <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-3 py-3 font-medium text-slate-700">
-        <span>{label}</span>
+        <span className="inline-flex min-w-0 items-center gap-2">
+          <span>{label}</span>
+          <span className="font-data rounded-md bg-slate-50 px-2 py-1 text-xs text-slate-500">{options.length}</span>
+        </span>
         <span className="inline-flex items-center gap-2">
           {selectedCount > 0 ? (
             <span className="font-data rounded-md bg-slate-50 px-2 py-1 text-xs text-slate-500">{selectedCount}</span>
@@ -437,6 +458,33 @@ function FilterGroup({
         </span>
       </summary>
       <div className="grid min-w-0 gap-2 border-t border-slate-200 p-3">
+        {options.length > optionLimit ? (
+          <label className="relative block">
+            <span className="sr-only">搜索{label}</span>
+            <Search aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+            <input
+              className="w-full rounded-md border border-slate-200 bg-white py-2 pl-9 pr-8 text-sm text-slate-800 outline-none placeholder:text-slate-400 focus:border-slate-500"
+              onChange={(event) => {
+                setOptionQuery(event.target.value);
+                setVisibleOptionLimit(filterOptionPageSize);
+              }}
+              placeholder={`搜索${label}`}
+              type="search"
+              value={optionQuery}
+            />
+            {optionQuery ? (
+              <button
+                className="absolute right-2 top-1/2 inline-flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-md text-slate-400 hover:bg-slate-100 hover:text-slate-700"
+                onClick={() => setOptionQuery("")}
+                title="清除筛选项搜索"
+                type="button"
+              >
+                <span className="sr-only">清除筛选项搜索</span>
+                <X aria-hidden="true" className="h-3.5 w-3.5" />
+              </button>
+            ) : null}
+          </label>
+        ) : null}
         {visibleOptions.map((option) => {
           const checked = filters[filterKey].includes(option.value);
           return (
@@ -457,12 +505,68 @@ function FilterGroup({
             </label>
           );
         })}
-        {options.length > visibleOptions.length ? (
-          <p className="text-xs leading-5 text-slate-500">显示前 {visibleOptions.length} 项，搜索可缩小范围。</p>
+        {visibleOptions.length === 0 ? (
+          <div className="rounded-md border border-slate-200 bg-slate-50 px-3 py-3 text-xs leading-5 text-slate-500">
+            没有匹配的筛选项。
+          </div>
+        ) : null}
+        {canShowMoreOptions || canCollapseOptions ? (
+          <div className="mt-1 grid gap-2 sm:grid-cols-2">
+            {canShowMoreOptions ? (
+              <button
+                className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-white px-3 py-2 text-xs font-medium text-slate-600 hover:border-slate-500 hover:text-slate-950"
+                onClick={() => setVisibleOptionLimit((value) => value + filterOptionPageSize)}
+                type="button"
+              >
+                显示更多 {Math.min(filterOptionPageSize, remainingOptionCount)} 项
+              </button>
+            ) : null}
+            {canCollapseOptions ? (
+              <button
+                className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-white px-3 py-2 text-xs font-medium text-slate-600 hover:border-slate-500 hover:text-slate-950"
+                onClick={() => setVisibleOptionLimit(optionLimit)}
+                type="button"
+              >
+                收起到前 {optionLimit} 项
+              </button>
+            ) : null}
+          </div>
+        ) : null}
+        {isSearchingOptions || canShowMoreOptions ? (
+          <p className="text-xs leading-5 text-slate-500">
+            已显示 {Math.min(visibleOptions.length, filteredOptions.length)} 项，匹配 {filteredOptions.length} 项，共 {options.length} 项。
+          </p>
         ) : null}
       </div>
     </details>
   );
+}
+
+function getVisibleFilterOptions({
+  filteredOptions,
+  options,
+  selectedValues,
+  visibleOptionLimit,
+}: {
+  filteredOptions: Array<{ value: string; label: string }>;
+  options: Array<{ value: string; label: string }>;
+  selectedValues: string[];
+  visibleOptionLimit: number;
+}) {
+  const filteredOptionValues = new Set(filteredOptions.map((option) => option.value));
+  const selectedOptions = options.filter(
+    (option) => selectedValues.includes(option.value) && filteredOptionValues.has(option.value),
+  );
+  const limitedOptions = filteredOptions.slice(0, visibleOptionLimit);
+  const seen = new Set<string>();
+
+  return [...selectedOptions, ...limitedOptions].filter((option) => {
+    if (seen.has(option.value)) {
+      return false;
+    }
+    seen.add(option.value);
+    return true;
+  });
 }
 
 function ProjectCard({ project }: { project: ProjectListItem }) {
