@@ -1,18 +1,32 @@
 ---
 import { ProjectExplorer } from "../../components/ProjectExplorer";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { projects } from "../../lib/data";
 
 const initialQuery = Astro.url.searchParams.get("q") ?? "";
+const analyzedCount = projects.filter((project) => project.aiAnalysis?.status === "available").length;
 ---
 
 <BaseLayout title="项目列表 | Indie Products Map" description="按原 README 顺序展示独立产品项目。">
   <main class="mx-auto max-w-6xl px-6 py-10">
-    <section>
-      <p class="text-sm font-medium text-emerald-700">项目浏览</p>
-      <h1 class="mt-3 text-3xl font-semibold tracking-normal">查找独立产品案例</h1>
-      <p class="mt-4 max-w-3xl leading-7 text-slate-700">
-        支持模糊搜索、多选筛选和基础排序。AI 字段均为推测分析，原始信息以 README 和官网摘要为准。
-      </p>
+    <section class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
+      <div>
+        <p class="font-data text-xs uppercase tracking-[0.18em] text-emerald-700">Project explorer</p>
+        <h1 class="font-display mt-3 text-4xl font-semibold tracking-normal text-slate-950">查找独立产品案例</h1>
+        <p class="mt-4 max-w-3xl leading-7 text-slate-700">
+          用关键词、产品类型、目标用户和商业化方式缩小样本范围。原始信息来自 README，AI 字段均为推测分析。
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-3 rounded-md border border-slate-200 bg-white p-4 shadow-sm">
+        <div>
+          <div class="text-sm text-slate-500">项目总数</div>
+          <div class="font-data mt-1 text-3xl font-semibold text-slate-950">{projects.length}</div>
+        </div>
+        <div>
+          <div class="text-sm text-slate-500">AI 分析</div>
+          <div class="font-data mt-1 text-3xl font-semibold text-slate-950">{analyzedCount}</div>
+        </div>
+      </div>
     </section>
 
     <ProjectExplorer client:load initialQuery={initialQuery} />
