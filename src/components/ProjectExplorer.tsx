@@ -148,7 +148,7 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
   return (
     <section>
       <div className="grid min-w-0 gap-5 lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
-        <aside className="min-w-0 rounded-md border border-slate-200 bg-white p-4 shadow-sm lg:sticky lg:top-4">
+        <aside className="min-w-0 rounded-md border border-slate-200 bg-white p-4 shadow-sm lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:self-start lg:overflow-y-auto lg:overscroll-contain">
           <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-4">
             <div>
               <div className="flex items-center gap-2 text-sm font-semibold text-slate-950">
