@@ -2,6 +2,8 @@
 
 本项目是 `indie-products-map`，一个基于 `1c7/chinese-independent-developer` 的非官方独立产品灵感浏览器。
 
+当前范围：由于全量产品模式聚类成本过高，当前版本取消产品模式地图、产品模式页、产品模式筛选和自动聚类流程。站点保留项目浏览、搜索筛选、详情页、链接检测、官网摘要和项目级 AI 推测分析。
+
 AI agent 进入本仓库后，必须先阅读：
 
 - `docs/requirements.md`
@@ -30,7 +32,7 @@ AI agent 进入本仓库后，必须先阅读：
 4. T4 实现增量对比和 slug 固化
 5. T5 实现链接检测和官网摘要
 6. T6 实现 AI 分析
-7. T7 实现产品模式聚类
+7. T7 产品模式聚类已取消
 8. T8 实现页面骨架和静态路由
 9. T9 实现搜索筛选排序
 10. T10 实现 SEO 和 sitemap
@@ -94,7 +96,6 @@ GitHub Actions 月度更新流程必须符合：
 抓取 README
 → 增量对比
 → 新增项目 AI 分析
-→ 产品模式增量处理
 → 全量链接检测
 → schema 校验
 → Vitest
@@ -111,6 +112,6 @@ GitHub Actions 月度更新流程必须符合：
 - `npm run validate-data` 成功。
 - `npm test` 成功。
 - `npm run build` 成功。
-- 首页、项目列表页、项目详情页、产品模式页、关于页存在。
+- 首页、项目列表页、项目详情页、关于页存在。
 - GitHub Actions 支持每月定时和手动触发。
 - README 说明本地开发、环境变量、数据更新、GitHub Actions Secrets、Vercel 部署、数据来源、AI 边界和许可证。

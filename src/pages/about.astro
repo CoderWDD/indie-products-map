@@ -1,35 +1,123 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { latestUpdate } from "../lib/data";
+
+function formatDateTime(value: string | null) {
+  if (!value) {
+    return "尚未更新";
+  }
+
+  return new Intl.DateTimeFormat("zh-CN", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date(value));
+}
+
+const updatedAt = formatDateTime(latestUpdate.updatedAt);
+const sourceUrl = "https://github.com/1c7/chinese-independent-developer";
+const siteRepoUrl = "https://github.com/CoderWDD/indie-products-map";
 ---
 
 <BaseLayout title="关于 | Indie Products Map" description="本站的数据来源、AI 边界和非官方说明。">
-  <main class="mx-auto max-w-4xl px-6 py-10">
-    <p class="text-sm font-medium text-emerald-700">关于本站</p>
-    <h1 class="mt-3 text-3xl font-semibold tracking-normal">非官方独立产品灵感浏览器</h1>
+  <main>
+    <section class="border-b border-slate-200 bg-white/65">
+      <div class="mx-auto grid max-w-6xl gap-8 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
+        <div>
+          <p class="font-data text-xs uppercase tracking-[0.18em] text-emerald-700">About this record desk</p>
+          <h1 class="font-display mt-3 text-4xl font-semibold tracking-normal text-slate-950">关于这个观察台</h1>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
+            Indie Products Map 是一个非官方的中文独立产品灵感浏览器。它不替代原仓库，只把公开 README、链接检测、官网摘要和项目级 AI 推测组织成更容易浏览的静态站点。
+          </p>
+        </div>
+        <div class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+          <p class="text-sm font-semibold text-slate-950">数据状态</p>
+          <dl class="mt-4 space-y-3 text-sm">
+            <div class="flex justify-between gap-4">
+              <dt class="text-slate-500">项目数</dt>
+              <dd class="font-data text-slate-950">{latestUpdate.counts.projects}</dd>
+            </div>
+            <div class="flex justify-between gap-4">
+              <dt class="text-slate-500">AI 分析</dt>
+              <dd class="font-data text-slate-950">{latestUpdate.counts.aiAnalyzedProjects}</dd>
+            </div>
+            <div>
+              <dt class="text-slate-500">最近更新</dt>
+              <dd class="font-data mt-1 text-slate-950">{updatedAt}</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
 
-    <div class="mt-8 space-y-8 rounded-md border border-slate-200 bg-white p-6 leading-7 text-slate-700">
-      <section>
-        <h2 class="text-xl font-semibold tracking-normal text-slate-950">非官方说明</h2>
-        <p class="mt-3">本站是基于 1c7/chinese-independent-developer 的非官方项目，不接管原项目维护权。</p>
-      </section>
-      <section>
-        <h2 class="text-xl font-semibold tracking-normal text-slate-950">数据来源</h2>
-        <p class="mt-3">原始项目数据来自原仓库 README，本站只做结构化展示、官网摘要和后续 AI 辅助分析。</p>
-        <a class="mt-3 inline-block text-emerald-700 hover:text-emerald-900" href="https://github.com/1c7/chinese-independent-developer" target="_blank" rel="noreferrer">访问原 GitHub 仓库</a>
-      </section>
-      <section>
-        <h2 class="text-xl font-semibold tracking-normal text-slate-950">AI 分析边界</h2>
-        <p class="mt-3">AI 分析是推测性内容，仅用于产品灵感参考，不代表事实判断。本站不展示成功或失败判断、收入估算、用户规模推断或风险提示。</p>
-      </section>
-      <section>
-        <h2 class="text-xl font-semibold tracking-normal text-slate-950">提交、纠错或移除</h2>
-        <p class="mt-3">项目收录和修改请优先回到原仓库提交。本站纠错或移除请求可通过本仓库 GitHub Issue 处理，不提供后台或用户系统。</p>
-      </section>
-      <section>
-        <h2 class="text-xl font-semibold tracking-normal text-slate-950">许可证和更新</h2>
-        <p class="mt-3">本站代码使用 MIT License。最近更新时间：{latestUpdate.updatedAt ?? "尚未更新"}。</p>
-      </section>
+    <div class="mx-auto grid max-w-6xl gap-8 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_320px]">
+      <div class="space-y-6">
+        <section class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm font-medium text-emerald-700">非官方说明</p>
+          <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">原仓库仍是权威来源</h2>
+          <p class="mt-4 leading-7 text-slate-700">
+            本站基于 1c7/chinese-independent-developer 构建，不接管项目收录、排序和维护权。项目新增、修改、下架等源头问题，应优先回到原仓库处理。
+          </p>
+        </section>
+
+        <section class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm font-medium text-emerald-700">数据来源</p>
+          <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">公开信息被整理成结构化记录</h2>
+          <div class="mt-4 space-y-3 leading-7 text-slate-700">
+            <p>原始项目数据来自原仓库 README。本站会保存解析后的项目名称、链接、作者、简介、来源分区和来源顺序。</p>
+            <p>链接检测和官网摘要只保存轻量结果，不保存原始官网全文。</p>
+          </div>
+        </section>
+
+        <section class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm font-medium text-emerald-700">AI 边界</p>
+          <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">AI 内容只作为产品灵感推测</h2>
+          <p class="mt-4 leading-7 text-slate-700">
+            AI 分析经过 Zod 校验后才会写入数据。页面会把 README/官网摘要和 AI 推测分开展示。本站不展示成功或失败判断、收入估算、用户规模推断、风险提示、攻击性评价或作者动机断言。
+          </p>
+        </section>
+
+        <section class="rounded-md border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm font-medium text-emerald-700">当前范围</p>
+          <h2 class="font-display mt-1 text-2xl font-semibold tracking-normal text-slate-950">不维护产品模式地图</h2>
+          <p class="mt-4 leading-7 text-slate-700">
+            当前版本取消高成本的产品模式聚类和模式页，保留项目浏览、搜索筛选、详情页、链接检测、官网摘要和项目级 AI 推测分析。
+          </p>
+        </section>
+      </div>
+
+      <aside class="space-y-4 lg:sticky lg:top-4 lg:self-start">
+        <section class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+          <h2 class="font-semibold text-slate-950">维护入口</h2>
+          <div class="mt-4 space-y-3 text-sm">
+            <a class="block rounded-md bg-slate-950 px-4 py-3 font-medium text-white hover:bg-slate-800" href={sourceUrl} target="_blank" rel="noreferrer">
+              访问原始项目仓库
+            </a>
+            <a class="block rounded-md border border-slate-300 bg-white px-4 py-3 font-medium text-slate-700 hover:border-slate-500" href={`${siteRepoUrl}/issues`} target="_blank" rel="noreferrer">
+              提交本站纠错
+            </a>
+          </div>
+        </section>
+
+        <section class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+          <h2 class="font-semibold text-slate-950">本站不提供</h2>
+          <ul class="mt-4 space-y-2 text-sm leading-6 text-slate-700">
+            <li>账号、后台、评论或收藏</li>
+            <li>访问统计或行为记录</li>
+            <li>收入估算或成功判断</li>
+            <li>产品截图或作者头像抓取</li>
+          </ul>
+        </section>
+
+        <section class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+          <h2 class="font-semibold text-slate-950">许可证</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-700">
+            本站代码使用 MIT License。原始项目内容归各自项目和原仓库维护者所有。
+          </p>
+        </section>
+      </aside>
     </div>
   </main>
 </BaseLayout>
