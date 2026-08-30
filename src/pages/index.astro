@@ -46,106 +46,114 @@ const updatedAt = formatDate(latestUpdate.updatedAt);
 ---
 
 <BaseLayout title="Indie Products Map" description="基于原始 README 和 AI 推测的非官方独立产品灵感浏览器。">
-  <main>
-    <section class="mx-auto grid max-w-6xl gap-8 px-6 pb-12 pt-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-end lg:pt-16">
-      <div class="max-w-3xl">
-        <p class="font-data text-xs uppercase tracking-[0.18em] text-emerald-700">README / AI notes / product clues</p>
-        <h1 class="font-display mt-5 text-4xl font-semibold leading-tight tracking-normal text-slate-950 sm:text-6xl">
-          中文独立产品观察台
-        </h1>
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-          把原始 README 项目列表整理成可搜索、可筛选、可继续追问的产品样本库。原始信息和 AI 推测分开呈现，适合用来找方向、拆定位、看人群和产品形态。
-        </p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a class="rounded-md bg-slate-950 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800" href="/projects">
-            浏览全部项目
-          </a>
-          <a class="rounded-md border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-700 hover:text-slate-950" href="/about">
-            查看数据边界
-          </a>
-        </div>
-      </div>
+  <main class="overflow-x-clip">
+    <section class="border-b border-slate-200 bg-white/65">
+      <div class="mx-auto grid max-w-6xl gap-8 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-stretch lg:py-14">
+        <div class="flex min-w-0 max-w-full flex-col justify-between overflow-hidden rounded-md border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <div>
+            <p class="font-data max-w-full break-words text-xs uppercase tracking-[0.18em] text-emerald-700">Product intelligence desk</p>
+            <h1 class="font-display mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-normal text-slate-950 sm:text-6xl">
+              中文独立产品观察台
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
+              从公开 README 出发，把独立产品样本整理成可搜索、可筛选、可继续拆解的观察库。原始信息和 AI 推测分开呈现，适合找方向、看定位、拆人群。
+            </p>
+          </div>
 
-      <form class="rounded-md border border-slate-200 bg-white p-5 shadow-sm" action="/projects" method="get">
-        <label class="text-sm font-semibold text-slate-950" for="q">从一个关键词开始</label>
-        <p class="mt-2 text-sm leading-6 text-slate-600">
-          搜索项目名、作者、原始简介或 AI 摘要。
-        </p>
-        <input
-          id="q"
-          name="q"
-          class="mt-4 w-full rounded-md border border-slate-300 bg-white px-4 py-3 text-base outline-none focus:border-emerald-600"
-          placeholder="例如：PDF、Chrome、写作、出海"
-        />
-        <button class="mt-3 w-full rounded-md bg-slate-950 px-4 py-3 text-sm font-medium text-white hover:bg-slate-800" type="submit">
-          搜索项目
-        </button>
-      </form>
+          <form class="mt-8 max-w-2xl" action="/projects" method="get">
+            <label class="text-sm font-semibold text-slate-950" for="q">输入一个线索</label>
+            <div class="mt-3 grid gap-3 sm:grid-cols-[minmax(0,1fr)_120px]">
+              <input
+                id="q"
+                name="q"
+                class="min-w-0 rounded-md border border-slate-300 bg-white px-4 py-3 text-base outline-none focus:border-emerald-600"
+                placeholder="PDF、Chrome、写作、出海"
+              />
+              <button class="rounded-md bg-slate-950 px-4 py-3 text-sm font-medium text-white hover:bg-slate-800" type="submit">
+                搜索
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="grid min-w-0 max-w-full overflow-hidden rounded-md border border-slate-200 bg-slate-950 p-5 text-white shadow-sm">
+          <div>
+            <p class="font-data max-w-full break-words text-xs uppercase tracking-[0.18em] text-white/60">Dataset</p>
+            <p class="mt-4 text-sm leading-6 text-white/70">当前静态站点已生成项目详情页，可直接从类型、关键词或最近新增记录进入。</p>
+          </div>
+          <dl class="mt-8 grid grid-cols-2 gap-4">
+            <div>
+              <dt class="text-xs text-white/55">收录项目</dt>
+              <dd class="font-data mt-1 text-3xl font-semibold">{projects.length}</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-white/55">仍在原列表</dt>
+              <dd class="font-data mt-1 text-3xl font-semibold">{activeProjects}</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-white/55">AI 分析覆盖</dt>
+              <dd class="font-data mt-1 text-3xl font-semibold">{analysisCoverage}%</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-white/55">最近更新</dt>
+              <dd class="font-data mt-2 text-base font-semibold">{updatedAt}</dd>
+            </div>
+          </dl>
+          <div class="mt-8 grid gap-3 sm:flex sm:flex-wrap">
+            <a class="rounded-md bg-white px-4 py-3 text-center text-sm font-medium text-slate-950 hover:text-emerald-700" href="/projects">
+              浏览全部项目
+            </a>
+            <a class="rounded-md border border-white/20 px-4 py-3 text-center text-sm font-medium text-white/80 hover:text-white" href="/about">
+              数据边界
+            </a>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <section class="border-y border-slate-200 bg-white/75" aria-label="数据概况">
-      <div class="mx-auto grid max-w-6xl gap-px px-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="py-6">
-          <div class="text-sm text-slate-500">收录项目</div>
-          <div class="font-data mt-2 text-4xl font-semibold text-slate-950">{projects.length}</div>
-        </div>
-        <div class="py-6">
-          <div class="text-sm text-slate-500">仍在原列表</div>
-          <div class="font-data mt-2 text-4xl font-semibold text-slate-950">{activeProjects}</div>
-        </div>
-        <div class="py-6">
-          <div class="text-sm text-slate-500">AI 分析覆盖</div>
-          <div class="font-data mt-2 text-4xl font-semibold text-slate-950">{analysisCoverage}%</div>
-        </div>
-        <div class="py-6">
-          <div class="text-sm text-slate-500">最近更新</div>
-          <div class="font-data mt-3 text-xl font-semibold text-slate-950">{updatedAt}</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mx-auto grid max-w-6xl gap-6 px-6 py-12 lg:grid-cols-[0.85fr_1.15fr]">
+    <section class="mx-auto grid max-w-6xl gap-8 px-6 py-12 lg:grid-cols-[0.72fr_1.28fr]">
       <div>
-        <p class="text-sm font-medium text-emerald-700">观察维度</p>
-        <h2 class="font-display mt-2 text-3xl font-semibold tracking-normal text-slate-950">先看产品形态，再进入项目细节</h2>
+        <p class="text-sm font-medium text-emerald-700">按产品类型进入</p>
+        <h2 class="font-display mt-2 text-3xl font-semibold tracking-normal text-slate-950">先看样本分布，再进入项目细节</h2>
         <p class="mt-4 leading-7 text-slate-700">
-          当前版本不再维护高成本的产品模式地图。首页改为展示由项目级 AI 分析沉淀出的产品类型，让你先感知样本分布，再进入项目列表做搜索和筛选。
+          当前版本不再维护高成本的产品模式地图。这里展示由项目级 AI 分析沉淀出的产品类型，用来快速感知哪些方向样本更多。
         </p>
       </div>
       <div class="grid gap-3 sm:grid-cols-2">
         {
-          topProductTypes.map(([type, count]) => (
+          topProductTypes.map(([type, count], index) => (
             <a
-              class="flex items-center justify-between rounded-md border border-slate-200 bg-white px-4 py-3 shadow-sm hover:border-slate-300 hover:text-slate-950"
+              class="group grid min-w-0 grid-cols-[2.5rem_minmax(0,1fr)_auto] items-center gap-3 rounded-md border border-slate-200 bg-white px-4 py-3 shadow-sm hover:border-slate-300"
               href={`/projects?q=${encodeURIComponent(type)}`}
             >
-              <span class="text-sm font-medium text-slate-950">{type}</span>
-              <span class="font-data text-sm text-slate-500">{count}</span>
+              <span class="font-data text-xs text-slate-500">{String(index + 1).padStart(2, "0")}</span>
+              <span class="min-w-0 break-words text-sm font-medium text-slate-950 group-hover:text-emerald-700">{type}</span>
+              <span class="font-data rounded-md bg-slate-100 px-2 py-1 text-sm text-slate-500">{count}</span>
             </a>
           ))
         }
       </div>
     </section>
 
-    <section class="border-y border-slate-200 bg-white/70">
-      <div class="mx-auto grid max-w-6xl gap-8 px-6 py-12 lg:grid-cols-[1fr_1fr]">
+    <section class="border-y border-slate-200 bg-white/75">
+      <div class="mx-auto grid max-w-6xl gap-8 px-6 py-12 lg:grid-cols-[0.92fr_1.08fr]">
         <div>
-          <p class="text-sm font-medium text-emerald-700">本次数据状态</p>
-          <h2 class="font-display mt-2 text-3xl font-semibold tracking-normal text-slate-950">更新后还有 {unanalyzedCount} 个项目暂无可用 AI 分析</h2>
+          <p class="text-sm font-medium text-emerald-700">本次更新</p>
+          <h2 class="font-display mt-2 text-3xl font-semibold tracking-normal text-slate-950">还有 {unanalyzedCount} 个项目暂无可用 AI 分析</h2>
           <p class="mt-4 leading-7 text-slate-700">
             这些项目仍会展示原始 README 信息。AI 内容只作为产品灵感推测，不替代项目事实，也不用于判断项目成败。
           </p>
         </div>
-        <div class="rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+        <div>
           <div class="flex items-center justify-between gap-4 border-b border-slate-200 pb-3">
             <h3 class="text-sm font-semibold text-slate-950">最近新增记录</h3>
             <a class="text-sm text-emerald-700 hover:text-emerald-900" href="/projects">全部项目</a>
           </div>
-          <ol class="mt-4 space-y-3">
+          <ol class="mt-4 grid gap-3">
             {
               latestAddedProjects.map((project) => (
-                <li class="flex items-center justify-between gap-4 text-sm">
-                  <a class="truncate font-medium text-slate-950 hover:text-emerald-700" href={`/projects/${project.projectSlug}`}>
+                <li class="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-md border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm">
+                  <a class="min-w-0 truncate font-medium text-slate-950 hover:text-emerald-700" href={`/projects/${project.projectSlug}`}>
                     {project.name}
                   </a>
                   <span class="font-data shrink-0 text-xs text-slate-500">{project.projectSlug}</span>
