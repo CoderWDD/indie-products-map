@@ -2,6 +2,8 @@
 
 面向中文用户的非官方独立产品灵感浏览器，基于 [`1c7/chinese-independent-developer`](https://github.com/1c7/chinese-independent-developer) 构建。
 
+Slogan：从中文独立产品里，找下一次动手的方向。
+
 这个项目把原始 README 中的中文独立产品列表转换为结构化数据，补充链接检测、官网首页轻量摘要和经过 Zod 校验的 AI 推测分析，并构建成一个可静态部署的 Astro 站点。
 
 它的核心使用场景是：帮助正在寻找个人产品方向的中文用户，更快理解「别人做了什么产品、面向谁、可能解决什么问题、有哪些可借鉴的切入点」。
@@ -11,6 +13,10 @@
 这是一个非官方衍生项目。项目收录和原始信息修改仍以原始 README 为准。
 
 本站不包含账户、后台、评论、收藏、导出、访问统计、深色模式或 E2E 测试。
+
+## Brand
+
+网站 logo 使用「产」字作为主体，叠加蓝色坐标点和琥珀色锚点，表达“从中文独立产品样本中定位方向”。站点图标位于 `public/logo.svg`，页面中的可复用标识组件位于 `src/components/SiteLogo.astro`。
 
 ## Local Development
 
