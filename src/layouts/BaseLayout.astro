@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { ArrowUpRight, Database, Info, Search } from "lucide-react";
 import { createAbsoluteUrl, normalizePathname } from "../lib/site";
 
 type Props = {
@@ -49,17 +50,17 @@ function isActivePath(href: string) {
       跳到主要内容
     </a>
     <header class="border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div class="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
-        <a href="/" class="group inline-flex w-fit items-center gap-3 text-slate-950" aria-label="Indie Products Map 首页">
-          <span class="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 bg-slate-950 font-data text-sm text-white shadow-sm">
+      <div class="mx-auto grid max-w-6xl gap-4 px-6 py-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
+        <a href="/" class="group inline-flex min-w-0 items-center gap-3 text-slate-950" aria-label="Indie Products Map 首页">
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-950 font-data text-sm text-white shadow-sm">
             IP
           </span>
-          <span>
-            <span class="font-display block text-xl font-semibold tracking-normal">Indie Products Map</span>
-            <span class="block text-xs text-slate-500">中文独立产品观察台</span>
+          <span class="min-w-0">
+            <span class="font-display block truncate text-xl font-semibold tracking-normal">Indie Products Map</span>
+            <span class="block truncate text-xs text-slate-500">中文独立产品观察台</span>
           </span>
         </a>
-        <nav class="flex w-fit flex-wrap gap-2 rounded-md border border-slate-200 bg-slate-50 p-1 text-sm text-slate-600" aria-label="主导航">
+        <nav class="grid grid-cols-3 gap-1 rounded-md border border-slate-200 bg-slate-50 p-1 text-center text-sm text-slate-600 sm:flex sm:w-fit sm:flex-wrap" aria-label="主导航">
           {
             navigation.map((item) => {
               const active = isActivePath(item.href);
@@ -83,12 +84,16 @@ function isActivePath(href: string) {
       </div>
     </header>
     <div class="border-b border-slate-200 bg-white/80">
-      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-3 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
-        <p>
+      <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-3 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+        <p class="flex min-w-0 items-start gap-2 leading-6">
+          <Info aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-emerald-700" />
+          <span>
           非官方项目。原始信息来自 README 和官网摘要，AI 内容只作为产品灵感推测。
+          </span>
         </p>
-        <a class="w-fit text-slate-700 underline decoration-slate-300 hover:text-slate-950" href="/about">
+        <a class="inline-flex w-fit shrink-0 items-center gap-1 text-slate-700 underline decoration-slate-300 hover:text-slate-950" href="/about">
           查看边界说明
+          <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
         </a>
       </div>
     </div>
@@ -96,18 +101,40 @@ function isActivePath(href: string) {
       <slot />
     </div>
     <footer class="border-t border-slate-200 bg-white/90">
-      <div class="mx-auto grid max-w-6xl gap-5 px-6 py-8 text-sm text-slate-500 sm:grid-cols-[1fr_auto] sm:items-end">
-        <div>
-          <p class="font-display text-lg font-semibold text-slate-950">Indie Products Map</p>
-          <p class="mt-2 max-w-2xl">
+      <div class="mx-auto grid max-w-6xl gap-6 px-6 py-8 text-sm text-slate-500 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+        <div class="min-w-0">
+          <div class="flex items-center gap-3">
+            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-950 font-data text-xs text-white shadow-sm">IP</span>
+            <div class="min-w-0">
+              <p class="font-display truncate text-lg font-semibold text-slate-950">Indie Products Map</p>
+              <p class="mt-1 text-xs text-slate-500">非官方中文独立产品观察台</p>
+            </div>
+          </div>
+          <p class="mt-4 max-w-2xl leading-6">
             用结构化数据和 AI 推测辅助观察中文独立产品。项目收录和修改请优先回到原 GitHub 仓库。
           </p>
         </div>
-        <div class="flex flex-wrap gap-3 sm:justify-end">
-          <a class="hover:text-slate-950" href="/projects">浏览项目</a>
-          <a class="hover:text-slate-950" href="/about">关于本站</a>
-          <a class="hover:text-slate-950" href="https://github.com/1c7/chinese-independent-developer" target="_blank" rel="noreferrer">
-            原始仓库
+        <div class="grid gap-3 sm:grid-cols-3 lg:min-w-[440px]">
+          <a class="flex items-center justify-between gap-3 rounded-md border border-slate-200 bg-white px-4 py-3 font-medium text-slate-700 hover:border-slate-500 hover:text-slate-950" href="/projects">
+            <span class="inline-flex items-center gap-2">
+              <Search aria-hidden="true" className="h-4 w-4 text-emerald-700" />
+              浏览项目
+            </span>
+            <ArrowUpRight aria-hidden="true" className="h-4 w-4 shrink-0" />
+          </a>
+          <a class="flex items-center justify-between gap-3 rounded-md border border-slate-200 bg-white px-4 py-3 font-medium text-slate-700 hover:border-slate-500 hover:text-slate-950" href="/about">
+            <span class="inline-flex items-center gap-2">
+              <Info aria-hidden="true" className="h-4 w-4 text-emerald-700" />
+              关于本站
+            </span>
+            <ArrowUpRight aria-hidden="true" className="h-4 w-4 shrink-0" />
+          </a>
+          <a class="flex items-center justify-between gap-3 rounded-md border border-slate-200 bg-white px-4 py-3 font-medium text-slate-700 hover:border-slate-500 hover:text-slate-950" href="https://github.com/1c7/chinese-independent-developer" target="_blank" rel="noreferrer">
+            <span class="inline-flex items-center gap-2">
+              <Database aria-hidden="true" className="h-4 w-4 text-emerald-700" />
+              原始仓库
+            </span>
+            <ArrowUpRight aria-hidden="true" className="h-4 w-4 shrink-0" />
           </a>
         </div>
       </div>

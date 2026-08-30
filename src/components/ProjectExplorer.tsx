@@ -1,4 +1,12 @@
-import { ChevronDown, ExternalLink, RotateCcw, SlidersHorizontal } from "lucide-react";
+import {
+  ChevronDown,
+  ExternalLink,
+  ListFilter,
+  Loader2,
+  RotateCcw,
+  SlidersHorizontal,
+  X,
+} from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 import {
@@ -27,6 +35,12 @@ const sortOptions: Array<{ value: ProjectSortKey; label: string }> = [
 ];
 
 const pageSize = 60;
+const filterLabels: Record<FilterKey, string> = {
+  productTypes: "类型",
+  targetUsers: "用户",
+  monetizationMethods: "商业化",
+  linkStatuses: "链接",
+};
 
 export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
   const [projects, setProjects] = useState<ProjectListItem[]>([]);
@@ -48,10 +62,16 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
   }, [filters, projects, query, sortKey]);
   const displayedProjects = visibleProjects.slice(0, visibleLimit);
   const activeFilterCount = countActiveFilters(filters);
+  const activeFilterEntries = Object.entries(filters).flatMap(([key, values]) =>
+    values.map((value) => ({ key: key as FilterKey, value })),
+  );
+  const sortLabel = sortOptions.find((option) => option.value === sortKey)?.label ?? "默认";
   const hasActiveControls = query.trim().length > 0 || activeFilterCount > 0 || sortKey !== "default";
   const analyzedCount = projects.filter((project) => project.aiAnalysis?.status === "available").length;
   const lowConfidenceCount = projects.filter((project) => project.aiAnalysis?.lowConfidence).length;
   const isLoading = !loadError && projects.length === 0;
+  const displayStart = visibleProjects.length > 0 ? 1 : 0;
+  const displayEnd = Math.min(displayedProjects.length, visibleProjects.length);
 
   useEffect(() => {
     let active = true;
@@ -76,6 +96,13 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
     return () => {
       active = false;
     };
+  }, []);
+
+  useEffect(() => {
+    const runtimeQuery = new URLSearchParams(window.location.search).get("q") ?? "";
+    if (runtimeQuery.trim().length > 0) {
+      setQuery(runtimeQuery);
+    }
   }, []);
 
   useEffect(() => {
@@ -109,8 +136,15 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
     }));
   }
 
+  function removeFilter(filterKey: FilterKey, value: string) {
+    setFilters((current) => ({
+      ...current,
+      [filterKey]: current[filterKey].filter((item) => item !== value),
+    }));
+  }
+
   return (
-    <section className="mt-8">
+    <section>
       <div className="grid min-w-0 gap-5 lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
         <aside className="min-w-0 rounded-md border border-slate-200 bg-white p-4 shadow-sm lg:sticky lg:top-4">
           <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-4">
@@ -122,7 +156,7 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
               <p className="mt-1 text-xs text-slate-500">{activeFilterCount} 个条件已选</p>
             </div>
             <button
-              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-slate-200 text-slate-500 hover:text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-slate-200 text-slate-500 hover:border-slate-500 hover:text-slate-950 disabled:cursor-not-allowed disabled:opacity-40"
               disabled={!hasActiveControls}
               onClick={resetControls}
               title="清除条件"
@@ -140,7 +174,7 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
           <label className="mt-4 block text-sm font-medium text-slate-700">
             排序
             <select
-              className="mt-2 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm font-normal"
+              className="mt-2 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal"
               value={sortKey}
               onChange={(event) => setSortKey(event.target.value as ProjectSortKey)}
             >
@@ -159,13 +193,18 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
                 <span className="font-data text-slate-500">{activeFilterCount}</span>
               </div>
               <div className="mt-3 flex min-w-0 flex-wrap gap-2 text-xs">
-                {Object.entries(filters).flatMap(([key, values]) =>
-                  values.map((value) => (
-                    <span className="max-w-full break-words rounded-md bg-white px-2 py-1 text-slate-600" key={`${key}-${value}`}>
-                      {value}
-                    </span>
-                  )),
-                )}
+                {activeFilterEntries.map(({ key, value }) => (
+                  <button
+                    className="inline-flex max-w-full items-center gap-1 rounded-md bg-white px-2 py-1 text-left text-slate-600 hover:text-slate-950"
+                    key={`${key}-${value}`}
+                    onClick={() => removeFilter(key, value)}
+                    title={`移除 ${value}`}
+                    type="button"
+                  >
+                    <span className="min-w-0 break-words">{value}</span>
+                    <X aria-hidden="true" className="h-3 w-3 shrink-0" />
+                  </button>
+                ))}
               </div>
             </div>
           ) : null}
@@ -218,7 +257,10 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
           <div className="rounded-md border border-slate-200 bg-white px-5 py-4 shadow-sm">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-sm text-slate-500">当前结果</p>
+                <div className="flex items-center gap-2 text-sm text-slate-500">
+                  <ListFilter aria-hidden="true" className="h-4 w-4 text-emerald-700" />
+                  当前结果
+                </div>
                 <p className="font-data mt-1 text-3xl font-semibold text-slate-950">
                   {isLoading ? "..." : visibleProjects.length}
                   <span className="ml-2 text-sm font-normal text-slate-500">
@@ -239,14 +281,40 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
             </div>
             {hasActiveControls ? (
               <div className="mt-4 flex min-w-0 flex-wrap gap-2 border-t border-slate-200 pt-4 text-xs">
-                {query.trim() ? <span className="max-w-full break-words rounded-md bg-slate-100 px-2 py-1 text-slate-600">搜索：{query}</span> : null}
-                {Object.entries(filters).flatMap(([key, values]) =>
-                  values.map((value) => (
-                    <span className="max-w-full break-words rounded-md bg-slate-100 px-2 py-1 text-slate-600" key={`${key}-${value}`}>
-                      {value}
-                    </span>
-                  )),
-                )}
+                {query.trim() ? (
+                  <button
+                    className="inline-flex max-w-full items-center gap-1 rounded-md bg-slate-100 px-2 py-1 text-left text-slate-600 hover:text-slate-950"
+                    onClick={() => setQuery("")}
+                    title="清除搜索"
+                    type="button"
+                  >
+                    <span className="min-w-0 break-words">搜索：{query}</span>
+                    <X aria-hidden="true" className="h-3 w-3 shrink-0" />
+                  </button>
+                ) : null}
+                {activeFilterEntries.map(({ key, value }) => (
+                  <button
+                    className="inline-flex max-w-full items-center gap-1 rounded-md bg-slate-100 px-2 py-1 text-left text-slate-600 hover:text-slate-950"
+                    key={`${key}-${value}`}
+                    onClick={() => removeFilter(key, value)}
+                    title={`移除 ${value}`}
+                    type="button"
+                  >
+                    <span className="min-w-0 break-words">{filterLabels[key]}：{value}</span>
+                    <X aria-hidden="true" className="h-3 w-3 shrink-0" />
+                  </button>
+                ))}
+                {sortKey !== "default" ? (
+                  <button
+                    className="inline-flex max-w-full items-center gap-1 rounded-md bg-slate-100 px-2 py-1 text-left text-slate-600 hover:text-slate-950"
+                    onClick={() => setSortKey("default")}
+                    title="恢复默认排序"
+                    type="button"
+                  >
+                    <span>排序：{sortLabel}</span>
+                    <X aria-hidden="true" className="h-3 w-3 shrink-0" />
+                  </button>
+                ) : null}
               </div>
             ) : null}
           </div>
@@ -258,11 +326,14 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
           ) : null}
 
           {isLoading ? (
-            <div className="mt-4 rounded-md border border-slate-200 bg-white p-6 text-sm text-slate-600">
-              <div className="h-4 w-36 rounded-md bg-slate-100" />
+            <div className="mt-4 rounded-md border border-slate-200 bg-white p-6 text-sm text-slate-600 shadow-sm">
+              <div className="flex items-center gap-2">
+                <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin text-emerald-700" />
+                <span>正在载入项目数据</span>
+              </div>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                <div className="h-36 rounded-md bg-slate-50" />
-                <div className="h-36 rounded-md bg-slate-50" />
+                <div className="h-36 animate-pulse rounded-md bg-slate-50" />
+                <div className="h-36 animate-pulse rounded-md bg-slate-50" />
               </div>
             </div>
           ) : null}
@@ -289,14 +360,20 @@ export function ProjectExplorer({ initialQuery = "" }: ProjectExplorerProps) {
             ))}
           </div>
 
+          {!isLoading && visibleProjects.length > 0 ? (
+            <p className="mt-5 text-center text-sm text-slate-500">
+              当前显示 {displayStart}-{displayEnd}，共 {visibleProjects.length} 个匹配项目。
+            </p>
+          ) : null}
+
           {visibleLimit < visibleProjects.length ? (
-            <div className="mt-6 flex justify-center">
+            <div className="mt-4 flex justify-center">
               <button
-                className="rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 hover:border-slate-500"
+                className="rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 shadow-sm hover:border-slate-500 hover:text-slate-950"
                 type="button"
                 onClick={() => setVisibleLimit((value) => value + pageSize)}
               >
-                加载更多
+                加载更多，剩余 {visibleProjects.length - visibleLimit} 个
               </button>
             </div>
           ) : null}
@@ -366,7 +443,7 @@ function FilterGroup({
             <label
               className={[
                 "flex min-w-0 max-w-full items-start gap-2 rounded-md border px-3 py-2 text-slate-700",
-                checked ? "border-slate-300 bg-white shadow-sm" : "border-slate-200 bg-slate-50",
+                checked ? "border-slate-300 bg-white text-slate-950 shadow-sm" : "border-slate-200 bg-slate-50 hover:border-slate-300",
               ].join(" ")}
               key={option.value}
             >
