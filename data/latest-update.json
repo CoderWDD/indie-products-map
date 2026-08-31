@@ -1,16 +1,34 @@
 {
   "schemaVersion": 1,
   "sourceUrl": "https://github.com/1c7/chinese-independent-developer/blob/master/README.md",
-  "fetchedAt": "2026-08-30T11:58:56.091Z",
-  "updatedAt": "2026-08-30T12:00:43.970Z",
+  "fetchedAt": "2026-08-31T09:45:29.337Z",
+  "updatedAt": "2026-08-31T09:46:48.446Z",
   "counts": {
-    "sourceProjects": 1969,
-    "projects": 1969,
+    "sourceProjects": 1972,
+    "projects": 1972,
     "patterns": 0,
-    "aiAnalyzedProjects": 1938
+    "aiAnalyzedProjects": 1940
   },
   "changes": {
     "added": [
+      {
+        "sourceId": "f4c2d320ea8d",
+        "projectSlug": "hellogen",
+        "name": "HelloGen"
+      },
+      {
+        "sourceId": "445cf9549ff0",
+        "projectSlug": "animot",
+        "name": "AniMot"
+      },
+      {
+        "sourceId": "4675ef4673a7",
+        "projectSlug": "cardshopdir",
+        "name": "CardShopDir"
+      }
+    ],
+    "removed": [],
+    "changed": [
       {
         "sourceId": "75b1c71ad24a",
         "projectSlug": "ikat",
@@ -45,10 +63,7 @@
         "sourceId": "ebc01db11015",
         "projectSlug": "deepseek",
         "name": "DeepSeek酱语录"
-      }
-    ],
-    "removed": [],
-    "changed": [
+      },
       {
         "sourceId": "a7aff284c198",
         "projectSlug": "agentero",
