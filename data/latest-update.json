@@ -1,16 +1,174 @@
 {
   "schemaVersion": 1,
   "sourceUrl": "https://github.com/1c7/chinese-independent-developer/blob/master/README.md",
-  "fetchedAt": "2026-08-31T09:45:29.337Z",
-  "updatedAt": "2026-08-31T09:46:48.446Z",
+  "fetchedAt": "2026-09-07T08:18:50.667Z",
+  "updatedAt": "2026-09-07T08:29:33.738Z",
   "counts": {
-    "sourceProjects": 1972,
-    "projects": 1972,
+    "sourceProjects": 2003,
+    "projects": 2003,
     "patterns": 0,
-    "aiAnalyzedProjects": 1940
+    "aiAnalyzedProjects": 1970
   },
   "changes": {
     "added": [
+      {
+        "sourceId": "3f8d8c7371c2",
+        "projectSlug": "lawpulse",
+        "name": "法脉 LawPulse"
+      },
+      {
+        "sourceId": "235c968cfbbf",
+        "projectSlug": "sitehunter",
+        "name": "SiteHunter"
+      },
+      {
+        "sourceId": "1e5ac8e978e6",
+        "projectSlug": "seadanse",
+        "name": "Seadanse"
+      },
+      {
+        "sourceId": "3dacb56c4302",
+        "projectSlug": "subnetdesk",
+        "name": "SubnetDesk"
+      },
+      {
+        "sourceId": "b2fca6ca33e3",
+        "projectSlug": "dtcwise",
+        "name": "DTCwise"
+      },
+      {
+        "sourceId": "a625ace511fb",
+        "projectSlug": "crosstool",
+        "name": "CrossTool"
+      },
+      {
+        "sourceId": "3133a4cf6438",
+        "projectSlug": "gemini-omni-3133a4",
+        "name": "Gemini Omni"
+      },
+      {
+        "sourceId": "7589f21bc1c1",
+        "projectSlug": "htmlshare",
+        "name": "HTMLShare"
+      },
+      {
+        "sourceId": "c96c737f9528",
+        "projectSlug": "rgb-to-cmyk",
+        "name": "RGB TO CMYK"
+      },
+      {
+        "sourceId": "de294b3867e3",
+        "projectSlug": "video-text-remover",
+        "name": "Video Text Remover"
+      },
+      {
+        "sourceId": "d800ee1a6cc0",
+        "projectSlug": "piceditor",
+        "name": "PicEditor"
+      },
+      {
+        "sourceId": "4eacc8a827c8",
+        "projectSlug": "yourart",
+        "name": "YourArt"
+      },
+      {
+        "sourceId": "fb57cc6a814a",
+        "projectSlug": "cc8-cc",
+        "name": "cc8.cc"
+      },
+      {
+        "sourceId": "90192049416f",
+        "projectSlug": "unblurry",
+        "name": "unblurry"
+      },
+      {
+        "sourceId": "bd17c17d7d47",
+        "projectSlug": "lunalisa",
+        "name": "Lunalisa"
+      },
+      {
+        "sourceId": "e38119a41a99",
+        "projectSlug": "bulkcerts",
+        "name": "BulkCerts"
+      },
+      {
+        "sourceId": "7e6b9596414d",
+        "projectSlug": "stitchcraft",
+        "name": "StitchCraft"
+      },
+      {
+        "sourceId": "60cab623775f",
+        "projectSlug": "image3d-ai",
+        "name": "Image3D AI"
+      },
+      {
+        "sourceId": "f56c741e7d32",
+        "projectSlug": "pdfcompare",
+        "name": "PdfCompare"
+      },
+      {
+        "sourceId": "5e6c01d0358b",
+        "projectSlug": "xiustore",
+        "name": "XiuStore"
+      },
+      {
+        "sourceId": "69a50c928308",
+        "projectSlug": "vibe-coding",
+        "name": "Vibe Coding 首切片"
+      },
+      {
+        "sourceId": "2a7b4349357c",
+        "projectSlug": "movetozero",
+        "name": "MoveToZero"
+      },
+      {
+        "sourceId": "4e6155e19cc3",
+        "projectSlug": "chat2mind",
+        "name": "Chat2Mind"
+      },
+      {
+        "sourceId": "2721f110af3c",
+        "projectSlug": "bookmarkhell",
+        "name": "BookmarkHell"
+      },
+      {
+        "sourceId": "709b730aa8f4",
+        "projectSlug": "bigwalktools",
+        "name": "BigWalkTools"
+      },
+      {
+        "sourceId": "ca4c9f638396",
+        "projectSlug": "wardogs-companion",
+        "name": "WARDOGS Companion"
+      },
+      {
+        "sourceId": "48b18b95aae0",
+        "projectSlug": "echoword",
+        "name": "EchoWord"
+      },
+      {
+        "sourceId": "bb2dde54bd83",
+        "projectSlug": "flow-ai-video",
+        "name": "Flow AI Video"
+      },
+      {
+        "sourceId": "db91822782a4",
+        "projectSlug": "upscayl",
+        "name": "Upscayl"
+      },
+      {
+        "sourceId": "00c6c00c731d",
+        "projectSlug": "video-watermark-remover-00c6c0",
+        "name": "Video Watermark Remover"
+      },
+      {
+        "sourceId": "66448d1804a4",
+        "projectSlug": "seed-imagine",
+        "name": "Seed Imagine"
+      }
+    ],
+    "removed": [],
+    "changed": [
       {
         "sourceId": "f4c2d320ea8d",
         "projectSlug": "hellogen",
@@ -25,10 +183,7 @@
         "sourceId": "4675ef4673a7",
         "projectSlug": "cardshopdir",
         "name": "CardShopDir"
-      }
-    ],
-    "removed": [],
-    "changed": [
+      },
       {
         "sourceId": "75b1c71ad24a",
         "projectSlug": "ikat",
