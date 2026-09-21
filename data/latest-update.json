@@ -1,260 +1,100 @@
 {
   "schemaVersion": 1,
   "sourceUrl": "https://github.com/1c7/chinese-independent-developer/blob/master/README.md",
-  "fetchedAt": "2026-09-14T08:55:44.666Z",
-  "updatedAt": "2026-09-14T09:27:00.135Z",
+  "fetchedAt": "2026-09-21T08:57:16.448Z",
+  "updatedAt": "2026-09-21T09:01:44.392Z",
   "counts": {
-    "sourceProjects": 1841,
-    "projects": 2051,
+    "sourceProjects": 1858,
+    "projects": 2068,
     "patterns": 0,
-    "aiAnalyzedProjects": 2018
+    "aiAnalyzedProjects": 2034
   },
   "changes": {
     "added": [
       {
-        "sourceId": "1cac8fde1ab5",
-        "projectSlug": "mika",
-        "name": "小麦 Mika"
+        "sourceId": "630c167a70c6",
+        "projectSlug": "melodytrace",
+        "name": "MelodyTrace"
       },
       {
-        "sourceId": "957915a629b2",
-        "projectSlug": "excel",
-        "name": "Excel 表格工具"
+        "sourceId": "dbe5fc5d90ca",
+        "projectSlug": "project-b9f33e",
+        "name": "拼豆猫师傅-拼豆图纸工坊"
       },
       {
-        "sourceId": "420a7f923eef",
-        "projectSlug": "tidelink",
-        "name": "TideLink"
+        "sourceId": "04ab73e4cd7a",
+        "projectSlug": "project-19a68c",
+        "name": "阅古文"
       },
       {
-        "sourceId": "9510d71271f6",
-        "projectSlug": "image-to-ascii",
-        "name": "Image to ASCII"
+        "sourceId": "6fe3db6bf559",
+        "projectSlug": "neatcompress",
+        "name": "NeatCompress"
       },
       {
-        "sourceId": "451d030b9b40",
-        "projectSlug": "jiandan",
-        "name": "剪蛋 Jiandan"
+        "sourceId": "01b27c3707be",
+        "projectSlug": "imagetoimageai",
+        "name": "ImageToImageAI"
       },
       {
-        "sourceId": "ed2ffb0a8ce6",
-        "projectSlug": "pet-memorial-portrait",
-        "name": "pet memorial portrait"
+        "sourceId": "f6fe4b73e940",
+        "projectSlug": "musuw",
+        "name": "Musuw"
       },
       {
-        "sourceId": "529a3e0be65e",
-        "projectSlug": "1980s-ai-photo",
-        "name": "1980s AI Photo"
+        "sourceId": "aa6944fbbfe9",
+        "projectSlug": "unit-converter-for-science",
+        "name": "Unit Converter for Science"
       },
       {
-        "sourceId": "8ce9b6190201",
-        "projectSlug": "ielts-writing-practice",
-        "name": "IELTS Writing Practice"
+        "sourceId": "fb60467d9268",
+        "projectSlug": "color-season-ai",
+        "name": "Color Season AI"
       },
       {
-        "sourceId": "ec849cfcbeb8",
-        "projectSlug": "nanoavatar",
-        "name": "NanoAvatar"
+        "sourceId": "7321fcafaf05",
+        "projectSlug": "random-animal-generator",
+        "name": "Random Animal Generator"
       },
       {
-        "sourceId": "b25855b65515",
-        "projectSlug": "shen-suan-ge",
-        "name": "神算阁 / Shen Suan Ge"
+        "sourceId": "aa65e4de186e",
+        "projectSlug": "jev-ai",
+        "name": "Jev AI"
       },
       {
-        "sourceId": "3428d26c066c",
-        "projectSlug": "ui-design-agent-kit",
-        "name": "UI Design Agent Kit 作品展厅"
+        "sourceId": "57c41938b7cb",
+        "projectSlug": "soulcut",
+        "name": "SoulCut"
       },
       {
-        "sourceId": "b43167aa3633",
-        "projectSlug": "tokentracker",
-        "name": "TokenTracker / 纸账"
+        "sourceId": "394bed2955cf",
+        "projectSlug": "opc-394bed",
+        "name": "人人都是OPC"
       },
       {
-        "sourceId": "0581b9d59391",
-        "projectSlug": "trim",
-        "name": "Trim 订阅扫雷器"
+        "sourceId": "e3713de6b8aa",
+        "projectSlug": "playiq",
+        "name": "PlayIQ"
       },
       {
-        "sourceId": "3b5b3c30121a",
-        "projectSlug": "project-db035d",
-        "name": "工程数据驾驶舱"
+        "sourceId": "f32b592c501e",
+        "projectSlug": "iloveepub",
+        "name": "iloveepub"
       },
       {
-        "sourceId": "f4c1f90541b6",
-        "projectSlug": "voicecloner",
-        "name": "VoiceCloner"
+        "sourceId": "405288f4f270",
+        "projectSlug": "project-a04be0",
+        "name": "云播切片"
       },
       {
-        "sourceId": "5f783c5b4be3",
-        "projectSlug": "c2anime",
-        "name": "C2Anime"
+        "sourceId": "95b6cd572265",
+        "projectSlug": "picwall",
+        "name": "PICWALL"
       },
       {
-        "sourceId": "88adba58db3d",
-        "projectSlug": "art-grid-maker",
-        "name": "Art Grid Maker"
-      },
-      {
-        "sourceId": "9713e74e738b",
-        "projectSlug": "twiflux",
-        "name": "TwiFlux"
-      },
-      {
-        "sourceId": "bde75a682b25",
-        "projectSlug": "piclocation",
-        "name": "PicLocation"
-      },
-      {
-        "sourceId": "27d1207702c1",
-        "projectSlug": "find-key-bpm",
-        "name": "Find Key & BPM"
-      },
-      {
-        "sourceId": "7eefa3689b18",
-        "projectSlug": "airadar-ai",
-        "name": "AIradar · AI 订阅价格雷达"
-      },
-      {
-        "sourceId": "0ef287edf104",
-        "projectSlug": "project-9aa40d",
-        "name": "素刀"
-      },
-      {
-        "sourceId": "517178aa120f",
-        "projectSlug": "ai-517178",
-        "name": "AI 智能快照"
-      },
-      {
-        "sourceId": "3e5da7f97dc8",
-        "projectSlug": "opc",
-        "name": "OPC 情报站"
-      },
-      {
-        "sourceId": "625f21be60f3",
-        "projectSlug": "project-8cf61a",
-        "name": "慧报价"
-      },
-      {
-        "sourceId": "f4451c48f37f",
-        "projectSlug": "scribetoany",
-        "name": "ScribeToAny"
-      },
-      {
-        "sourceId": "72b319466401",
-        "projectSlug": "gpt-image-2-5",
-        "name": "Gpt Image 2.5 图片生成器"
-      },
-      {
-        "sourceId": "7cea631f2580",
-        "projectSlug": "picpermit",
-        "name": "PicPermit"
-      },
-      {
-        "sourceId": "9123ee153435",
-        "projectSlug": "thumbrix",
-        "name": "Thumbrix"
-      },
-      {
-        "sourceId": "7db394760a58",
-        "projectSlug": "interval-timers",
-        "name": "Interval Timers"
-      },
-      {
-        "sourceId": "e7f1e9ab3dc8",
-        "projectSlug": "dead-pixel-test",
-        "name": "Dead Pixel Test"
-      },
-      {
-        "sourceId": "fc7a533b8d24",
-        "projectSlug": "ropond-proxy-cloud",
-        "name": "Ropond Proxy Cloud"
-      },
-      {
-        "sourceId": "ddc87db42326",
-        "projectSlug": "hevzo",
-        "name": "Hevzo"
-      },
-      {
-        "sourceId": "cfc24cff1732",
-        "projectSlug": "pixel-art-base",
-        "name": "Pixel Art Base"
-      },
-      {
-        "sourceId": "a49258d65d5e",
-        "projectSlug": "readgzh",
-        "name": "ReadGZH"
-      },
-      {
-        "sourceId": "b55a94c4e31a",
-        "projectSlug": "project-05567c",
-        "name": "热摸爽"
-      },
-      {
-        "sourceId": "fcc390cb1117",
-        "projectSlug": "erase-background-pro",
-        "name": "Erase Background Pro"
-      },
-      {
-        "sourceId": "dcd92ae17c35",
-        "projectSlug": "project-22b519",
-        "name": "薯小二"
-      },
-      {
-        "sourceId": "320cb34bd42d",
-        "projectSlug": "lovecomic",
-        "name": "LoveComic"
-      },
-      {
-        "sourceId": "c352533dffa2",
-        "projectSlug": "notepp",
-        "name": "NotePP"
-      },
-      {
-        "sourceId": "5ddab2e70896",
-        "projectSlug": "real-job-work-from-home",
-        "name": "Real Job Work From Home"
-      },
-      {
-        "sourceId": "2f9a423e2ff9",
-        "projectSlug": "scribeflash",
-        "name": "ScribeFlash"
-      },
-      {
-        "sourceId": "8371490dd78a",
-        "projectSlug": "seichigo",
-        "name": "SeichiGo 圣地巡礼"
-      },
-      {
-        "sourceId": "16a771c43fb3",
-        "projectSlug": "cubistai",
-        "name": "CubistAI"
-      },
-      {
-        "sourceId": "208f94deb602",
-        "projectSlug": "xiustore-208f94",
-        "name": "XiuStore"
-      },
-      {
-        "sourceId": "ae5b30790123",
-        "projectSlug": "metrune",
-        "name": "Metrune"
-      },
-      {
-        "sourceId": "f0564392e9c3",
-        "projectSlug": "ai-f05643",
-        "name": "AI 独立制造所"
-      },
-      {
-        "sourceId": "421df515e1ac",
-        "projectSlug": "project-b53db8",
-        "name": "独立星球"
-      },
-      {
-        "sourceId": "88289950d4c4",
-        "projectSlug": "project-5451c7",
-        "name": "独立观察"
+        "sourceId": "ae08e1ed9085",
+        "projectSlug": "hippoxos",
+        "name": "hippoxOS"
       }
     ],
     "removed": [
@@ -1311,6 +1151,226 @@
     ],
     "changed": [
       {
+        "sourceId": "1cac8fde1ab5",
+        "projectSlug": "mika",
+        "name": "小麦 Mika"
+      },
+      {
+        "sourceId": "957915a629b2",
+        "projectSlug": "excel",
+        "name": "Excel 表格工具"
+      },
+      {
+        "sourceId": "420a7f923eef",
+        "projectSlug": "tidelink",
+        "name": "TideLink"
+      },
+      {
+        "sourceId": "9510d71271f6",
+        "projectSlug": "image-to-ascii",
+        "name": "Image to ASCII"
+      },
+      {
+        "sourceId": "451d030b9b40",
+        "projectSlug": "jiandan",
+        "name": "剪蛋 Jiandan"
+      },
+      {
+        "sourceId": "ed2ffb0a8ce6",
+        "projectSlug": "pet-memorial-portrait",
+        "name": "pet memorial portrait"
+      },
+      {
+        "sourceId": "529a3e0be65e",
+        "projectSlug": "1980s-ai-photo",
+        "name": "1980s AI Photo"
+      },
+      {
+        "sourceId": "8ce9b6190201",
+        "projectSlug": "ielts-writing-practice",
+        "name": "IELTS Writing Practice"
+      },
+      {
+        "sourceId": "ec849cfcbeb8",
+        "projectSlug": "nanoavatar",
+        "name": "NanoAvatar"
+      },
+      {
+        "sourceId": "b25855b65515",
+        "projectSlug": "shen-suan-ge",
+        "name": "神算阁 / Shen Suan Ge"
+      },
+      {
+        "sourceId": "3428d26c066c",
+        "projectSlug": "ui-design-agent-kit",
+        "name": "UI Design Agent Kit 作品展厅"
+      },
+      {
+        "sourceId": "b43167aa3633",
+        "projectSlug": "tokentracker",
+        "name": "TokenTracker / 纸账"
+      },
+      {
+        "sourceId": "0581b9d59391",
+        "projectSlug": "trim",
+        "name": "Trim 订阅扫雷器"
+      },
+      {
+        "sourceId": "3b5b3c30121a",
+        "projectSlug": "project-db035d",
+        "name": "工程数据驾驶舱"
+      },
+      {
+        "sourceId": "f4c1f90541b6",
+        "projectSlug": "voicecloner",
+        "name": "VoiceCloner"
+      },
+      {
+        "sourceId": "5f783c5b4be3",
+        "projectSlug": "c2anime",
+        "name": "C2Anime"
+      },
+      {
+        "sourceId": "88adba58db3d",
+        "projectSlug": "art-grid-maker",
+        "name": "Art Grid Maker"
+      },
+      {
+        "sourceId": "9713e74e738b",
+        "projectSlug": "twiflux",
+        "name": "TwiFlux"
+      },
+      {
+        "sourceId": "bde75a682b25",
+        "projectSlug": "piclocation",
+        "name": "PicLocation"
+      },
+      {
+        "sourceId": "27d1207702c1",
+        "projectSlug": "find-key-bpm",
+        "name": "Find Key & BPM"
+      },
+      {
+        "sourceId": "7eefa3689b18",
+        "projectSlug": "airadar-ai",
+        "name": "AIradar · AI 订阅价格雷达"
+      },
+      {
+        "sourceId": "0ef287edf104",
+        "projectSlug": "project-9aa40d",
+        "name": "素刀"
+      },
+      {
+        "sourceId": "517178aa120f",
+        "projectSlug": "ai-517178",
+        "name": "AI 智能快照"
+      },
+      {
+        "sourceId": "3e5da7f97dc8",
+        "projectSlug": "opc",
+        "name": "OPC 情报站"
+      },
+      {
+        "sourceId": "625f21be60f3",
+        "projectSlug": "project-8cf61a",
+        "name": "慧报价"
+      },
+      {
+        "sourceId": "f4451c48f37f",
+        "projectSlug": "scribetoany",
+        "name": "ScribeToAny"
+      },
+      {
+        "sourceId": "72b319466401",
+        "projectSlug": "gpt-image-2-5",
+        "name": "Gpt Image 2.5 图片生成器"
+      },
+      {
+        "sourceId": "7cea631f2580",
+        "projectSlug": "picpermit",
+        "name": "PicPermit"
+      },
+      {
+        "sourceId": "9123ee153435",
+        "projectSlug": "thumbrix",
+        "name": "Thumbrix"
+      },
+      {
+        "sourceId": "7db394760a58",
+        "projectSlug": "interval-timers",
+        "name": "Interval Timers"
+      },
+      {
+        "sourceId": "e7f1e9ab3dc8",
+        "projectSlug": "dead-pixel-test",
+        "name": "Dead Pixel Test"
+      },
+      {
+        "sourceId": "fc7a533b8d24",
+        "projectSlug": "ropond-proxy-cloud",
+        "name": "Ropond Proxy Cloud"
+      },
+      {
+        "sourceId": "ddc87db42326",
+        "projectSlug": "hevzo",
+        "name": "Hevzo"
+      },
+      {
+        "sourceId": "cfc24cff1732",
+        "projectSlug": "pixel-art-base",
+        "name": "Pixel Art Base"
+      },
+      {
+        "sourceId": "a49258d65d5e",
+        "projectSlug": "readgzh",
+        "name": "ReadGZH"
+      },
+      {
+        "sourceId": "b55a94c4e31a",
+        "projectSlug": "project-05567c",
+        "name": "热摸爽"
+      },
+      {
+        "sourceId": "fcc390cb1117",
+        "projectSlug": "erase-background-pro",
+        "name": "Erase Background Pro"
+      },
+      {
+        "sourceId": "dcd92ae17c35",
+        "projectSlug": "project-22b519",
+        "name": "薯小二"
+      },
+      {
+        "sourceId": "320cb34bd42d",
+        "projectSlug": "lovecomic",
+        "name": "LoveComic"
+      },
+      {
+        "sourceId": "c352533dffa2",
+        "projectSlug": "notepp",
+        "name": "NotePP"
+      },
+      {
+        "sourceId": "5ddab2e70896",
+        "projectSlug": "real-job-work-from-home",
+        "name": "Real Job Work From Home"
+      },
+      {
+        "sourceId": "2f9a423e2ff9",
+        "projectSlug": "scribeflash",
+        "name": "ScribeFlash"
+      },
+      {
+        "sourceId": "8371490dd78a",
+        "projectSlug": "seichigo",
+        "name": "SeichiGo 圣地巡礼"
+      },
+      {
+        "sourceId": "16a771c43fb3",
+        "projectSlug": "cubistai",
+        "name": "CubistAI"
+      },
+      {
         "sourceId": "3f8d8c7371c2",
         "projectSlug": "lawpulse",
         "name": "法脉 LawPulse"
@@ -1404,6 +1464,11 @@
         "sourceId": "f56c741e7d32",
         "projectSlug": "pdfcompare",
         "name": "PdfCompare"
+      },
+      {
+        "sourceId": "208f94deb602",
+        "projectSlug": "xiustore-208f94",
+        "name": "XiuStore"
       },
       {
         "sourceId": "69a50c928308",
@@ -1719,6 +1784,11 @@
         "sourceId": "1f00b9aa8bbf",
         "projectSlug": "rssh",
         "name": "RSSH"
+      },
+      {
+        "sourceId": "ae5b30790123",
+        "projectSlug": "metrune",
+        "name": "Metrune"
       },
       {
         "sourceId": "acc5af2a3c27",
@@ -10266,9 +10336,24 @@
         "name": "易匹配"
       },
       {
+        "sourceId": "f0564392e9c3",
+        "projectSlug": "ai-f05643",
+        "name": "AI 独立制造所"
+      },
+      {
         "sourceId": "7a1d156e96fe",
         "projectSlug": "project-8daeb7",
         "name": "中国独立开发者项目列表（网页版）"
+      },
+      {
+        "sourceId": "421df515e1ac",
+        "projectSlug": "project-b53db8",
+        "name": "独立星球"
+      },
+      {
+        "sourceId": "88289950d4c4",
+        "projectSlug": "project-5451c7",
+        "name": "独立观察"
       }
     ],
     "unchanged": []
