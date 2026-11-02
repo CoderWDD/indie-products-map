@@ -1,802 +1,1132 @@
 {
   "schemaVersion": 1,
   "sourceUrl": "https://github.com/1c7/chinese-independent-developer/blob/master/README.md",
-  "fetchedAt": "2026-10-26T08:55:48.180Z",
-  "updatedAt": "2026-10-26T08:55:56.940Z",
+  "fetchedAt": "2026-11-02T11:07:11.859Z",
+  "updatedAt": "2026-11-02T11:07:17.621Z",
   "counts": {
-    "sourceProjects": 1739,
-    "projects": 2381,
+    "sourceProjects": 1715,
+    "projects": 2479,
     "patterns": 0,
-    "aiAnalyzedProjects": 2171
+    "aiAnalyzedProjects": 2170
   },
   "changes": {
     "added": [
       {
-        "sourceId": "071876a65a25",
-        "projectSlug": "quick-image-kit",
-        "name": "Quick Image Kit"
+        "sourceId": "5d87c6c5c394",
+        "projectSlug": "rapmotion",
+        "name": "RapMotion"
       },
       {
-        "sourceId": "161a4f960abb",
-        "projectSlug": "apkgo-apkgo-cloud",
-        "name": "apkgo / apkgo cloud"
+        "sourceId": "1230186c64dc",
+        "projectSlug": "dayfly-mail",
+        "name": "Dayfly Mail"
       },
       {
-        "sourceId": "f95128c68421",
-        "projectSlug": "shottide",
-        "name": "ShotTide"
+        "sourceId": "093f35b963de",
+        "projectSlug": "virtual-ring-try-on",
+        "name": "virtual ring try on"
       },
       {
-        "sourceId": "ae1a7dcc2e9e",
-        "projectSlug": "project-7c65d3",
-        "name": "审美工程"
+        "sourceId": "33ac85a5e6e2",
+        "projectSlug": "ai-fashion-model-generator",
+        "name": "AI fashion model generator"
       },
       {
-        "sourceId": "dc0f69bfb76b",
-        "projectSlug": "command-reopen",
-        "name": "Command Reopen"
+        "sourceId": "68c5470fe7b1",
+        "projectSlug": "ai-lyric-video-maker",
+        "name": "AI lyric video maker"
       },
       {
-        "sourceId": "055d4217a10d",
-        "projectSlug": "aitoword",
-        "name": "Aitoword"
+        "sourceId": "c9f49b71d4c9",
+        "projectSlug": "ai-clothes-changer",
+        "name": "AI clothes changer"
       },
       {
-        "sourceId": "d71af1662e7c",
-        "projectSlug": "time-overlay",
-        "name": "Time Overlay"
+        "sourceId": "07d904260423",
+        "projectSlug": "audioscript",
+        "name": "AudioScript 声稿"
       },
       {
-        "sourceId": "1017ff77607c",
-        "projectSlug": "videodance-1017ff",
-        "name": "VideoDance"
+        "sourceId": "2f0489430022",
+        "projectSlug": "quickpix",
+        "name": "QuickPix"
       },
       {
-        "sourceId": "df23ef076ed3",
-        "projectSlug": "youtube-gif-comments",
-        "name": "YouTube GIF Comments"
+        "sourceId": "81514be47e02",
+        "projectSlug": "quickvid",
+        "name": "QuickVid"
       },
       {
-        "sourceId": "c9a8bd4b3a8b",
-        "projectSlug": "docube",
-        "name": "DoCube"
+        "sourceId": "5b6b3509ab78",
+        "projectSlug": "project-03667b",
+        "name": "饮品咖啡因速查"
       },
       {
-        "sourceId": "7679e884f136",
-        "projectSlug": "mclqe",
-        "name": "MCLQE"
+        "sourceId": "dcd8417f444a",
+        "projectSlug": "shotmap",
+        "name": "ShotMap"
       },
       {
-        "sourceId": "e684c1636501",
-        "projectSlug": "seedance-3-0",
-        "name": "seedance 3.0"
+        "sourceId": "5d2dd2453727",
+        "projectSlug": "mp4flow",
+        "name": "MP4Flow"
       },
       {
-        "sourceId": "6c162edef950",
-        "projectSlug": "palapili",
-        "name": "PalaPili"
+        "sourceId": "d210fb6364d8",
+        "projectSlug": "lumaview",
+        "name": "LumaView"
       },
       {
-        "sourceId": "9f6f8c815ec7",
-        "projectSlug": "ai-image-combiner",
-        "name": "AI Image Combiner"
+        "sourceId": "9123346d9929",
+        "projectSlug": "nihongo-to-japan",
+        "name": "Nihongo to Japan"
       },
       {
-        "sourceId": "f6453f1c773b",
-        "projectSlug": "manxia",
-        "name": "漫匣 Manxia"
+        "sourceId": "fe4633aa3bef",
+        "projectSlug": "trustbible-bible-word-counter",
+        "name": "TrustBible Bible Word Counter"
       },
       {
-        "sourceId": "2ff10d11426f",
-        "projectSlug": "companest",
-        "name": "Companest 伴境"
+        "sourceId": "a7b541eb26e2",
+        "projectSlug": "tripmate",
+        "name": "旅伴 TripMate"
       },
       {
-        "sourceId": "8dcb9aa993b1",
-        "projectSlug": "ai-dance-generator-8dcb9a",
-        "name": "AI Dance Generator"
+        "sourceId": "2c274bc053c4",
+        "projectSlug": "project-01fe99",
+        "name": "听笺"
       },
       {
-        "sourceId": "b5f5b71cebad",
-        "projectSlug": "project-9c1438",
-        "name": "票号核对台"
+        "sourceId": "2836a708e7ef",
+        "projectSlug": "disconfirmai",
+        "name": "DisconfirmAI"
       },
       {
-        "sourceId": "e0aa3619023b",
-        "projectSlug": "takumikit",
-        "name": "匠工具箱 TakumiKit"
+        "sourceId": "64de1c4b8e5a",
+        "projectSlug": "kyna-player",
+        "name": "Kyna Player"
       },
       {
-        "sourceId": "59375d443c88",
-        "projectSlug": "project-36219f",
-        "name": "字相"
+        "sourceId": "041d7f3b76f2",
+        "projectSlug": "logo-animation-ai",
+        "name": "Logo Animation AI"
       },
       {
-        "sourceId": "bba8026dd984",
-        "projectSlug": "pixwit",
-        "name": "Pixwit"
+        "sourceId": "d356fc691f18",
+        "projectSlug": "pic2svg",
+        "name": "Pic2SVG"
       },
       {
-        "sourceId": "9f2f5366c43d",
-        "projectSlug": "paper-texture",
-        "name": "Paper Texture"
+        "sourceId": "e43e39becacb",
+        "projectSlug": "big-walk-guide",
+        "name": "Big Walk Guide"
       },
       {
-        "sourceId": "afe631f42838",
-        "projectSlug": "everygen-ai",
-        "name": "Everygen AI"
+        "sourceId": "edbb490983db",
+        "projectSlug": "imgmov-image-prep",
+        "name": "imgmov Image Prep"
       },
       {
-        "sourceId": "87cbd8a5bda4",
-        "projectSlug": "uuscribe",
-        "name": "UUScribe"
+        "sourceId": "3038b6496481",
+        "projectSlug": "roam-radio",
+        "name": "Roam Radio"
       },
       {
-        "sourceId": "1142e9ca2a56",
-        "projectSlug": "ai-1142e9",
-        "name": "巨浪 AI"
+        "sourceId": "5b0ce5cb4e1e",
+        "projectSlug": "ai-5b0ce5",
+        "name": "湾区 AI 日历"
       },
       {
-        "sourceId": "ce45d80801a3",
-        "projectSlug": "project-328786",
-        "name": "趣站博物馆"
+        "sourceId": "be96959fa05a",
+        "projectSlug": "magic-resume",
+        "name": "Magic Resume"
       },
       {
-        "sourceId": "b8e1cef78d4d",
-        "projectSlug": "project-3adc1a",
-        "name": "失业了咋办"
+        "sourceId": "1ef0e386b4a0",
+        "projectSlug": "referralcodes-canada",
+        "name": "ReferralCodes Canada"
       },
       {
-        "sourceId": "4268032f4137",
-        "projectSlug": "voltip",
-        "name": "Voltip"
+        "sourceId": "1a3c56ca96ae",
+        "projectSlug": "kanacraft",
+        "name": "KanaCraft 卡娜日语 / 卡娜英语"
       },
       {
-        "sourceId": "26b4a9bfe51f",
-        "projectSlug": "videotextremover",
-        "name": "VideoTextRemover"
+        "sourceId": "d18995440875",
+        "projectSlug": "project-ffe388",
+        "name": "豆门"
       },
       {
-        "sourceId": "4d52d62d096e",
-        "projectSlug": "sparkpix",
-        "name": "SparkPix"
+        "sourceId": "125a43b39d45",
+        "projectSlug": "chanscout",
+        "name": "ChanScout"
       },
       {
-        "sourceId": "4e2fcc83eea2",
-        "projectSlug": "magicremover",
-        "name": "MagicRemover"
+        "sourceId": "6635e97631c6",
+        "projectSlug": "bgx",
+        "name": "BGX"
       },
       {
-        "sourceId": "b219216aa613",
-        "projectSlug": "offbase-tools",
-        "name": "OffBase Tools"
+        "sourceId": "99f6197539e4",
+        "projectSlug": "bg2x",
+        "name": "bg2x"
       },
       {
-        "sourceId": "6a227e7b7617",
-        "projectSlug": "memebako",
-        "name": "MemeBako"
+        "sourceId": "e7b16d06c9d1",
+        "projectSlug": "ipzor",
+        "name": "IPZOR"
       },
       {
-        "sourceId": "9fa6004a6d4b",
-        "projectSlug": "ai-genjutsu",
-        "name": "AI Genjutsu"
+        "sourceId": "ae9da3549207",
+        "projectSlug": "hkdone",
+        "name": "HKDone 香港办事指南"
       },
       {
-        "sourceId": "ab4bedf15a02",
-        "projectSlug": "neon-duo",
-        "name": "NEON DUO"
+        "sourceId": "4530e544d67f",
+        "projectSlug": "vaqira",
+        "name": "VAQIRA · 独立产品收入榜"
       },
       {
-        "sourceId": "503ba006a80a",
-        "projectSlug": "rainku",
-        "name": "Rainku"
+        "sourceId": "a57f19549745",
+        "projectSlug": "project-e7f9b0",
+        "name": "食愿小灶"
       },
       {
-        "sourceId": "8c978dc88040",
-        "projectSlug": "tuneku-fm",
-        "name": "Tuneku FM"
+        "sourceId": "7c57afd678d6",
+        "projectSlug": "asteriadne",
+        "name": "Asteriadne"
       },
       {
-        "sourceId": "0fe8bb119e27",
-        "projectSlug": "project-9d2a53",
-        "name": "这图能改"
+        "sourceId": "6bf09c728ad3",
+        "projectSlug": "wpaforge",
+        "name": "WPAForge"
       },
       {
-        "sourceId": "4c0c10ec4bfd",
-        "projectSlug": "notebook-generator",
-        "name": "Notebook Generator"
+        "sourceId": "b4ae565d06e1",
+        "projectSlug": "aivizens",
+        "name": "AIVIZENS"
       },
       {
-        "sourceId": "ec67f8036dde",
-        "projectSlug": "sliceloft",
-        "name": "SliceLoft"
+        "sourceId": "7db8f4733793",
+        "projectSlug": "pixsolo",
+        "name": "Pixsolo"
       },
       {
-        "sourceId": "090d6e3c3037",
-        "projectSlug": "powerstation-size",
-        "name": "PowerStation Size"
+        "sourceId": "539f23fde46e",
+        "projectSlug": "hd-image-enhancer",
+        "name": "HD Image Enhancer"
       },
       {
-        "sourceId": "4f38e7b1bd99",
-        "projectSlug": "flux3max",
-        "name": "Flux3Max"
+        "sourceId": "414bf50b2113",
+        "projectSlug": "ncurator",
+        "name": "馆长（NCurator）"
       },
       {
-        "sourceId": "85f8aaa3cb48",
-        "projectSlug": "viewhtml",
-        "name": "ViewHTML"
+        "sourceId": "6f911e9cfbdb",
+        "projectSlug": "zhizhou",
+        "name": "知周 ZhiZhou"
       },
       {
-        "sourceId": "f9903ac033f2",
-        "projectSlug": "fondo-blanco",
-        "name": "Fondo Blanco"
+        "sourceId": "680ac589f47d",
+        "projectSlug": "project-5772e7",
+        "name": "闪电全能下载"
       },
       {
-        "sourceId": "61f4e98eacd9",
-        "projectSlug": "project-c10b7f",
-        "name": "糖包"
+        "sourceId": "42c818b95dc8",
+        "projectSlug": "project-35fa23",
+        "name": "小清"
       },
       {
-        "sourceId": "3f76c77cbee3",
-        "projectSlug": "tradesniper",
-        "name": "TradeSniper"
+        "sourceId": "f1f78add2ced",
+        "projectSlug": "friday-invoice-chase-ranker",
+        "name": "周五追账排序器 Friday Invoice Chase Ranker"
       },
       {
-        "sourceId": "8640a724b088",
-        "projectSlug": "myfategpt",
-        "name": "MyFateGPT（紫微命书）"
+        "sourceId": "0aaee6e49488",
+        "projectSlug": "jojo-characters",
+        "name": "JoJo Characters"
       },
       {
-        "sourceId": "60fc5056dea6",
-        "projectSlug": "ajaxmodel-release-tracker",
-        "name": "AjaxModel Release Tracker"
+        "sourceId": "70ead605fbd4",
+        "projectSlug": "zoopfizz",
+        "name": "ZoopFizz"
       },
       {
-        "sourceId": "07d7eed7305e",
-        "projectSlug": "songfromvideo",
-        "name": "SongFromVideo"
+        "sourceId": "e04849ae2d63",
+        "projectSlug": "ai-beamjoin",
+        "name": "铝构AI BeamJoin"
       },
       {
-        "sourceId": "ac6af2ece75b",
-        "projectSlug": "dtcstack",
-        "name": "DTCStack"
+        "sourceId": "82350b70bd9c",
+        "projectSlug": "me2cloud",
+        "name": "Me2Cloud"
       },
       {
-        "sourceId": "cc9dfed366b7",
-        "projectSlug": "voxr",
-        "name": "VOXR"
+        "sourceId": "ec36992d1918",
+        "projectSlug": "make-dime-dime-baby",
+        "name": "Make Dime Dime Baby"
       },
       {
-        "sourceId": "c31530ba56a5",
-        "projectSlug": "ai-doctor-scan",
-        "name": "AI Doctor Scan"
+        "sourceId": "a5d76c760d7f",
+        "projectSlug": "squishy-paper",
+        "name": "Squishy Paper"
       },
       {
-        "sourceId": "3a0cdb838e0f",
-        "projectSlug": "unsent",
-        "name": "未寄 · Unsent"
+        "sourceId": "7f48b087c9fb",
+        "projectSlug": "reclipmuse",
+        "name": "ReclipMuse"
       },
       {
-        "sourceId": "f90c956fb6e8",
-        "projectSlug": "project-df44f1",
-        "name": "知海图书馆"
+        "sourceId": "a869397ab63c",
+        "projectSlug": "airapvideo",
+        "name": "airapvideo"
       },
       {
-        "sourceId": "37c6bc9a0bf6",
-        "projectSlug": "examparser",
-        "name": "ExamParser"
+        "sourceId": "d8aeeca3439f",
+        "projectSlug": "alors-on-danse-ai-d8aeec",
+        "name": "Alors on Danse AI"
       },
       {
-        "sourceId": "dc26d59ff8d7",
-        "projectSlug": "spaceknife",
-        "name": "SpaceKnife"
+        "sourceId": "ffaa126483ef",
+        "projectSlug": "bad-times-ai-ffaa12",
+        "name": "Bad Times AI"
       },
       {
-        "sourceId": "cbbc26ebe4cb",
-        "projectSlug": "ai-cbbc26",
-        "name": "AI观潮"
+        "sourceId": "fdf83f9e2eb0",
+        "projectSlug": "bbywowguy-ai",
+        "name": "bbywowguy AI"
       },
       {
-        "sourceId": "2dbfba2f7db3",
-        "projectSlug": "ai-2dbfba",
-        "name": "苏哲AI"
+        "sourceId": "b92b113c15b3",
+        "projectSlug": "burning-bridges-ai-b92b11",
+        "name": "Burning Bridges AI"
       },
       {
-        "sourceId": "7091ca1b6e3f",
-        "projectSlug": "ai-anime-generator-7091ca",
-        "name": "AI Anime Generator"
+        "sourceId": "0ec7c1f2305b",
+        "projectSlug": "cat-in-the-hat-ai",
+        "name": "Cat in the Hat AI"
       },
       {
-        "sourceId": "9fe4aa302588",
-        "projectSlug": "speaker",
-        "name": "Speaker"
+        "sourceId": "ebb6e736eb4d",
+        "projectSlug": "chatgpt-millionaire-ai",
+        "name": "ChatGPT Millionaire AI"
       },
       {
-        "sourceId": "001010869b6c",
-        "projectSlug": "saydart",
-        "name": "SayDart"
+        "sourceId": "aca64dd4b69b",
+        "projectSlug": "chatgtt",
+        "name": "ChatGTT"
       },
       {
-        "sourceId": "0661a81f6468",
-        "projectSlug": "flowcay",
-        "name": "FlowCay"
+        "sourceId": "fe72ce01d309",
+        "projectSlug": "cheba-man-ai",
+        "name": "Cheba Man AI"
+      },
+      {
+        "sourceId": "26124af60a3d",
+        "projectSlug": "choosin-texas-ai",
+        "name": "Choosin Texas AI"
+      },
+      {
+        "sourceId": "4a9d2dc9d0f5",
+        "projectSlug": "chuttamalle-dance-ai",
+        "name": "Chuttamalle Dance AI"
+      },
+      {
+        "sourceId": "f497d63e6018",
+        "projectSlug": "coralineai",
+        "name": "coralineai"
+      },
+      {
+        "sourceId": "f4a4b5424028",
+        "projectSlug": "corpse-bride-ai",
+        "name": "Corpse Bride AI"
+      },
+      {
+        "sourceId": "b77f7921d083",
+        "projectSlug": "devil-wears-prada-ai",
+        "name": "Devil Wears Prada AI"
+      },
+      {
+        "sourceId": "bba74bcb7961",
+        "projectSlug": "flying-roadster-ai",
+        "name": "Flying Roadster AI"
+      },
+      {
+        "sourceId": "47385c254271",
+        "projectSlug": "hotel-lobby-ai-47385c",
+        "name": "Hotel Lobby AI"
+      },
+      {
+        "sourceId": "a8732f271edd",
+        "projectSlug": "hug-in-heaven-ai",
+        "name": "Hug In Heaven AI"
+      },
+      {
+        "sourceId": "e52860dc0499",
+        "projectSlug": "jeanphilai",
+        "name": "JeanPhilAI"
+      },
+      {
+        "sourceId": "b8d376ba4147",
+        "projectSlug": "kiss-cam-ai",
+        "name": "Kiss Cam AI"
+      },
+      {
+        "sourceId": "3da4844c44ea",
+        "projectSlug": "raindance-ai-3da484",
+        "name": "Raindance AI"
+      },
+      {
+        "sourceId": "a7eb30060d78",
+        "projectSlug": "remixmeme",
+        "name": "RemixMeme"
+      },
+      {
+        "sourceId": "862a05879f71",
+        "projectSlug": "rumpelstiltskin-dance-ai",
+        "name": "Rumpelstiltskin Dance AI"
+      },
+      {
+        "sourceId": "584b9479b436",
+        "projectSlug": "shanshenbu-ai",
+        "name": "ShanShenBu AI"
+      },
+      {
+        "sourceId": "f57b86bc2631",
+        "projectSlug": "unforgettable-car-ai",
+        "name": "Unforgettable Car AI"
+      },
+      {
+        "sourceId": "783cbafe13a9",
+        "projectSlug": "venom-car-ai",
+        "name": "Venom Car AI"
+      },
+      {
+        "sourceId": "d71ad72f5add",
+        "projectSlug": "venommakeup-ai",
+        "name": "venommakeup AI"
+      },
+      {
+        "sourceId": "6f7935a4df5b",
+        "projectSlug": "victoria-secret-ai",
+        "name": "Victoria Secret AI"
+      },
+      {
+        "sourceId": "56d6648fdf0f",
+        "projectSlug": "white-chicks-ai",
+        "name": "White Chicks AI"
+      },
+      {
+        "sourceId": "bb17ae8d4997",
+        "projectSlug": "wywmysweetie-ai",
+        "name": "wywmysweetie AI"
+      },
+      {
+        "sourceId": "28fbc48a3043",
+        "projectSlug": "zombiehug",
+        "name": "ZombieHug"
+      },
+      {
+        "sourceId": "e2caf8825f16",
+        "projectSlug": "idea-rewind",
+        "name": "回想册 Idea Rewind"
+      },
+      {
+        "sourceId": "4df0f689df25",
+        "projectSlug": "project-da8d4a",
+        "name": "风言写作"
+      },
+      {
+        "sourceId": "4ceef73ac04a",
+        "projectSlug": "spaceora",
+        "name": "Spaceora"
+      },
+      {
+        "sourceId": "c31b37172ddb",
+        "projectSlug": "openmontage-drama-studio",
+        "name": "OpenMontage Drama Studio"
+      },
+      {
+        "sourceId": "56a1e57ac36f",
+        "projectSlug": "macmix",
+        "name": "MacMix"
+      },
+      {
+        "sourceId": "655cbde31ad5",
+        "projectSlug": "lumno",
+        "name": "Lumno"
+      },
+      {
+        "sourceId": "7521aba7c1e6",
+        "projectSlug": "project-b6f1b6",
+        "name": "涟漪"
+      },
+      {
+        "sourceId": "2dd5cb28e09b",
+        "projectSlug": "diskwise",
+        "name": "DiskWise"
+      },
+      {
+        "sourceId": "a494b855f4b7",
+        "projectSlug": "space-simulator-online",
+        "name": "Space Simulator Online"
+      },
+      {
+        "sourceId": "437a8814ba85",
+        "projectSlug": "reelmorph",
+        "name": "ReelMorph"
+      },
+      {
+        "sourceId": "dc2f07be14f2",
+        "projectSlug": "carwrapdesign",
+        "name": "CarWrapDesign"
+      },
+      {
+        "sourceId": "f9c0ead75ffd",
+        "projectSlug": "yix",
+        "name": "YIX"
+      },
+      {
+        "sourceId": "c2b6ff1bca12",
+        "projectSlug": "wave-radar",
+        "name": "Wave Radar"
+      },
+      {
+        "sourceId": "1b3559c1d335",
+        "projectSlug": "ideoy",
+        "name": "Ideoy"
+      },
+      {
+        "sourceId": "513777678b36",
+        "projectSlug": "project-69ac7b",
+        "name": "关津"
+      },
+      {
+        "sourceId": "fdccff40e2c8",
+        "projectSlug": "project-f52122",
+        "name": "安星纪工具站"
       }
     ],
     "removed": [
       {
-        "sourceId": "b5ceb65c91f0",
-        "projectSlug": "easegen",
-        "name": "EaseGen"
+        "sourceId": "0c4b1def4434",
+        "projectSlug": "ai-0c4b1d",
+        "name": "AI 取名网"
       },
       {
-        "sourceId": "722c18b60a6e",
-        "projectSlug": "ai-722c18",
-        "name": "AI 小说作家"
+        "sourceId": "8c5c9d7e1fc2",
+        "projectSlug": "flux-1-kontext-image-generator",
+        "name": "FLUX.1 Kontext Image Generator"
       },
       {
-        "sourceId": "ba151e96be84",
-        "projectSlug": "invoice-downloader",
-        "name": "Invoice Downloader"
+        "sourceId": "b7be7a1b9f41",
+        "projectSlug": "ai-baby-generator",
+        "name": "AI Baby Generator"
       },
       {
-        "sourceId": "d416892676aa",
-        "projectSlug": "gptgeminigrok-ai",
-        "name": "GPTGeminiGrok.AI"
+        "sourceId": "01176f38a4da",
+        "projectSlug": "project-ee1e4d",
+        "name": "台灣解夢"
       },
       {
-        "sourceId": "ed6436ddd262",
-        "projectSlug": "flux-ai-art",
-        "name": "FLUX AI ART"
+        "sourceId": "41db209b68eb",
+        "projectSlug": "ai-41db20",
+        "name": "AI 随机图片生成器"
       },
       {
-        "sourceId": "e45419cd9bbb",
-        "projectSlug": "ai-hairstyle",
-        "name": "AI Hairstyle"
+        "sourceId": "e6fc70331928",
+        "projectSlug": "bypass-turnitin",
+        "name": "Bypass Turnitin"
       },
       {
-        "sourceId": "9a15a712a6e7",
-        "projectSlug": "ai-9a15a7",
-        "name": "海嘉 AI 实验室智能应用"
+        "sourceId": "95bc41417121",
+        "projectSlug": "product-rule",
+        "name": "product-rule"
       },
       {
-        "sourceId": "dde7186fe201",
-        "projectSlug": "ai-agents-directory",
-        "name": "AI Agents Directory"
+        "sourceId": "1af2d36f8194",
+        "projectSlug": "ai-line-art-generator",
+        "name": "AI Line Art Generator"
       },
       {
-        "sourceId": "7945c0912c9a",
-        "projectSlug": "chinese-name-generator",
-        "name": "Chinese Name Generator"
+        "sourceId": "8853ea7f38e9",
+        "projectSlug": "proof-of-awesome",
+        "name": "Proof of Awesome"
       },
       {
-        "sourceId": "11cfc50746be",
-        "projectSlug": "learn-kana",
-        "name": "Learn Kana"
+        "sourceId": "aab3774be294",
+        "projectSlug": "veo3-video",
+        "name": "Veo3 video"
       },
       {
-        "sourceId": "ee8261aeb610",
-        "projectSlug": "ai-death-calculator",
-        "name": "AI Death Calculator"
+        "sourceId": "277de6e2ac3a",
+        "projectSlug": "loraai",
+        "name": "LoraAI"
       },
       {
-        "sourceId": "3a8b0cbf0928",
-        "projectSlug": "tempmail-love",
-        "name": "TempMail.Love"
+        "sourceId": "ab395c210d0f",
+        "projectSlug": "ask-me-anything",
+        "name": "Ask Me Anything"
       },
       {
-        "sourceId": "584c4db9069a",
-        "projectSlug": "aigotools",
-        "name": "Aigotools"
+        "sourceId": "9199e3d2a8b9",
+        "projectSlug": "notegen",
+        "name": "NoteGen"
       },
       {
-        "sourceId": "c93350b36f0b",
-        "projectSlug": "similarlabs",
-        "name": "Similarlabs"
+        "sourceId": "697714a22185",
+        "projectSlug": "mii-maker",
+        "name": "Mii Maker"
       },
       {
-        "sourceId": "d56512ae1236",
-        "projectSlug": "project-2284a2",
-        "name": "反斗限免"
+        "sourceId": "7c368d313122",
+        "projectSlug": "json-merge",
+        "name": "JSON Merge"
       },
       {
-        "sourceId": "8a7280668d6a",
-        "projectSlug": "bfp-calculator",
-        "name": "BFP Calculator"
+        "sourceId": "811866f9afda",
+        "projectSlug": "aihuntlist",
+        "name": "AIHuntList"
       },
       {
-        "sourceId": "70c87a9d9c8a",
-        "projectSlug": "project-52b5ff",
-        "name": "涂色乐园"
+        "sourceId": "9cf5a8315cf2",
+        "projectSlug": "nestsaas",
+        "name": "NestSaaS"
       },
       {
-        "sourceId": "09450cf0c5b7",
-        "projectSlug": "ssh-monitor-ssh",
-        "name": "SSH Monitor: SSH终端与服务器监控"
+        "sourceId": "2c831f0d7e9b",
+        "projectSlug": "snapreader",
+        "name": "SnapReader"
       },
       {
-        "sourceId": "7b929a68d7d4",
-        "projectSlug": "openterm",
-        "name": "OpenTerm"
+        "sourceId": "66d198bf767a",
+        "projectSlug": "transmonkey",
+        "name": "Transmonkey"
       },
       {
-        "sourceId": "476f52f01493",
-        "projectSlug": "slidebrowser",
-        "name": "SlideBrowser"
+        "sourceId": "d0fa925ad058",
+        "projectSlug": "teachany",
+        "name": "TeachAny"
       },
       {
-        "sourceId": "02d64b8c8da1",
-        "projectSlug": "travel-translator",
-        "name": "Travel Translator"
+        "sourceId": "f5ee41c45c43",
+        "projectSlug": "imgkits",
+        "name": "Imgkits"
       },
       {
-        "sourceId": "dd7d119a8bc6",
-        "projectSlug": "json-translator-dd7d11",
-        "name": "JSON Translator"
+        "sourceId": "9805d4ae301a",
+        "projectSlug": "agenthunter",
+        "name": "AgentHunter"
       },
       {
-        "sourceId": "a73588a97cd5",
-        "projectSlug": "bilive",
-        "name": "bilive"
+        "sourceId": "0e970fc9cfc4",
+        "projectSlug": "english-daily",
+        "name": "English Daily"
       },
       {
-        "sourceId": "8455850613f9",
-        "projectSlug": "justseo",
-        "name": "JustSEO"
+        "sourceId": "7d06e1e221d7",
+        "projectSlug": "ai-7d06e1",
+        "name": "AI 今日热榜"
       },
       {
-        "sourceId": "094fd960a678",
-        "projectSlug": "jetbrains-maple-mono",
-        "name": "JetBrains Maple Mono"
+        "sourceId": "9aac27983671",
+        "projectSlug": "buzz-cut-ai",
+        "name": "buzz-cut AI"
       },
       {
-        "sourceId": "87676c60cf30",
-        "projectSlug": "smart-bookmark",
-        "name": "Smart Bookmark"
+        "sourceId": "c0340a7c32a1",
+        "projectSlug": "veo-3-ai",
+        "name": "Veo 3 AI"
       },
       {
-        "sourceId": "f71fd99ff709",
-        "projectSlug": "formulas-ai",
-        "name": "Formulas AI"
+        "sourceId": "3e41327a5dbd",
+        "projectSlug": "board-foot-calculator",
+        "name": "Board Foot Calculator"
       },
       {
-        "sourceId": "734ad75e4f1d",
-        "projectSlug": "mouse-click",
-        "name": "mouse-click"
+        "sourceId": "adacf0ee92be",
+        "projectSlug": "mksaas-com",
+        "name": "mksaas.com"
       },
       {
-        "sourceId": "6e5fe6bb94b1",
-        "projectSlug": "dynamic-photo-video-display-wall",
-        "name": "Dynamic-photo-video-display-wall"
+        "sourceId": "3b7226342ade",
+        "projectSlug": "video2ppt-com",
+        "name": "video2ppt.com"
       },
       {
-        "sourceId": "386129c69d0a",
-        "projectSlug": "synexa-ai",
-        "name": "Synexa AI"
+        "sourceId": "35afb5f94db2",
+        "projectSlug": "ai-doll",
+        "name": "AI Doll"
       },
       {
-        "sourceId": "bd64f8c22cc0",
-        "projectSlug": "mouseclick",
-        "name": "MouseClick"
+        "sourceId": "a6037dc36774",
+        "projectSlug": "tarotdreamhub",
+        "name": "TarotDreamHub"
       },
       {
-        "sourceId": "fb76ab23cc92",
-        "projectSlug": "deepseek-chat",
-        "name": "DeepSeek Chat"
+        "sourceId": "48ac3de18a2e",
+        "projectSlug": "bratgenerator",
+        "name": "bratgenerator"
       },
       {
-        "sourceId": "1af81903b509",
-        "projectSlug": "midjourney-sref-code",
-        "name": "Midjourney Sref code 收集"
+        "sourceId": "469cf61e9e77",
+        "projectSlug": "writehybrid",
+        "name": "WriteHybrid"
       },
       {
-        "sourceId": "456fc1eb1c63",
-        "projectSlug": "swads",
-        "name": "Swads"
+        "sourceId": "84fe86b08f2e",
+        "projectSlug": "firsto",
+        "name": "Firsto"
       },
       {
-        "sourceId": "7ebd2d70286a",
-        "projectSlug": "highlight-pulse",
-        "name": "高能闪刻 | Highlight Pulse"
+        "sourceId": "4c432a8c8595",
+        "projectSlug": "raffle-blue",
+        "name": "Raffle Blue"
       },
       {
-        "sourceId": "f47e050125f4",
-        "projectSlug": "nfc-plinkd",
-        "name": "NFC PLinkD (中文名：电纸链接)"
+        "sourceId": "0180f6a385c2",
+        "projectSlug": "ai-teach-tools",
+        "name": "AI teach tools"
       },
       {
-        "sourceId": "d6ef816bc361",
-        "projectSlug": "online-web-clock",
-        "name": "Online Web Clock"
+        "sourceId": "b5bc42a13afc",
+        "projectSlug": "bluesky-sdk",
+        "name": "BlueSky SDK"
       },
       {
-        "sourceId": "69f371f12783",
-        "projectSlug": "project-5377d4",
-        "name": "日语名字生成器"
+        "sourceId": "28a79740bdf1",
+        "projectSlug": "tarotqa",
+        "name": "TarotQA"
       },
       {
-        "sourceId": "bd5db4476625",
-        "projectSlug": "image-translate-ai",
-        "name": "Image Translate AI"
+        "sourceId": "00c18210fe48",
+        "projectSlug": "faceratingai",
+        "name": "FaceRatingAI"
       },
       {
-        "sourceId": "6f7d4f0d47e9",
-        "projectSlug": "project-a74ce1",
-        "name": "小帖"
+        "sourceId": "cbf2aa7b5181",
+        "projectSlug": "aipoemgenerator",
+        "name": "AIPoemGenerator"
       },
       {
-        "sourceId": "2ee474b15c54",
-        "projectSlug": "aiagents42-com",
-        "name": "aiagents42.com"
+        "sourceId": "bdccfb4d1407",
+        "projectSlug": "ai-tool-kit",
+        "name": "AI Tool Kit"
       },
       {
-        "sourceId": "de4291d1ecb2",
-        "projectSlug": "freaky-fonts-com",
-        "name": "freaky-fonts.com"
+        "sourceId": "ef7c7c6f95af",
+        "projectSlug": "ai-image-editor-ef7c7c",
+        "name": "AI Image Editor"
       },
       {
-        "sourceId": "e1ac36bc1feb",
-        "projectSlug": "gridmaker",
-        "name": "图片切割神器 GridMaker"
+        "sourceId": "e09e9c84b012",
+        "projectSlug": "microsoft-sam-tts",
+        "name": "Microsoft SAM TTS"
       },
       {
-        "sourceId": "77cef729771f",
-        "projectSlug": "indie-tools",
-        "name": "INDIE TOOLS"
+        "sourceId": "d0c80f3ba2ec",
+        "projectSlug": "free-voice-cloning",
+        "name": "Free Voice Cloning"
       },
       {
-        "sourceId": "0a6fa4f10007",
-        "projectSlug": "wikitok",
-        "name": "WikiTok"
+        "sourceId": "110ea7760cc3",
+        "projectSlug": "image-to-image-ai-110ea7",
+        "name": "Image to Image AI"
       },
       {
-        "sourceId": "2ec36ea4523c",
-        "projectSlug": "navfolders",
-        "name": "NavFolders导航站"
+        "sourceId": "6983d94ebe86",
+        "projectSlug": "safewrite-ai",
+        "name": "SafeWrite AI"
       },
       {
-        "sourceId": "b485a4303de8",
-        "projectSlug": "project-316113",
-        "name": "视频分割专业版"
+        "sourceId": "3f9cd1c7f4ba",
+        "projectSlug": "framepack-ai",
+        "name": "FramePack AI"
       },
       {
-        "sourceId": "f42319929b23",
-        "projectSlug": "al-visibility",
-        "name": "Al Visibility"
+        "sourceId": "f633862dffb2",
+        "projectSlug": "ace-step",
+        "name": "ACE-Step"
       },
       {
-        "sourceId": "da66a1c9b2b0",
-        "projectSlug": "boilerplatehunt",
-        "name": "BoilerplateHunt"
+        "sourceId": "e69b702e8f93",
+        "projectSlug": "graffitiart-app",
+        "name": "Graffitiart app"
       },
       {
-        "sourceId": "5fc7a53e9ffd",
-        "projectSlug": "sobricks",
-        "name": "SoBricks"
+        "sourceId": "ce1558958c98",
+        "projectSlug": "musci-ce1558",
+        "name": "Musci"
       },
       {
-        "sourceId": "5e35d7d359dd",
-        "projectSlug": "project-cbda96",
-        "name": "慢图浏览"
+        "sourceId": "36eeba2fa0e1",
+        "projectSlug": "attractiveness-scale",
+        "name": "Attractiveness Scale"
       },
       {
-        "sourceId": "7c3e9bd5308a",
-        "projectSlug": "crop-image",
-        "name": "Crop Image"
+        "sourceId": "aa645f0cbf31",
+        "projectSlug": "project-62e6cb",
+        "name": "在线工具箱"
       },
       {
-        "sourceId": "8392cd848577",
-        "projectSlug": "cursor",
-        "name": "学习 Cursor"
+        "sourceId": "596ea9a3c3f7",
+        "projectSlug": "facelessvideos-app",
+        "name": "FacelessVideos.APP"
       },
       {
-        "sourceId": "4ad830954183",
-        "projectSlug": "project-7c6e16",
-        "name": "在线计数器"
+        "sourceId": "d5910d046ef3",
+        "projectSlug": "imagesart-ai",
+        "name": "ImagesArt.ai"
       },
       {
-        "sourceId": "7199bbb4dab1",
-        "projectSlug": "supametas-ai",
-        "name": "Supametas.AI"
+        "sourceId": "097777de827b",
+        "projectSlug": "flux2klein-io",
+        "name": "Flux2Klein.io"
       },
       {
-        "sourceId": "524ad433259f",
-        "projectSlug": "photog",
-        "name": "PhotoG"
+        "sourceId": "77163e96ab30",
+        "projectSlug": "papyrusfont-com",
+        "name": "PapyrusFont.com"
       },
       {
-        "sourceId": "3d8484ca8ab1",
-        "projectSlug": "seo",
-        "name": "优好搜·SEO优化工具"
+        "sourceId": "fc3550ca3633",
+        "projectSlug": "ai-fc3550",
+        "name": "免费在线 AI 角色脑洞生成工具"
       },
       {
-        "sourceId": "e73f9186cdad",
-        "projectSlug": "minute-timer",
-        "name": "Minute Timer"
+        "sourceId": "71b70ed4f6f8",
+        "projectSlug": "calligraphy-font-generator",
+        "name": "Calligraphy Font Generator"
       },
       {
-        "sourceId": "74f3913d8fe7",
-        "projectSlug": "staying",
-        "name": "Staying"
+        "sourceId": "32121a93efb9",
+        "projectSlug": "bilibili",
+        "name": "Bilibili “换一换” 历史插件"
       },
       {
-        "sourceId": "bc23a06ea33b",
-        "projectSlug": "image-describer-bc23a0",
-        "name": "Image Describer"
+        "sourceId": "41daadb440cc",
+        "projectSlug": "addsubtitle",
+        "name": "Addsubtitle"
       },
       {
-        "sourceId": "89db579709da",
-        "projectSlug": "project-561b12",
-        "name": "猫步简历"
+        "sourceId": "b16502cfe21a",
+        "projectSlug": "tabboost-chrome",
+        "name": "TabBoost（Chrome 扩展）"
       },
       {
-        "sourceId": "e3f0b319348c",
-        "projectSlug": "project-5aed23",
-        "name": "小报童排行榜"
+        "sourceId": "94c0e5f15d91",
+        "projectSlug": "best-bra-size-calculator",
+        "name": "Best Bra Size Calculator"
       },
       {
-        "sourceId": "7e723def84ae",
-        "projectSlug": "project-99849a",
-        "name": "仓鼠工具箱"
+        "sourceId": "282c29d33e93",
+        "projectSlug": "ai-282c29",
+        "name": "信风 AI 外贸获客智能体"
       },
       {
-        "sourceId": "66f47dc5eee1",
-        "projectSlug": "crop-image-66f47d",
-        "name": "Crop Image"
+        "sourceId": "8cc1ab8c017b",
+        "projectSlug": "free-ai-beauty-test",
+        "name": "Free AI Beauty Test"
       },
       {
-        "sourceId": "b65cf2ae533b",
-        "projectSlug": "whatdoilooklike",
-        "name": "whatDoILookLike"
+        "sourceId": "aa88453e93dc",
+        "projectSlug": "ai-doll-generator",
+        "name": "AI Doll Generator"
       },
       {
-        "sourceId": "23f6aad9ee09",
-        "projectSlug": "aihinto",
-        "name": "aihinto"
+        "sourceId": "7f570c0d3263",
+        "projectSlug": "4oimg-org",
+        "name": "4oimg.org"
       },
       {
-        "sourceId": "d36e42641289",
-        "projectSlug": "arnis",
-        "name": "Arnis"
+        "sourceId": "0dcc57cf296b",
+        "projectSlug": "notion-style-illustration",
+        "name": "Notion style illustration"
       },
       {
-        "sourceId": "616ef3d897f0",
-        "projectSlug": "project-cb3cc5",
-        "name": "去水印去多多"
+        "sourceId": "d06df5fb2a88",
+        "projectSlug": "labubu-wallpaper-d06df5",
+        "name": "Labubu Wallpaper"
       },
       {
-        "sourceId": "fc3d8396700a",
-        "projectSlug": "inkcomic",
-        "name": "InkComic"
+        "sourceId": "d96682e98e5f",
+        "projectSlug": "clone-ui",
+        "name": "Clone UI"
       },
       {
-        "sourceId": "1d1e291197fa",
-        "projectSlug": "template0",
-        "name": "Template0"
+        "sourceId": "babafd270ac1",
+        "projectSlug": "style-ai",
+        "name": "Style Ai"
       },
       {
-        "sourceId": "9de13cbb2b88",
-        "projectSlug": "gemini-coder",
-        "name": "Gemini Coder"
+        "sourceId": "2f03b8076ba2",
+        "projectSlug": "cfa-essentials",
+        "name": "CFA Essentials"
       },
       {
-        "sourceId": "307c2c49a274",
-        "projectSlug": "deepseek-v3",
-        "name": "DeepSeek v3"
+        "sourceId": "4df8909c1aa9",
+        "projectSlug": "canvave",
+        "name": "Canvave"
       },
       {
-        "sourceId": "4388cb2dce68",
-        "projectSlug": "trellis-3d-ai",
-        "name": "TRELLIS 3D AI"
+        "sourceId": "417b8157e770",
+        "projectSlug": "proxypin",
+        "name": "ProxyPin"
       },
       {
-        "sourceId": "0907128391bb",
-        "projectSlug": "flux-style-shaping",
-        "name": "FLUX Style Shaping"
+        "sourceId": "066dce3b1388",
+        "projectSlug": "action-figure-ai-generator",
+        "name": "Action Figure AI Generator"
       },
       {
-        "sourceId": "e05337daf56d",
-        "projectSlug": "project-8305a6",
-        "name": "八爪鱼收纳"
+        "sourceId": "9789b6eefc64",
+        "projectSlug": "pet-to-human",
+        "name": "Pet To Human"
       },
       {
-        "sourceId": "32b1dacf22c4",
-        "projectSlug": "xshorts",
-        "name": "XShorts"
+        "sourceId": "8e4ad12c22b0",
+        "projectSlug": "character-headcanon-generator",
+        "name": "Character Headcanon Generator"
       },
       {
-        "sourceId": "01988ec1e43e",
-        "projectSlug": "free-open-graph-generator",
-        "name": "Free Open Graph Generator"
+        "sourceId": "5bfde1cf34b4",
+        "projectSlug": "action-figure-ai",
+        "name": "Action Figure AI"
       },
       {
-        "sourceId": "4ca41e4f6d61",
-        "projectSlug": "project-8dffca",
-        "name": "短剧大王"
+        "sourceId": "c89b375985e0",
+        "projectSlug": "circle-net",
+        "name": "circle net"
       },
       {
-        "sourceId": "7c1e21a9459a",
-        "projectSlug": "github-cards",
-        "name": "GitHub Cards"
+        "sourceId": "e45b3b5590e5",
+        "projectSlug": "project-14b568",
+        "name": "二维码解码器"
       },
       {
-        "sourceId": "68a12fa86096",
-        "projectSlug": "mkdirs",
-        "name": "Mkdirs"
+        "sourceId": "a22dc2e31cda",
+        "projectSlug": "svg-converter",
+        "name": "SVG Converter"
       },
       {
-        "sourceId": "fd3f826cc999",
-        "projectSlug": "indiehub",
-        "name": "IndieHub"
+        "sourceId": "dd7e44ba6f87",
+        "projectSlug": "qwq-ai-assistant",
+        "name": "QWQ AI Assistant"
       },
       {
-        "sourceId": "453d7ae976e9",
-        "projectSlug": "project-f738fc",
-        "name": "帽子云"
+        "sourceId": "f35bbf24d3f9",
+        "projectSlug": "project-be8c9a-f35bbf",
+        "name": "临时邮箱"
       },
       {
-        "sourceId": "d4e581b60413",
-        "projectSlug": "bluesky",
-        "name": "BlueSky 工具目录站点"
+        "sourceId": "55dc1ba8d85b",
+        "projectSlug": "imagetoblackandwhite",
+        "name": "ImageToBlackAndWhite"
       },
       {
-        "sourceId": "5b12dacf491c",
-        "projectSlug": "unblurimage-ai",
-        "name": "UnblurImage AI"
+        "sourceId": "736bb3426b1b",
+        "projectSlug": "ai-alt-text-generator",
+        "name": "AI Alt Text Generator"
       },
       {
-        "sourceId": "bea2ba4d453b",
-        "projectSlug": "podextra-ai",
-        "name": "PodExtra AI"
+        "sourceId": "82632e3659f8",
+        "projectSlug": "qwikrank",
+        "name": "Qwikrank"
       },
       {
-        "sourceId": "8f5828d07524",
-        "projectSlug": "autoppt",
-        "name": "Autoppt"
+        "sourceId": "46232f26cf94",
+        "projectSlug": "supportmatic",
+        "name": "SupportMatic"
       },
       {
-        "sourceId": "8d363c9bfe2f",
-        "projectSlug": "readest",
-        "name": "Readest"
+        "sourceId": "04168f168478",
+        "projectSlug": "imagetoany",
+        "name": "ImageToAny"
       },
       {
-        "sourceId": "1940737e4b7a",
-        "projectSlug": "youtube-seo",
-        "name": "一键将 Youtube 视频转成 SEO 友好的文章"
+        "sourceId": "c6002c0b1051",
+        "projectSlug": "project-cc9baa",
+        "name": "报告汇"
       },
       {
-        "sourceId": "c6956f762e9c",
-        "projectSlug": "onionai",
-        "name": "OnionAI"
+        "sourceId": "204d69913111",
+        "projectSlug": "ai-204d69",
+        "name": "教育类 AI 应用目录"
       },
       {
-        "sourceId": "58613558b6a7",
-        "projectSlug": "project-1ab1df",
-        "name": "桌面世界"
+        "sourceId": "88c456211de6",
+        "projectSlug": "gitto",
+        "name": "Gitto"
       },
       {
-        "sourceId": "023c1a1773a7",
-        "projectSlug": "genie-2",
-        "name": "Genie 2"
+        "sourceId": "275738bf6b97",
+        "projectSlug": "ai-affiliate",
+        "name": "AI Affiliate 分销目录"
       },
       {
-        "sourceId": "af8291633401",
-        "projectSlug": "secsoso",
-        "name": "SECSOSO 安全搜搜"
+        "sourceId": "eb0a7e6e6359",
+        "projectSlug": "ai-eb0a7e",
+        "name": "免费在线 AI 卡通图片生成工具"
       },
       {
-        "sourceId": "37d02b7db67f",
-        "projectSlug": "project-f7c67e",
-        "name": "字玩"
+        "sourceId": "9260169d65de",
+        "projectSlug": "project-037f3d",
+        "name": "动猫相机"
       },
       {
-        "sourceId": "eb6dc011f10c",
-        "projectSlug": "project-1c4481",
-        "name": "像素画家"
+        "sourceId": "8ed273514047",
+        "projectSlug": "project-b2f4f1",
+        "name": "策引"
+      },
+      {
+        "sourceId": "665b7226aa64",
+        "projectSlug": "logent-ai",
+        "name": "Logent AI"
+      },
+      {
+        "sourceId": "0aae4eba7038",
+        "projectSlug": "ghibliimage",
+        "name": "ghibliimage图像转换"
+      },
+      {
+        "sourceId": "42eb51f50c4b",
+        "projectSlug": "voice-cloning",
+        "name": "Voice Cloning"
+      },
+      {
+        "sourceId": "206c3700d65a",
+        "projectSlug": "photog-v2",
+        "name": "PhotoG V2"
+      },
+      {
+        "sourceId": "f488130035ec",
+        "projectSlug": "replaytact-form-automation-tester",
+        "name": "ReplayTact - Form Automation Tester"
+      },
+      {
+        "sourceId": "c7efb135fca1",
+        "projectSlug": "javaguide",
+        "name": "javaguide"
+      },
+      {
+        "sourceId": "649aeec17254",
+        "projectSlug": "chequewriting",
+        "name": "chequewriting"
+      },
+      {
+        "sourceId": "cd30c39d8bac",
+        "projectSlug": "acodenav",
+        "name": "acodenav"
+      },
+      {
+        "sourceId": "0f76fdbdcc98",
+        "projectSlug": "atemplate",
+        "name": "atemplate"
+      },
+      {
+        "sourceId": "88daf8d57d47",
+        "projectSlug": "png",
+        "name": "PNG贴纸切割器"
+      },
+      {
+        "sourceId": "a401937bea43",
+        "projectSlug": "ghibli-meme-generator",
+        "name": "Ghibli Meme Generator"
+      },
+      {
+        "sourceId": "2e80ee072192",
+        "projectSlug": "project-3d46c5",
+        "name": "小贴"
+      },
+      {
+        "sourceId": "1a60ceb31ef9",
+        "projectSlug": "chattempmail",
+        "name": "ChatTempMail"
+      },
+      {
+        "sourceId": "316b6b640c7a",
+        "projectSlug": "face-shape-ai",
+        "name": "Face Shape AI"
+      },
+      {
+        "sourceId": "eb938c4922d8",
+        "projectSlug": "snapmail",
+        "name": "snapmail - 临时邮箱"
+      },
+      {
+        "sourceId": "cce45dcb18de",
+        "projectSlug": "aiverything",
+        "name": "Aiverything"
+      },
+      {
+        "sourceId": "1fd8d84a66a5",
+        "projectSlug": "ufreetools",
+        "name": "UFreeTools - 你的免费工具集"
+      },
+      {
+        "sourceId": "08bd103160e4",
+        "projectSlug": "4oimage",
+        "name": "4oimage"
+      },
+      {
+        "sourceId": "15706a8e27e7",
+        "projectSlug": "project-233dba",
+        "name": "精准截图"
+      },
+      {
+        "sourceId": "f9e9ebc50c09",
+        "projectSlug": "imghunt",
+        "name": "imghunt"
+      },
+      {
+        "sourceId": "12fbe4374406",
+        "projectSlug": "idiom-today",
+        "name": "idiom.today-中文成语学习工具"
+      },
+      {
+        "sourceId": "c848baf9d5b5",
+        "projectSlug": "image2pixel",
+        "name": "Image2pixel"
+      },
+      {
+        "sourceId": "937782e04323",
+        "projectSlug": "project-247b12",
+        "name": "音之梦"
+      },
+      {
+        "sourceId": "6a2f69532441",
+        "projectSlug": "pronunciation-exercises",
+        "name": "Pronunciation Exercises"
+      },
+      {
+        "sourceId": "1beb30a9023c",
+        "projectSlug": "simpedit",
+        "name": "Simpedit"
+      },
+      {
+        "sourceId": "eef5febe56b6",
+        "projectSlug": "ai-eef5fe",
+        "name": "参要 AI - 诗词字帖"
+      },
+      {
+        "sourceId": "7ebe25215afc",
+        "projectSlug": "view-pre",
+        "name": "VIEW PRE"
+      },
+      {
+        "sourceId": "f13b3b83f2c9",
+        "projectSlug": "tool-hut",
+        "name": "Tool Hut"
       },
       {
         "sourceId": "5e6c01d0358b",
         "projectSlug": "xiustore",
         "name": "XiuStore"
+      },
+      {
+        "sourceId": "b5ceb65c91f0",
+        "projectSlug": "easegen",
+        "name": "EaseGen"
       },
       {
         "sourceId": "7589f21bc1c1",
@@ -817,6 +1147,21 @@
         "sourceId": "9445ef88677e",
         "projectSlug": "project-90ede3",
         "name": "大字白板"
+      },
+      {
+        "sourceId": "722c18b60a6e",
+        "projectSlug": "ai-722c18",
+        "name": "AI 小说作家"
+      },
+      {
+        "sourceId": "ba151e96be84",
+        "projectSlug": "invoice-downloader",
+        "name": "Invoice Downloader"
+      },
+      {
+        "sourceId": "d416892676aa",
+        "projectSlug": "gptgeminigrok-ai",
+        "name": "GPTGeminiGrok.AI"
       },
       {
         "sourceId": "ba6cf956b26f",
@@ -934,6 +1279,11 @@
         "name": "Network Sniffer"
       },
       {
+        "sourceId": "ed6436ddd262",
+        "projectSlug": "flux-ai-art",
+        "name": "FLUX AI ART"
+      },
+      {
         "sourceId": "caaed6548bb0",
         "projectSlug": "ai-detector-caaed6",
         "name": "AI Detector"
@@ -942,6 +1292,11 @@
         "sourceId": "68ca829889de",
         "projectSlug": "notion-mate",
         "name": "Notion Mate"
+      },
+      {
+        "sourceId": "e45419cd9bbb",
+        "projectSlug": "ai-hairstyle",
+        "name": "AI Hairstyle"
       },
       {
         "sourceId": "88493d5c1edc",
@@ -954,6 +1309,11 @@
         "name": "诶嘿(EI)"
       },
       {
+        "sourceId": "9a15a712a6e7",
+        "projectSlug": "ai-9a15a7",
+        "name": "海嘉 AI 实验室智能应用"
+      },
+      {
         "sourceId": "ea060788fbf9",
         "projectSlug": "jarkviewer",
         "name": "jarkViewer"
@@ -962,6 +1322,11 @@
         "sourceId": "da57a59ab350",
         "projectSlug": "project-dd0ad6",
         "name": "电商优惠券查找脚本"
+      },
+      {
+        "sourceId": "dde7186fe201",
+        "projectSlug": "ai-agents-directory",
+        "name": "AI Agents Directory"
       },
       {
         "sourceId": "b49c7e519360",
@@ -974,6 +1339,11 @@
         "name": "Airtable iOS Shortcuts Library"
       },
       {
+        "sourceId": "7945c0912c9a",
+        "projectSlug": "chinese-name-generator",
+        "name": "Chinese Name Generator"
+      },
+      {
         "sourceId": "3d96f8ecd125",
         "projectSlug": "project-84b5fc",
         "name": "小天气"
@@ -982,6 +1352,11 @@
         "sourceId": "1e753ccff00a",
         "projectSlug": "chat",
         "name": "共鸣 Chat"
+      },
+      {
+        "sourceId": "11cfc50746be",
+        "projectSlug": "learn-kana",
+        "name": "Learn Kana"
       },
       {
         "sourceId": "e9732c88d40c",
@@ -994,6 +1369,11 @@
         "name": "OncePower"
       },
       {
+        "sourceId": "ee8261aeb610",
+        "projectSlug": "ai-death-calculator",
+        "name": "AI Death Calculator"
+      },
+      {
         "sourceId": "fb18c8405ea1",
         "projectSlug": "bluesky-video-downloader",
         "name": "Bluesky Video Downloader"
@@ -1002,6 +1382,11 @@
         "sourceId": "55b525b6aa8c",
         "projectSlug": "project-40ede8",
         "name": "值得一读技术博客"
+      },
+      {
+        "sourceId": "3a8b0cbf0928",
+        "projectSlug": "tempmail-love",
+        "name": "TempMail.Love"
       },
       {
         "sourceId": "ada18dc3ec85",
@@ -1014,6 +1399,11 @@
         "name": "X Detector"
       },
       {
+        "sourceId": "584c4db9069a",
+        "projectSlug": "aigotools",
+        "name": "Aigotools"
+      },
+      {
         "sourceId": "2d92c46ef6b5",
         "projectSlug": "projecthunt",
         "name": "ProjectHunt"
@@ -1022,6 +1412,11 @@
         "sourceId": "3c6576b8d049",
         "projectSlug": "rizz-ai",
         "name": "RIZZ AI"
+      },
+      {
+        "sourceId": "c93350b36f0b",
+        "projectSlug": "similarlabs",
+        "name": "Similarlabs"
       },
       {
         "sourceId": "8eeb481edb85",
@@ -1034,6 +1429,11 @@
         "name": "壁纸千寻"
       },
       {
+        "sourceId": "d56512ae1236",
+        "projectSlug": "project-2284a2",
+        "name": "反斗限免"
+      },
+      {
         "sourceId": "ceda666d5bfd",
         "projectSlug": "project-c2ada1",
         "name": "如快"
@@ -1042,6 +1442,11 @@
         "sourceId": "c89cbb0c56d4",
         "projectSlug": "project-bbeda4",
         "name": "小报童专栏导航"
+      },
+      {
+        "sourceId": "8a7280668d6a",
+        "projectSlug": "bfp-calculator",
+        "name": "BFP Calculator"
       },
       {
         "sourceId": "57f757edd849",
@@ -1054,6 +1459,11 @@
         "name": "韶光日记"
       },
       {
+        "sourceId": "70c87a9d9c8a",
+        "projectSlug": "project-52b5ff",
+        "name": "涂色乐园"
+      },
+      {
         "sourceId": "5a5bec8259a1",
         "projectSlug": "liusha-tech-detector",
         "name": "liusha tech detector"
@@ -1062,6 +1472,11 @@
         "sourceId": "9c852441979e",
         "projectSlug": "ecopaste",
         "name": "EcoPaste"
+      },
+      {
+        "sourceId": "09450cf0c5b7",
+        "projectSlug": "ssh-monitor-ssh",
+        "name": "SSH Monitor: SSH终端与服务器监控"
       },
       {
         "sourceId": "55dd28d3abc9",
@@ -1074,6 +1489,11 @@
         "name": "FurryAI"
       },
       {
+        "sourceId": "7b929a68d7d4",
+        "projectSlug": "openterm",
+        "name": "OpenTerm"
+      },
+      {
         "sourceId": "7a907b7f7ce8",
         "projectSlug": "subrise",
         "name": "Subrise"
@@ -1082,6 +1502,11 @@
         "sourceId": "fe82012c9fe1",
         "projectSlug": "work-panel",
         "name": "Work Panel"
+      },
+      {
+        "sourceId": "476f52f01493",
+        "projectSlug": "slidebrowser",
+        "name": "SlideBrowser"
       },
       {
         "sourceId": "478fb96f6570",
@@ -1094,6 +1519,11 @@
         "name": "即时热点"
       },
       {
+        "sourceId": "02d64b8c8da1",
+        "projectSlug": "travel-translator",
+        "name": "Travel Translator"
+      },
+      {
         "sourceId": "3b994edd1a17",
         "projectSlug": "image-to-excel",
         "name": "Image to excel"
@@ -1102,6 +1532,11 @@
         "sourceId": "c83c0ccb1581",
         "projectSlug": "ai-with-me",
         "name": "AI WITH.ME"
+      },
+      {
+        "sourceId": "dd7d119a8bc6",
+        "projectSlug": "json-translator-dd7d11",
+        "name": "JSON Translator"
       },
       {
         "sourceId": "8289f159b1d8",
@@ -1114,6 +1549,11 @@
         "name": "AI Filter"
       },
       {
+        "sourceId": "a73588a97cd5",
+        "projectSlug": "bilive",
+        "name": "bilive"
+      },
+      {
         "sourceId": "ea82f02acc21",
         "projectSlug": "v3",
         "name": "扇贝单词助手V3"
@@ -1122,6 +1562,11 @@
         "sourceId": "eaee616ed6fc",
         "projectSlug": "replay-text-actions",
         "name": "Replay Text Actions"
+      },
+      {
+        "sourceId": "8455850613f9",
+        "projectSlug": "justseo",
+        "name": "JustSEO"
       },
       {
         "sourceId": "bb8880533956",
@@ -1134,6 +1579,11 @@
         "name": "Midjourney 样式代码库"
       },
       {
+        "sourceId": "094fd960a678",
+        "projectSlug": "jetbrains-maple-mono",
+        "name": "JetBrains Maple Mono"
+      },
+      {
         "sourceId": "cadbb428377c",
         "projectSlug": "mvpfast",
         "name": "MvpFast"
@@ -1142,6 +1592,11 @@
         "sourceId": "04b0b6b17e89",
         "projectSlug": "mpmd",
         "name": "mpmd"
+      },
+      {
+        "sourceId": "87676c60cf30",
+        "projectSlug": "smart-bookmark",
+        "name": "Smart Bookmark"
       },
       {
         "sourceId": "da90ebd7f272",
@@ -1154,6 +1609,11 @@
         "name": "CraftRecord"
       },
       {
+        "sourceId": "f71fd99ff709",
+        "projectSlug": "formulas-ai",
+        "name": "Formulas AI"
+      },
+      {
         "sourceId": "99e8711af1fb",
         "projectSlug": "project-afb292",
         "name": "网页微信书评插件"
@@ -1162,6 +1622,11 @@
         "sourceId": "c0983a3d1a65",
         "projectSlug": "project-24168f",
         "name": "三点划线"
+      },
+      {
+        "sourceId": "734ad75e4f1d",
+        "projectSlug": "mouse-click",
+        "name": "mouse-click"
       },
       {
         "sourceId": "0598ebd975e6",
@@ -1174,6 +1639,11 @@
         "name": "微软 TTS (Text-to-Speech) 文字转语音下载器"
       },
       {
+        "sourceId": "6e5fe6bb94b1",
+        "projectSlug": "dynamic-photo-video-display-wall",
+        "name": "Dynamic-photo-video-display-wall"
+      },
+      {
         "sourceId": "e985dbc39444",
         "projectSlug": "abgerny",
         "name": "Abgerny"
@@ -1182,6 +1652,11 @@
         "sourceId": "dc83dc35a009",
         "projectSlug": "project-4c1ddc",
         "name": "亲戚称呼计算器"
+      },
+      {
+        "sourceId": "386129c69d0a",
+        "projectSlug": "synexa-ai",
+        "name": "Synexa AI"
       },
       {
         "sourceId": "8ee50ac6163d",
@@ -1194,6 +1669,11 @@
         "name": "Siphon 吸词"
       },
       {
+        "sourceId": "bd64f8c22cc0",
+        "projectSlug": "mouseclick",
+        "name": "MouseClick"
+      },
+      {
         "sourceId": "73d596c5b855",
         "projectSlug": "biofy",
         "name": "Biofy"
@@ -1202,6 +1682,11 @@
         "sourceId": "7a0c920c96f3",
         "projectSlug": "aitoolist",
         "name": "AITOOLIST"
+      },
+      {
+        "sourceId": "fb76ab23cc92",
+        "projectSlug": "deepseek-chat",
+        "name": "DeepSeek Chat"
       },
       {
         "sourceId": "437dff150b1f",
@@ -1214,6 +1699,11 @@
         "name": "m3u8下载器"
       },
       {
+        "sourceId": "1af81903b509",
+        "projectSlug": "midjourney-sref-code",
+        "name": "Midjourney Sref code 收集"
+      },
+      {
         "sourceId": "a2a0ffb78d52",
         "projectSlug": "ai-a2a0ff",
         "name": "AI 形象照"
@@ -1222,6 +1712,11 @@
         "sourceId": "4072e83e6cba",
         "projectSlug": "saysnap",
         "name": "saysnap"
+      },
+      {
+        "sourceId": "456fc1eb1c63",
+        "projectSlug": "swads",
+        "name": "Swads"
       },
       {
         "sourceId": "0d445aab16b0",
@@ -1234,6 +1729,11 @@
         "name": "Group Tab Tree"
       },
       {
+        "sourceId": "7ebd2d70286a",
+        "projectSlug": "highlight-pulse",
+        "name": "高能闪刻 | Highlight Pulse"
+      },
+      {
         "sourceId": "08d2ac4ac669",
         "projectSlug": "image-splitter-08d2ac",
         "name": "Image Splitter"
@@ -1242,6 +1742,11 @@
         "sourceId": "a3de7926bd60",
         "projectSlug": "pixarai",
         "name": "PixarAI"
+      },
+      {
+        "sourceId": "f47e050125f4",
+        "projectSlug": "nfc-plinkd",
+        "name": "NFC PLinkD (中文名：电纸链接)"
       },
       {
         "sourceId": "36070e62b747",
@@ -1254,6 +1759,11 @@
         "name": "billd-live"
       },
       {
+        "sourceId": "d6ef816bc361",
+        "projectSlug": "online-web-clock",
+        "name": "Online Web Clock"
+      },
+      {
         "sourceId": "482e64eb03dd",
         "projectSlug": "poster-generator",
         "name": "Poster Generator"
@@ -1262,6 +1772,11 @@
         "sourceId": "8c177458f8b6",
         "projectSlug": "billd-desk",
         "name": "billd-desk"
+      },
+      {
+        "sourceId": "69f371f12783",
+        "projectSlug": "project-5377d4",
+        "name": "日语名字生成器"
       },
       {
         "sourceId": "e82eb1fb0b2f",
@@ -1274,6 +1789,11 @@
         "name": "Case Convert Online"
       },
       {
+        "sourceId": "bd5db4476625",
+        "projectSlug": "image-translate-ai",
+        "name": "Image Translate AI"
+      },
+      {
         "sourceId": "029b74fef7f8",
         "projectSlug": "ezygraph",
         "name": "EzyGraph"
@@ -1282,6 +1802,11 @@
         "sourceId": "8cc51d68186d",
         "projectSlug": "aigotools-8cc51d",
         "name": "AigoTools"
+      },
+      {
+        "sourceId": "6f7d4f0d47e9",
+        "projectSlug": "project-a74ce1",
+        "name": "小帖"
       },
       {
         "sourceId": "3d642b9bf000",
@@ -1294,6 +1819,11 @@
         "name": "Dubbo-Desktop-Manager"
       },
       {
+        "sourceId": "2ee474b15c54",
+        "projectSlug": "aiagents42-com",
+        "name": "aiagents42.com"
+      },
+      {
         "sourceId": "6117cbb7b065",
         "projectSlug": "colorbox-mustard",
         "name": "Colorbox Mustard"
@@ -1302,6 +1832,11 @@
         "sourceId": "6c405e781484",
         "projectSlug": "project-c8963a",
         "name": "小红书去水印图片视频下载"
+      },
+      {
+        "sourceId": "de4291d1ecb2",
+        "projectSlug": "freaky-fonts-com",
+        "name": "freaky-fonts.com"
       },
       {
         "sourceId": "79ae00e12a94",
@@ -1314,6 +1849,11 @@
         "name": "MermaidHelp"
       },
       {
+        "sourceId": "e1ac36bc1feb",
+        "projectSlug": "gridmaker",
+        "name": "图片切割神器 GridMaker"
+      },
+      {
         "sourceId": "149d158abbe2",
         "projectSlug": "qrcode-fun",
         "name": "QRCode.fun"
@@ -1322,6 +1862,11 @@
         "sourceId": "c5d95ff15332",
         "projectSlug": "trace",
         "name": "Trace"
+      },
+      {
+        "sourceId": "77cef729771f",
+        "projectSlug": "indie-tools",
+        "name": "INDIE TOOLS"
       },
       {
         "sourceId": "9aac3f9e1880",
@@ -1334,6 +1879,11 @@
         "name": "aifly.tools"
       },
       {
+        "sourceId": "0a6fa4f10007",
+        "projectSlug": "wikitok",
+        "name": "WikiTok"
+      },
+      {
         "sourceId": "59c7084141a2",
         "projectSlug": "ip-im",
         "name": "IP.IM"
@@ -1342,6 +1892,11 @@
         "sourceId": "691dff145cb9",
         "projectSlug": "project-6a8147",
         "name": "快图批量图片设计工具"
+      },
+      {
+        "sourceId": "2ec36ea4523c",
+        "projectSlug": "navfolders",
+        "name": "NavFolders导航站"
       },
       {
         "sourceId": "c8733581ef03",
@@ -1354,6 +1909,11 @@
         "name": "html2image"
       },
       {
+        "sourceId": "b485a4303de8",
+        "projectSlug": "project-316113",
+        "name": "视频分割专业版"
+      },
+      {
         "sourceId": "a409aa79bb0c",
         "projectSlug": "project-dacf9b",
         "name": "主打“高颜值”、“说人话”的开源许可证选择器"
@@ -1362,6 +1922,11 @@
         "sourceId": "56ee1434bf5c",
         "projectSlug": "jpghi",
         "name": "jpgHi 图片魔法放大"
+      },
+      {
+        "sourceId": "f42319929b23",
+        "projectSlug": "al-visibility",
+        "name": "Al Visibility"
       },
       {
         "sourceId": "23f4ab6f2a6d",
@@ -1374,6 +1939,11 @@
         "name": "IDjpg 图片风格化"
       },
       {
+        "sourceId": "da66a1c9b2b0",
+        "projectSlug": "boilerplatehunt",
+        "name": "BoilerplateHunt"
+      },
+      {
         "sourceId": "080dac5ed6aa",
         "projectSlug": "okeiai",
         "name": "OkeiAI"
@@ -1382,6 +1952,11 @@
         "sourceId": "eaef42694634",
         "projectSlug": "helthpal",
         "name": "HelthPal"
+      },
+      {
+        "sourceId": "5fc7a53e9ffd",
+        "projectSlug": "sobricks",
+        "name": "SoBricks"
       },
       {
         "sourceId": "9fa339359e20",
@@ -1394,6 +1969,11 @@
         "name": "全王探测-直播源搜索神器"
       },
       {
+        "sourceId": "5e35d7d359dd",
+        "projectSlug": "project-cbda96",
+        "name": "慢图浏览"
+      },
+      {
         "sourceId": "cb39483acc99",
         "projectSlug": "seewhatnewai",
         "name": "SeeWhatNewAI"
@@ -1402,6 +1982,11 @@
         "sourceId": "bf909651fe5a",
         "projectSlug": "project-c8c557",
         "name": "猫九壁纸精选"
+      },
+      {
+        "sourceId": "7c3e9bd5308a",
+        "projectSlug": "crop-image",
+        "name": "Crop Image"
       },
       {
         "sourceId": "4ea28969e521",
@@ -1414,6 +1999,11 @@
         "name": "原色"
       },
       {
+        "sourceId": "8392cd848577",
+        "projectSlug": "cursor",
+        "name": "学习 Cursor"
+      },
+      {
         "sourceId": "b5431228c23c",
         "projectSlug": "tabbiy",
         "name": "Tabbiy"
@@ -1424,9 +2014,19 @@
         "name": "微信助手"
       },
       {
+        "sourceId": "4ad830954183",
+        "projectSlug": "project-7c6e16",
+        "name": "在线计数器"
+      },
+      {
         "sourceId": "d1a88846c031",
         "projectSlug": "json-for-you",
         "name": "JSON For You"
+      },
+      {
+        "sourceId": "7199bbb4dab1",
+        "projectSlug": "supametas-ai",
+        "name": "Supametas.AI"
       },
       {
         "sourceId": "7abc2f40aeed",
@@ -1439,6 +2039,11 @@
         "name": "封面图"
       },
       {
+        "sourceId": "524ad433259f",
+        "projectSlug": "photog",
+        "name": "PhotoG"
+      },
+      {
         "sourceId": "a21ca7d68a28",
         "projectSlug": "sengen-ai",
         "name": "SenGen - AI句子生成器"
@@ -1447,6 +2052,11 @@
         "sourceId": "b9ef189398d6",
         "projectSlug": "project-2dcfee",
         "name": "好说"
+      },
+      {
+        "sourceId": "3d8484ca8ab1",
+        "projectSlug": "seo",
+        "name": "优好搜·SEO优化工具"
       },
       {
         "sourceId": "9184dbeb5e1f",
@@ -1459,6 +2069,11 @@
         "name": "便签喵"
       },
       {
+        "sourceId": "e73f9186cdad",
+        "projectSlug": "minute-timer",
+        "name": "Minute Timer"
+      },
+      {
         "sourceId": "268932fa5d5c",
         "projectSlug": "oc-maker-268932",
         "name": "OC Maker"
@@ -1467,6 +2082,11 @@
         "sourceId": "eb1a85aa1820",
         "projectSlug": "project-43e53d",
         "name": "倒数鸭"
+      },
+      {
+        "sourceId": "74f3913d8fe7",
+        "projectSlug": "staying",
+        "name": "Staying"
       },
       {
         "sourceId": "5c11b05448d8",
@@ -1479,6 +2099,11 @@
         "name": "千盒工具"
       },
       {
+        "sourceId": "bc23a06ea33b",
+        "projectSlug": "image-describer-bc23a0",
+        "name": "Image Describer"
+      },
+      {
         "sourceId": "9cda6dba09a5",
         "projectSlug": "project-fbf2bf",
         "name": "退休年龄计算器"
@@ -1487,6 +2112,11 @@
         "sourceId": "25a10da103a3",
         "projectSlug": "project-66ca9e",
         "name": "小宇宙播客下载谷歌浏览器插件"
+      },
+      {
+        "sourceId": "89db579709da",
+        "projectSlug": "project-561b12",
+        "name": "猫步简历"
       },
       {
         "sourceId": "7ca2554d8e29",
@@ -1499,6 +2129,11 @@
         "name": "小红书视频封面下载谷歌浏览器插件"
       },
       {
+        "sourceId": "e3f0b319348c",
+        "projectSlug": "project-5aed23",
+        "name": "小报童排行榜"
+      },
+      {
         "sourceId": "f01f7e3b3fed",
         "projectSlug": "newpet",
         "name": "桌面新宠(NewPet)"
@@ -1507,6 +2142,11 @@
         "sourceId": "88378a04c0bb",
         "projectSlug": "autofit",
         "name": "AutoFit 浏览器插件"
+      },
+      {
+        "sourceId": "7e723def84ae",
+        "projectSlug": "project-99849a",
+        "name": "仓鼠工具箱"
       },
       {
         "sourceId": "e7ac416d9927",
@@ -1519,6 +2159,11 @@
         "name": "AIMangaTranslator"
       },
       {
+        "sourceId": "66f47dc5eee1",
+        "projectSlug": "crop-image-66f47d",
+        "name": "Crop Image"
+      },
+      {
         "sourceId": "1812b4f9a6e8",
         "projectSlug": "cloudotp",
         "name": "CloudOTP"
@@ -1527,6 +2172,11 @@
         "sourceId": "4585033ceb9b",
         "projectSlug": "dataflare",
         "name": "Dataflare"
+      },
+      {
+        "sourceId": "b65cf2ae533b",
+        "projectSlug": "whatdoilooklike",
+        "name": "whatDoILookLike"
       },
       {
         "sourceId": "492e516229fe",
@@ -1539,6 +2189,11 @@
         "name": "bilibili 视频下载谷歌浏览器插件"
       },
       {
+        "sourceId": "23f6aad9ee09",
+        "projectSlug": "aihinto",
+        "name": "aihinto"
+      },
+      {
         "sourceId": "7a36c2266b94",
         "projectSlug": "flux-ai",
         "name": "Flux AI"
@@ -1547,6 +2202,11 @@
         "sourceId": "078479a431dc",
         "projectSlug": "bunpou",
         "name": "Bunpou"
+      },
+      {
+        "sourceId": "d36e42641289",
+        "projectSlug": "arnis",
+        "name": "Arnis"
       },
       {
         "sourceId": "8a86f3c68d02",
@@ -1559,6 +2219,11 @@
         "name": "Kana playground"
       },
       {
+        "sourceId": "616ef3d897f0",
+        "projectSlug": "project-cb3cc5",
+        "name": "去水印去多多"
+      },
+      {
         "sourceId": "ab18dee980c3",
         "projectSlug": "project-2c4441",
         "name": "海德时钟"
@@ -1567,6 +2232,11 @@
         "sourceId": "967fb58a106f",
         "projectSlug": "sg-exam",
         "name": "sg-exam"
+      },
+      {
+        "sourceId": "fc3d8396700a",
+        "projectSlug": "inkcomic",
+        "name": "InkComic"
       },
       {
         "sourceId": "cce62028c1a3",
@@ -1579,6 +2249,11 @@
         "name": "Miko AI 翻译"
       },
       {
+        "sourceId": "1d1e291197fa",
+        "projectSlug": "template0",
+        "name": "Template0"
+      },
+      {
         "sourceId": "38f0045c927d",
         "projectSlug": "it",
         "name": "IT 摇篮曲"
@@ -1587,6 +2262,11 @@
         "sourceId": "ec10626f0c11",
         "projectSlug": "omp",
         "name": "OMP"
+      },
+      {
+        "sourceId": "9de13cbb2b88",
+        "projectSlug": "gemini-coder",
+        "name": "Gemini Coder"
       },
       {
         "sourceId": "4c4d9b3f5388",
@@ -1599,6 +2279,11 @@
         "name": "厨房定时器"
       },
       {
+        "sourceId": "307c2c49a274",
+        "projectSlug": "deepseek-v3",
+        "name": "DeepSeek v3"
+      },
+      {
         "sourceId": "4672a614d397",
         "projectSlug": "flux-ai-image-generator",
         "name": "Flux AI Image Generator"
@@ -1607,6 +2292,11 @@
         "sourceId": "9dae05afe0e3",
         "projectSlug": "apk-download",
         "name": "APK DOWNLOAD"
+      },
+      {
+        "sourceId": "4388cb2dce68",
+        "projectSlug": "trellis-3d-ai",
+        "name": "TRELLIS 3D AI"
       },
       {
         "sourceId": "7d93cdcb6594",
@@ -1619,6 +2309,11 @@
         "name": "91化简-开源简历设计制作神器"
       },
       {
+        "sourceId": "0907128391bb",
+        "projectSlug": "flux-style-shaping",
+        "name": "FLUX Style Shaping"
+      },
+      {
         "sourceId": "e2cef546e3d2",
         "projectSlug": "ai-e2cef5",
         "name": "番石榴实验室 AI 智能应用"
@@ -1627,6 +2322,11 @@
         "sourceId": "ecf233c88023",
         "projectSlug": "project-faa136",
         "name": "中国色"
+      },
+      {
+        "sourceId": "e05337daf56d",
+        "projectSlug": "project-8305a6",
+        "name": "八爪鱼收纳"
       },
       {
         "sourceId": "6599234f2e24",
@@ -1639,6 +2339,11 @@
         "name": "Rap Generator"
       },
       {
+        "sourceId": "32b1dacf22c4",
+        "projectSlug": "xshorts",
+        "name": "XShorts"
+      },
+      {
         "sourceId": "c5ebba56ca70",
         "projectSlug": "sitemap",
         "name": "网站地图 sitemap 生成及数据可视化分析平台"
@@ -1647,6 +2352,11 @@
         "sourceId": "2b521d2012f3",
         "projectSlug": "brick-center",
         "name": "Brick Center"
+      },
+      {
+        "sourceId": "01988ec1e43e",
+        "projectSlug": "free-open-graph-generator",
+        "name": "Free Open Graph Generator"
       },
       {
         "sourceId": "3b2296deb5fa",
@@ -1659,6 +2369,11 @@
         "name": "梦幻工坊"
       },
       {
+        "sourceId": "4ca41e4f6d61",
+        "projectSlug": "project-8dffca",
+        "name": "短剧大王"
+      },
+      {
         "sourceId": "04033dee1a0e",
         "projectSlug": "emoji-spark",
         "name": "Emoji Spark"
@@ -1667,6 +2382,11 @@
         "sourceId": "7a0c336b7f86",
         "projectSlug": "imagetools",
         "name": "ImageTools"
+      },
+      {
+        "sourceId": "7c1e21a9459a",
+        "projectSlug": "github-cards",
+        "name": "GitHub Cards"
       },
       {
         "sourceId": "1dc5947b5e4f",
@@ -1679,6 +2399,11 @@
         "name": "微寻"
       },
       {
+        "sourceId": "68a12fa86096",
+        "projectSlug": "mkdirs",
+        "name": "Mkdirs"
+      },
+      {
         "sourceId": "19be71d684f0",
         "projectSlug": "text-compare-merge",
         "name": "Text Compare & Merge"
@@ -1687,6 +2412,11 @@
         "sourceId": "4fc08d527d4c",
         "projectSlug": "project-f57a2e",
         "name": "英语汪"
+      },
+      {
+        "sourceId": "fd3f826cc999",
+        "projectSlug": "indiehub",
+        "name": "IndieHub"
       },
       {
         "sourceId": "d83a5281e98e",
@@ -1699,6 +2429,11 @@
         "name": "言叶"
       },
       {
+        "sourceId": "453d7ae976e9",
+        "projectSlug": "project-f738fc",
+        "name": "帽子云"
+      },
+      {
         "sourceId": "e3622030cdd4",
         "projectSlug": "seo-e36220",
         "name": "流沙 SEO"
@@ -1707,6 +2442,11 @@
         "sourceId": "a7173e1259ff",
         "projectSlug": "any-secret",
         "name": "Any Secret"
+      },
+      {
+        "sourceId": "d4e581b60413",
+        "projectSlug": "bluesky",
+        "name": "BlueSky 工具目录站点"
       },
       {
         "sourceId": "30bdd07165a4",
@@ -1719,6 +2459,11 @@
         "name": "iMessage AI 助手"
       },
       {
+        "sourceId": "5b12dacf491c",
+        "projectSlug": "unblurimage-ai",
+        "name": "UnblurImage AI"
+      },
+      {
         "sourceId": "28bf3819428b",
         "projectSlug": "project-7396d2",
         "name": "奇异字体生成器"
@@ -1727,6 +2472,11 @@
         "sourceId": "3aa702aff6c7",
         "projectSlug": "tieba-toolbox",
         "name": "tieba-toolbox"
+      },
+      {
+        "sourceId": "bea2ba4d453b",
+        "projectSlug": "podextra-ai",
+        "name": "PodExtra AI"
       },
       {
         "sourceId": "ceb32a921d60",
@@ -1739,6 +2489,11 @@
         "name": "IP Address Lookup"
       },
       {
+        "sourceId": "8f5828d07524",
+        "projectSlug": "autoppt",
+        "name": "Autoppt"
+      },
+      {
         "sourceId": "ae1eaffb0f1e",
         "projectSlug": "project-c4bb57",
         "name": "下一本读什么"
@@ -1747,6 +2502,11 @@
         "sourceId": "8a93c9c2a5d9",
         "projectSlug": "project-fdc597",
         "name": "微思文稿"
+      },
+      {
+        "sourceId": "8d363c9bfe2f",
+        "projectSlug": "readest",
+        "name": "Readest"
       },
       {
         "sourceId": "265e48a6829c",
@@ -1759,6 +2519,11 @@
         "name": "AI Image Description Generator"
       },
       {
+        "sourceId": "1940737e4b7a",
+        "projectSlug": "youtube-seo",
+        "name": "一键将 Youtube 视频转成 SEO 友好的文章"
+      },
+      {
         "sourceId": "f4f2a51bfcf6",
         "projectSlug": "watch-together",
         "name": "Watch together"
@@ -1767,6 +2532,11 @@
         "sourceId": "3dabfed1173b",
         "projectSlug": "project-e92c87",
         "name": "小作卡片"
+      },
+      {
+        "sourceId": "c6956f762e9c",
+        "projectSlug": "onionai",
+        "name": "OnionAI"
       },
       {
         "sourceId": "ec3a2af30180",
@@ -1779,6 +2549,11 @@
         "name": "几枝"
       },
       {
+        "sourceId": "58613558b6a7",
+        "projectSlug": "project-1ab1df",
+        "name": "桌面世界"
+      },
+      {
         "sourceId": "d89630379c1c",
         "projectSlug": "tiktok",
         "name": "TikTok 收益计算器"
@@ -1787,6 +2562,11 @@
         "sourceId": "4480a0261251",
         "projectSlug": "typing-word",
         "name": "typing-word"
+      },
+      {
+        "sourceId": "023c1a1773a7",
+        "projectSlug": "genie-2",
+        "name": "Genie 2"
       },
       {
         "sourceId": "f831c3a46ae4",
@@ -1799,6 +2579,11 @@
         "name": "SubRenamer"
       },
       {
+        "sourceId": "af8291633401",
+        "projectSlug": "secsoso",
+        "name": "SECSOSO 安全搜搜"
+      },
+      {
         "sourceId": "ebcc656b51b2",
         "projectSlug": "llm-gpu-helper",
         "name": "LLM GPU Helper"
@@ -1809,6 +2594,11 @@
         "name": "FunClip"
       },
       {
+        "sourceId": "37d02b7db67f",
+        "projectSlug": "project-f7c67e",
+        "name": "字玩"
+      },
+      {
         "sourceId": "fa600688b608",
         "projectSlug": "app",
         "name": "配图扫描 App"
@@ -1817,6 +2607,11 @@
         "sourceId": "7513c5d28b44",
         "projectSlug": "project-7191b0",
         "name": "兔兔答题"
+      },
+      {
+        "sourceId": "eb6dc011f10c",
+        "projectSlug": "project-1c4481",
+        "name": "像素画家"
       },
       {
         "sourceId": "b25172aab877",
@@ -3536,6 +4331,311 @@
     ],
     "changed": [
       {
+        "sourceId": "071876a65a25",
+        "projectSlug": "quick-image-kit",
+        "name": "Quick Image Kit"
+      },
+      {
+        "sourceId": "161a4f960abb",
+        "projectSlug": "apkgo-apkgo-cloud",
+        "name": "apkgo / apkgo cloud"
+      },
+      {
+        "sourceId": "f95128c68421",
+        "projectSlug": "shottide",
+        "name": "ShotTide"
+      },
+      {
+        "sourceId": "ae1a7dcc2e9e",
+        "projectSlug": "project-7c65d3",
+        "name": "审美工程"
+      },
+      {
+        "sourceId": "dc0f69bfb76b",
+        "projectSlug": "command-reopen",
+        "name": "Command Reopen"
+      },
+      {
+        "sourceId": "055d4217a10d",
+        "projectSlug": "aitoword",
+        "name": "Aitoword"
+      },
+      {
+        "sourceId": "d71af1662e7c",
+        "projectSlug": "time-overlay",
+        "name": "Time Overlay"
+      },
+      {
+        "sourceId": "1017ff77607c",
+        "projectSlug": "videodance-1017ff",
+        "name": "VideoDance"
+      },
+      {
+        "sourceId": "df23ef076ed3",
+        "projectSlug": "youtube-gif-comments",
+        "name": "YouTube GIF Comments"
+      },
+      {
+        "sourceId": "c9a8bd4b3a8b",
+        "projectSlug": "docube",
+        "name": "DoCube"
+      },
+      {
+        "sourceId": "7679e884f136",
+        "projectSlug": "mclqe",
+        "name": "MCLQE"
+      },
+      {
+        "sourceId": "e684c1636501",
+        "projectSlug": "seedance-3-0",
+        "name": "seedance 3.0"
+      },
+      {
+        "sourceId": "6c162edef950",
+        "projectSlug": "palapili",
+        "name": "PalaPili"
+      },
+      {
+        "sourceId": "9f6f8c815ec7",
+        "projectSlug": "ai-image-combiner",
+        "name": "AI Image Combiner"
+      },
+      {
+        "sourceId": "f6453f1c773b",
+        "projectSlug": "manxia",
+        "name": "漫匣 Manxia"
+      },
+      {
+        "sourceId": "2ff10d11426f",
+        "projectSlug": "companest",
+        "name": "Companest 伴境"
+      },
+      {
+        "sourceId": "8dcb9aa993b1",
+        "projectSlug": "ai-dance-generator-8dcb9a",
+        "name": "AI Dance Generator"
+      },
+      {
+        "sourceId": "b5f5b71cebad",
+        "projectSlug": "project-9c1438",
+        "name": "票号核对台"
+      },
+      {
+        "sourceId": "e0aa3619023b",
+        "projectSlug": "takumikit",
+        "name": "匠工具箱 TakumiKit"
+      },
+      {
+        "sourceId": "59375d443c88",
+        "projectSlug": "project-36219f",
+        "name": "字相"
+      },
+      {
+        "sourceId": "bba8026dd984",
+        "projectSlug": "pixwit",
+        "name": "Pixwit"
+      },
+      {
+        "sourceId": "9f2f5366c43d",
+        "projectSlug": "paper-texture",
+        "name": "Paper Texture"
+      },
+      {
+        "sourceId": "afe631f42838",
+        "projectSlug": "everygen-ai",
+        "name": "Everygen AI"
+      },
+      {
+        "sourceId": "87cbd8a5bda4",
+        "projectSlug": "uuscribe",
+        "name": "UUScribe"
+      },
+      {
+        "sourceId": "1142e9ca2a56",
+        "projectSlug": "ai-1142e9",
+        "name": "巨浪 AI"
+      },
+      {
+        "sourceId": "ce45d80801a3",
+        "projectSlug": "project-328786",
+        "name": "趣站博物馆"
+      },
+      {
+        "sourceId": "b8e1cef78d4d",
+        "projectSlug": "project-3adc1a",
+        "name": "失业了咋办"
+      },
+      {
+        "sourceId": "4268032f4137",
+        "projectSlug": "voltip",
+        "name": "Voltip"
+      },
+      {
+        "sourceId": "26b4a9bfe51f",
+        "projectSlug": "videotextremover",
+        "name": "VideoTextRemover"
+      },
+      {
+        "sourceId": "4d52d62d096e",
+        "projectSlug": "sparkpix",
+        "name": "SparkPix"
+      },
+      {
+        "sourceId": "4e2fcc83eea2",
+        "projectSlug": "magicremover",
+        "name": "MagicRemover"
+      },
+      {
+        "sourceId": "b219216aa613",
+        "projectSlug": "offbase-tools",
+        "name": "OffBase Tools"
+      },
+      {
+        "sourceId": "6a227e7b7617",
+        "projectSlug": "memebako",
+        "name": "MemeBako"
+      },
+      {
+        "sourceId": "9fa6004a6d4b",
+        "projectSlug": "ai-genjutsu",
+        "name": "AI Genjutsu"
+      },
+      {
+        "sourceId": "ab4bedf15a02",
+        "projectSlug": "neon-duo",
+        "name": "NEON DUO"
+      },
+      {
+        "sourceId": "503ba006a80a",
+        "projectSlug": "rainku",
+        "name": "Rainku"
+      },
+      {
+        "sourceId": "8c978dc88040",
+        "projectSlug": "tuneku-fm",
+        "name": "Tuneku FM"
+      },
+      {
+        "sourceId": "0fe8bb119e27",
+        "projectSlug": "project-9d2a53",
+        "name": "这图能改"
+      },
+      {
+        "sourceId": "4c0c10ec4bfd",
+        "projectSlug": "notebook-generator",
+        "name": "Notebook Generator"
+      },
+      {
+        "sourceId": "ec67f8036dde",
+        "projectSlug": "sliceloft",
+        "name": "SliceLoft"
+      },
+      {
+        "sourceId": "090d6e3c3037",
+        "projectSlug": "powerstation-size",
+        "name": "PowerStation Size"
+      },
+      {
+        "sourceId": "4f38e7b1bd99",
+        "projectSlug": "flux3max",
+        "name": "Flux3Max"
+      },
+      {
+        "sourceId": "85f8aaa3cb48",
+        "projectSlug": "viewhtml",
+        "name": "ViewHTML"
+      },
+      {
+        "sourceId": "f9903ac033f2",
+        "projectSlug": "fondo-blanco",
+        "name": "Fondo Blanco"
+      },
+      {
+        "sourceId": "61f4e98eacd9",
+        "projectSlug": "project-c10b7f",
+        "name": "糖包"
+      },
+      {
+        "sourceId": "3f76c77cbee3",
+        "projectSlug": "tradesniper",
+        "name": "TradeSniper"
+      },
+      {
+        "sourceId": "8640a724b088",
+        "projectSlug": "myfategpt",
+        "name": "MyFateGPT（紫微命书）"
+      },
+      {
+        "sourceId": "60fc5056dea6",
+        "projectSlug": "ajaxmodel-release-tracker",
+        "name": "AjaxModel Release Tracker"
+      },
+      {
+        "sourceId": "07d7eed7305e",
+        "projectSlug": "songfromvideo",
+        "name": "SongFromVideo"
+      },
+      {
+        "sourceId": "ac6af2ece75b",
+        "projectSlug": "dtcstack",
+        "name": "DTCStack"
+      },
+      {
+        "sourceId": "cc9dfed366b7",
+        "projectSlug": "voxr",
+        "name": "VOXR"
+      },
+      {
+        "sourceId": "c31530ba56a5",
+        "projectSlug": "ai-doctor-scan",
+        "name": "AI Doctor Scan"
+      },
+      {
+        "sourceId": "3a0cdb838e0f",
+        "projectSlug": "unsent",
+        "name": "未寄 · Unsent"
+      },
+      {
+        "sourceId": "f90c956fb6e8",
+        "projectSlug": "project-df44f1",
+        "name": "知海图书馆"
+      },
+      {
+        "sourceId": "37c6bc9a0bf6",
+        "projectSlug": "examparser",
+        "name": "ExamParser"
+      },
+      {
+        "sourceId": "dc26d59ff8d7",
+        "projectSlug": "spaceknife",
+        "name": "SpaceKnife"
+      },
+      {
+        "sourceId": "cbbc26ebe4cb",
+        "projectSlug": "ai-cbbc26",
+        "name": "AI观潮"
+      },
+      {
+        "sourceId": "2dbfba2f7db3",
+        "projectSlug": "ai-2dbfba",
+        "name": "苏哲AI"
+      },
+      {
+        "sourceId": "7091ca1b6e3f",
+        "projectSlug": "ai-anime-generator-7091ca",
+        "name": "AI Anime Generator"
+      },
+      {
+        "sourceId": "9fe4aa302588",
+        "projectSlug": "speaker",
+        "name": "Speaker"
+      },
+      {
+        "sourceId": "001010869b6c",
+        "projectSlug": "saydart",
+        "name": "SayDart"
+      },
+      {
         "sourceId": "fa6d42a0a865",
         "projectSlug": "toolknit",
         "name": "ToolKnit"
@@ -4194,6 +5294,11 @@
         "sourceId": "c95cca739d1c",
         "projectSlug": "covercay",
         "name": "CoverCay"
+      },
+      {
+        "sourceId": "0661a81f6468",
+        "projectSlug": "flowcay",
+        "name": "FlowCay"
       },
       {
         "sourceId": "324213d4200f",
@@ -11284,621 +12389,6 @@
         "sourceId": "dbbadafd4ccc",
         "projectSlug": "mouse-pro",
         "name": "Mouse Pro"
-      },
-      {
-        "sourceId": "0c4b1def4434",
-        "projectSlug": "ai-0c4b1d",
-        "name": "AI 取名网"
-      },
-      {
-        "sourceId": "8c5c9d7e1fc2",
-        "projectSlug": "flux-1-kontext-image-generator",
-        "name": "FLUX.1 Kontext Image Generator"
-      },
-      {
-        "sourceId": "b7be7a1b9f41",
-        "projectSlug": "ai-baby-generator",
-        "name": "AI Baby Generator"
-      },
-      {
-        "sourceId": "01176f38a4da",
-        "projectSlug": "project-ee1e4d",
-        "name": "台灣解夢"
-      },
-      {
-        "sourceId": "41db209b68eb",
-        "projectSlug": "ai-41db20",
-        "name": "AI 随机图片生成器"
-      },
-      {
-        "sourceId": "e6fc70331928",
-        "projectSlug": "bypass-turnitin",
-        "name": "Bypass Turnitin"
-      },
-      {
-        "sourceId": "95bc41417121",
-        "projectSlug": "product-rule",
-        "name": "product-rule"
-      },
-      {
-        "sourceId": "1af2d36f8194",
-        "projectSlug": "ai-line-art-generator",
-        "name": "AI Line Art Generator"
-      },
-      {
-        "sourceId": "8853ea7f38e9",
-        "projectSlug": "proof-of-awesome",
-        "name": "Proof of Awesome"
-      },
-      {
-        "sourceId": "c2e8e6707bfe",
-        "projectSlug": "flux-kontext-c2e8e6",
-        "name": "FLUX Kontext"
-      },
-      {
-        "sourceId": "aab3774be294",
-        "projectSlug": "veo3-video",
-        "name": "Veo3 video"
-      },
-      {
-        "sourceId": "277de6e2ac3a",
-        "projectSlug": "loraai",
-        "name": "LoraAI"
-      },
-      {
-        "sourceId": "ab395c210d0f",
-        "projectSlug": "ask-me-anything",
-        "name": "Ask Me Anything"
-      },
-      {
-        "sourceId": "9199e3d2a8b9",
-        "projectSlug": "notegen",
-        "name": "NoteGen"
-      },
-      {
-        "sourceId": "697714a22185",
-        "projectSlug": "mii-maker",
-        "name": "Mii Maker"
-      },
-      {
-        "sourceId": "7c368d313122",
-        "projectSlug": "json-merge",
-        "name": "JSON Merge"
-      },
-      {
-        "sourceId": "811866f9afda",
-        "projectSlug": "aihuntlist",
-        "name": "AIHuntList"
-      },
-      {
-        "sourceId": "9cf5a8315cf2",
-        "projectSlug": "nestsaas",
-        "name": "NestSaaS"
-      },
-      {
-        "sourceId": "2c831f0d7e9b",
-        "projectSlug": "snapreader",
-        "name": "SnapReader"
-      },
-      {
-        "sourceId": "66d198bf767a",
-        "projectSlug": "transmonkey",
-        "name": "Transmonkey"
-      },
-      {
-        "sourceId": "d0fa925ad058",
-        "projectSlug": "teachany",
-        "name": "TeachAny"
-      },
-      {
-        "sourceId": "f5ee41c45c43",
-        "projectSlug": "imgkits",
-        "name": "Imgkits"
-      },
-      {
-        "sourceId": "9805d4ae301a",
-        "projectSlug": "agenthunter",
-        "name": "AgentHunter"
-      },
-      {
-        "sourceId": "0e970fc9cfc4",
-        "projectSlug": "english-daily",
-        "name": "English Daily"
-      },
-      {
-        "sourceId": "7d06e1e221d7",
-        "projectSlug": "ai-7d06e1",
-        "name": "AI 今日热榜"
-      },
-      {
-        "sourceId": "9aac27983671",
-        "projectSlug": "buzz-cut-ai",
-        "name": "buzz-cut AI"
-      },
-      {
-        "sourceId": "c0340a7c32a1",
-        "projectSlug": "veo-3-ai",
-        "name": "Veo 3 AI"
-      },
-      {
-        "sourceId": "3e41327a5dbd",
-        "projectSlug": "board-foot-calculator",
-        "name": "Board Foot Calculator"
-      },
-      {
-        "sourceId": "adacf0ee92be",
-        "projectSlug": "mksaas-com",
-        "name": "mksaas.com"
-      },
-      {
-        "sourceId": "3b7226342ade",
-        "projectSlug": "video2ppt-com",
-        "name": "video2ppt.com"
-      },
-      {
-        "sourceId": "35afb5f94db2",
-        "projectSlug": "ai-doll",
-        "name": "AI Doll"
-      },
-      {
-        "sourceId": "a6037dc36774",
-        "projectSlug": "tarotdreamhub",
-        "name": "TarotDreamHub"
-      },
-      {
-        "sourceId": "48ac3de18a2e",
-        "projectSlug": "bratgenerator",
-        "name": "bratgenerator"
-      },
-      {
-        "sourceId": "469cf61e9e77",
-        "projectSlug": "writehybrid",
-        "name": "WriteHybrid"
-      },
-      {
-        "sourceId": "84fe86b08f2e",
-        "projectSlug": "firsto",
-        "name": "Firsto"
-      },
-      {
-        "sourceId": "4c432a8c8595",
-        "projectSlug": "raffle-blue",
-        "name": "Raffle Blue"
-      },
-      {
-        "sourceId": "0180f6a385c2",
-        "projectSlug": "ai-teach-tools",
-        "name": "AI teach tools"
-      },
-      {
-        "sourceId": "b5bc42a13afc",
-        "projectSlug": "bluesky-sdk",
-        "name": "BlueSky SDK"
-      },
-      {
-        "sourceId": "28a79740bdf1",
-        "projectSlug": "tarotqa",
-        "name": "TarotQA"
-      },
-      {
-        "sourceId": "00c18210fe48",
-        "projectSlug": "faceratingai",
-        "name": "FaceRatingAI"
-      },
-      {
-        "sourceId": "cbf2aa7b5181",
-        "projectSlug": "aipoemgenerator",
-        "name": "AIPoemGenerator"
-      },
-      {
-        "sourceId": "bdccfb4d1407",
-        "projectSlug": "ai-tool-kit",
-        "name": "AI Tool Kit"
-      },
-      {
-        "sourceId": "ef7c7c6f95af",
-        "projectSlug": "ai-image-editor-ef7c7c",
-        "name": "AI Image Editor"
-      },
-      {
-        "sourceId": "e09e9c84b012",
-        "projectSlug": "microsoft-sam-tts",
-        "name": "Microsoft SAM TTS"
-      },
-      {
-        "sourceId": "d0c80f3ba2ec",
-        "projectSlug": "free-voice-cloning",
-        "name": "Free Voice Cloning"
-      },
-      {
-        "sourceId": "110ea7760cc3",
-        "projectSlug": "image-to-image-ai-110ea7",
-        "name": "Image to Image AI"
-      },
-      {
-        "sourceId": "6983d94ebe86",
-        "projectSlug": "safewrite-ai",
-        "name": "SafeWrite AI"
-      },
-      {
-        "sourceId": "3f9cd1c7f4ba",
-        "projectSlug": "framepack-ai",
-        "name": "FramePack AI"
-      },
-      {
-        "sourceId": "f633862dffb2",
-        "projectSlug": "ace-step",
-        "name": "ACE-Step"
-      },
-      {
-        "sourceId": "e69b702e8f93",
-        "projectSlug": "graffitiart-app",
-        "name": "Graffitiart app"
-      },
-      {
-        "sourceId": "ce1558958c98",
-        "projectSlug": "musci-ce1558",
-        "name": "Musci"
-      },
-      {
-        "sourceId": "36eeba2fa0e1",
-        "projectSlug": "attractiveness-scale",
-        "name": "Attractiveness Scale"
-      },
-      {
-        "sourceId": "aa645f0cbf31",
-        "projectSlug": "project-62e6cb",
-        "name": "在线工具箱"
-      },
-      {
-        "sourceId": "596ea9a3c3f7",
-        "projectSlug": "facelessvideos-app",
-        "name": "FacelessVideos.APP"
-      },
-      {
-        "sourceId": "d5910d046ef3",
-        "projectSlug": "imagesart-ai",
-        "name": "ImagesArt.ai"
-      },
-      {
-        "sourceId": "097777de827b",
-        "projectSlug": "flux2klein-io",
-        "name": "Flux2Klein.io"
-      },
-      {
-        "sourceId": "77163e96ab30",
-        "projectSlug": "papyrusfont-com",
-        "name": "PapyrusFont.com"
-      },
-      {
-        "sourceId": "fc3550ca3633",
-        "projectSlug": "ai-fc3550",
-        "name": "免费在线 AI 角色脑洞生成工具"
-      },
-      {
-        "sourceId": "71b70ed4f6f8",
-        "projectSlug": "calligraphy-font-generator",
-        "name": "Calligraphy Font Generator"
-      },
-      {
-        "sourceId": "32121a93efb9",
-        "projectSlug": "bilibili",
-        "name": "Bilibili “换一换” 历史插件"
-      },
-      {
-        "sourceId": "41daadb440cc",
-        "projectSlug": "addsubtitle",
-        "name": "Addsubtitle"
-      },
-      {
-        "sourceId": "b16502cfe21a",
-        "projectSlug": "tabboost-chrome",
-        "name": "TabBoost（Chrome 扩展）"
-      },
-      {
-        "sourceId": "94c0e5f15d91",
-        "projectSlug": "best-bra-size-calculator",
-        "name": "Best Bra Size Calculator"
-      },
-      {
-        "sourceId": "282c29d33e93",
-        "projectSlug": "ai-282c29",
-        "name": "信风 AI 外贸获客智能体"
-      },
-      {
-        "sourceId": "8cc1ab8c017b",
-        "projectSlug": "free-ai-beauty-test",
-        "name": "Free AI Beauty Test"
-      },
-      {
-        "sourceId": "aa88453e93dc",
-        "projectSlug": "ai-doll-generator",
-        "name": "AI Doll Generator"
-      },
-      {
-        "sourceId": "7f570c0d3263",
-        "projectSlug": "4oimg-org",
-        "name": "4oimg.org"
-      },
-      {
-        "sourceId": "0dcc57cf296b",
-        "projectSlug": "notion-style-illustration",
-        "name": "Notion style illustration"
-      },
-      {
-        "sourceId": "d06df5fb2a88",
-        "projectSlug": "labubu-wallpaper-d06df5",
-        "name": "Labubu Wallpaper"
-      },
-      {
-        "sourceId": "d96682e98e5f",
-        "projectSlug": "clone-ui",
-        "name": "Clone UI"
-      },
-      {
-        "sourceId": "babafd270ac1",
-        "projectSlug": "style-ai",
-        "name": "Style Ai"
-      },
-      {
-        "sourceId": "2f03b8076ba2",
-        "projectSlug": "cfa-essentials",
-        "name": "CFA Essentials"
-      },
-      {
-        "sourceId": "4df8909c1aa9",
-        "projectSlug": "canvave",
-        "name": "Canvave"
-      },
-      {
-        "sourceId": "417b8157e770",
-        "projectSlug": "proxypin",
-        "name": "ProxyPin"
-      },
-      {
-        "sourceId": "066dce3b1388",
-        "projectSlug": "action-figure-ai-generator",
-        "name": "Action Figure AI Generator"
-      },
-      {
-        "sourceId": "9789b6eefc64",
-        "projectSlug": "pet-to-human",
-        "name": "Pet To Human"
-      },
-      {
-        "sourceId": "8e4ad12c22b0",
-        "projectSlug": "character-headcanon-generator",
-        "name": "Character Headcanon Generator"
-      },
-      {
-        "sourceId": "5bfde1cf34b4",
-        "projectSlug": "action-figure-ai",
-        "name": "Action Figure AI"
-      },
-      {
-        "sourceId": "c89b375985e0",
-        "projectSlug": "circle-net",
-        "name": "circle net"
-      },
-      {
-        "sourceId": "e45b3b5590e5",
-        "projectSlug": "project-14b568",
-        "name": "二维码解码器"
-      },
-      {
-        "sourceId": "a22dc2e31cda",
-        "projectSlug": "svg-converter",
-        "name": "SVG Converter"
-      },
-      {
-        "sourceId": "dd7e44ba6f87",
-        "projectSlug": "qwq-ai-assistant",
-        "name": "QWQ AI Assistant"
-      },
-      {
-        "sourceId": "f35bbf24d3f9",
-        "projectSlug": "project-be8c9a-f35bbf",
-        "name": "临时邮箱"
-      },
-      {
-        "sourceId": "55dc1ba8d85b",
-        "projectSlug": "imagetoblackandwhite",
-        "name": "ImageToBlackAndWhite"
-      },
-      {
-        "sourceId": "736bb3426b1b",
-        "projectSlug": "ai-alt-text-generator",
-        "name": "AI Alt Text Generator"
-      },
-      {
-        "sourceId": "82632e3659f8",
-        "projectSlug": "qwikrank",
-        "name": "Qwikrank"
-      },
-      {
-        "sourceId": "46232f26cf94",
-        "projectSlug": "supportmatic",
-        "name": "SupportMatic"
-      },
-      {
-        "sourceId": "04168f168478",
-        "projectSlug": "imagetoany",
-        "name": "ImageToAny"
-      },
-      {
-        "sourceId": "c6002c0b1051",
-        "projectSlug": "project-cc9baa",
-        "name": "报告汇"
-      },
-      {
-        "sourceId": "204d69913111",
-        "projectSlug": "ai-204d69",
-        "name": "教育类 AI 应用目录"
-      },
-      {
-        "sourceId": "88c456211de6",
-        "projectSlug": "gitto",
-        "name": "Gitto"
-      },
-      {
-        "sourceId": "275738bf6b97",
-        "projectSlug": "ai-affiliate",
-        "name": "AI Affiliate 分销目录"
-      },
-      {
-        "sourceId": "eb0a7e6e6359",
-        "projectSlug": "ai-eb0a7e",
-        "name": "免费在线 AI 卡通图片生成工具"
-      },
-      {
-        "sourceId": "9260169d65de",
-        "projectSlug": "project-037f3d",
-        "name": "动猫相机"
-      },
-      {
-        "sourceId": "8ed273514047",
-        "projectSlug": "project-b2f4f1",
-        "name": "策引"
-      },
-      {
-        "sourceId": "665b7226aa64",
-        "projectSlug": "logent-ai",
-        "name": "Logent AI"
-      },
-      {
-        "sourceId": "0aae4eba7038",
-        "projectSlug": "ghibliimage",
-        "name": "ghibliimage图像转换"
-      },
-      {
-        "sourceId": "42eb51f50c4b",
-        "projectSlug": "voice-cloning",
-        "name": "Voice Cloning"
-      },
-      {
-        "sourceId": "206c3700d65a",
-        "projectSlug": "photog-v2",
-        "name": "PhotoG V2"
-      },
-      {
-        "sourceId": "f488130035ec",
-        "projectSlug": "replaytact-form-automation-tester",
-        "name": "ReplayTact - Form Automation Tester"
-      },
-      {
-        "sourceId": "c7efb135fca1",
-        "projectSlug": "javaguide",
-        "name": "javaguide"
-      },
-      {
-        "sourceId": "649aeec17254",
-        "projectSlug": "chequewriting",
-        "name": "chequewriting"
-      },
-      {
-        "sourceId": "cd30c39d8bac",
-        "projectSlug": "acodenav",
-        "name": "acodenav"
-      },
-      {
-        "sourceId": "0f76fdbdcc98",
-        "projectSlug": "atemplate",
-        "name": "atemplate"
-      },
-      {
-        "sourceId": "88daf8d57d47",
-        "projectSlug": "png",
-        "name": "PNG贴纸切割器"
-      },
-      {
-        "sourceId": "a401937bea43",
-        "projectSlug": "ghibli-meme-generator",
-        "name": "Ghibli Meme Generator"
-      },
-      {
-        "sourceId": "2e80ee072192",
-        "projectSlug": "project-3d46c5",
-        "name": "小贴"
-      },
-      {
-        "sourceId": "1a60ceb31ef9",
-        "projectSlug": "chattempmail",
-        "name": "ChatTempMail"
-      },
-      {
-        "sourceId": "316b6b640c7a",
-        "projectSlug": "face-shape-ai",
-        "name": "Face Shape AI"
-      },
-      {
-        "sourceId": "eb938c4922d8",
-        "projectSlug": "snapmail",
-        "name": "snapmail - 临时邮箱"
-      },
-      {
-        "sourceId": "cce45dcb18de",
-        "projectSlug": "aiverything",
-        "name": "Aiverything"
-      },
-      {
-        "sourceId": "1fd8d84a66a5",
-        "projectSlug": "ufreetools",
-        "name": "UFreeTools - 你的免费工具集"
-      },
-      {
-        "sourceId": "08bd103160e4",
-        "projectSlug": "4oimage",
-        "name": "4oimage"
-      },
-      {
-        "sourceId": "15706a8e27e7",
-        "projectSlug": "project-233dba",
-        "name": "精准截图"
-      },
-      {
-        "sourceId": "f9e9ebc50c09",
-        "projectSlug": "imghunt",
-        "name": "imghunt"
-      },
-      {
-        "sourceId": "12fbe4374406",
-        "projectSlug": "idiom-today",
-        "name": "idiom.today-中文成语学习工具"
-      },
-      {
-        "sourceId": "c848baf9d5b5",
-        "projectSlug": "image2pixel",
-        "name": "Image2pixel"
-      },
-      {
-        "sourceId": "937782e04323",
-        "projectSlug": "project-247b12",
-        "name": "音之梦"
-      },
-      {
-        "sourceId": "6a2f69532441",
-        "projectSlug": "pronunciation-exercises",
-        "name": "Pronunciation Exercises"
-      },
-      {
-        "sourceId": "1beb30a9023c",
-        "projectSlug": "simpedit",
-        "name": "Simpedit"
-      },
-      {
-        "sourceId": "eef5febe56b6",
-        "projectSlug": "ai-eef5fe",
-        "name": "参要 AI - 诗词字帖"
-      },
-      {
-        "sourceId": "7ebe25215afc",
-        "projectSlug": "view-pre",
-        "name": "VIEW PRE"
-      },
-      {
-        "sourceId": "f13b3b83f2c9",
-        "projectSlug": "tool-hut",
-        "name": "Tool Hut"
       },
       {
         "sourceId": "f0564392e9c3",
